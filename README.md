@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# Capitalize: Sistema para controle de investimentos e gerenciamento de patrimônio 
 
-`CURSO`
+`CURSO`: Análise e Desenvolvimento de Sistemas
 
-`DISCIPLINA`
+`DISCIPLINA`: Eixo 1 - Projeto: Desenvolvimento de Aplicação Web Front-End
 
-`SEMESTRE`
+`SEMESTRE`: 1º Semestre
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Ahyla De Jesus Cabral
+* Caê Moreira Euphrásio
+* Lucas Marinho Ribeiro Guimarães
+* Marco De Pereira Binda
+* Paulo Henrique Da Cruz Alves
+* Pedro Willian Martins Rodrigues De Franca
 
 ## Orientador
 
-* Nome completo do professor 1
+* Wagner Cipriano Da Silva
 
 ## Instruções de utilização
 
