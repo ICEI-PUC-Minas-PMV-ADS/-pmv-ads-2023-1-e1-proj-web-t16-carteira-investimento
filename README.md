@@ -6,7 +6,7 @@
 
 `SEMESTRE`: 1º Semestre
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Sistema para controle de investimentos e gerenciamento de patrimônio
 
 ## Integrantes
 
