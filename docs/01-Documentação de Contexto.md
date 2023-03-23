@@ -8,7 +8,7 @@ Embora seja animador o progressivo interesse do brasileiro pela bolsa de valores
 
 Conforme o resultado do Programa de Avaliação de Estudantes Internacionais (PISA, em inglês) de 2018 (OCDE, 2020)[^2], 44% dos alunos de ensino médio (15 anos) no Brasil não atingiram o nível 2 de proficiência em letramento financeiro, não sendo capazes de
 
-> “*identificar produtos e termos financeiros comuns, reconhecer a diferença entre necessidades e desejos e tomar decisões simples relativas a gastos diários em contextos que eles provavelmente encontrariam pessoalmente*” [**tradução nossa**]. 
+     “*identificar produtos e termos financeiros comuns, reconhecer a diferença entre necessidades e desejos e tomar decisões simples relativas a gastos diários em contextos que eles provavelmente encontrariam pessoalmente*” [**tradução nossa**]. 
 
 Diante deste cenário, torna-se necessária uma ferramenta de auxílio ao investidor que não apenas cumpra suas funções de gestão dos investimentos e apuração de impostos, mas que também contribua para sua educação financeira. 
 
