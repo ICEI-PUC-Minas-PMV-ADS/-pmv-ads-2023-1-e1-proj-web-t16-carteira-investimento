@@ -35,7 +35,7 @@ Como objetivos específicos, podemos ressaltar:
 
 ## Justificativa
 
-Estudo randomizado de BRUHN et al (2022)[^3] demonstra que o acesso à educação financeira, no longo prazo, diminuiu o uso de linhas de crédito com taxas mais elevadas e reduziu o atraso no pagamento dos empréstimos e financiamentos, além de aumentar a probabilidade de o indivíduo se tornar microempreendedor, em oposição ao emprego formal. Ou seja, indivíduos que tiveram acesso à educação financeira foram capazes de tomar decisões que ajudaram a aumentar e/ou evitaram reduzir seu patrimônio. 
+Estudo randomizado de BRUHN *et al* (2022)[^3] demonstra que o acesso à educação financeira, no longo prazo, diminuiu o uso de linhas de crédito com taxas mais elevadas e reduziu o atraso no pagamento dos empréstimos e financiamentos, além de aumentar a probabilidade de o indivíduo se tornar microempreendedor, em oposição ao emprego formal. Ou seja, indivíduos que tiveram acesso à educação financeira foram capazes de tomar decisões que ajudaram a aumentar e/ou evitaram reduzir seu patrimônio. 
 
 Embora possa parecer que não haja relação entre a educação financeira e a bolsa de valores, cerca de 750 mil usuários da B³ têm menos de 25 anos, com um patrimônio total investido de R$ 640 milhões. O patrimônio mediano investido pela pessoa física na B³ caiu de R$21 mil em 2017 para R$ 1mil em 2022, segundo B3 (2022)[^1], fenômeno que também se repetiu na Renda Fixa. Cerca de 70% dos novos investidores do 4º trimestre de 2022 fizeram investimentos de até R$40. Isso significa que pessoas de menor poder aquisitivo passaram a ter acesso ao mercado financeiro.
 
@@ -46,7 +46,7 @@ Podemos presumir, contudo, que estas serão justamente as mais penalizadas, uma 
 
 ## Público-Alvo
 
-O público-alvo da Capitalize são as pessoas físicas com investimentos na bolsa de valores, sejam em Renda Fixa ou Renda Variável. 
+O público-alvo da `Capitalize` são as pessoas físicas com investimentos na bolsa de valores, sejam em Renda Fixa ou Renda Variável. 
 
 Conforme levantamento da B3 (2022)[^1], estas pessoas estão majoritariamente na Região Sudeste (57%), Sul (17%) e Nordeste (13,5%). Em termos de crescimento de número de pessoas físicas de 2018 a 2022, fica em destaque a Região Norte (+1363%), seguida do Nordeste (+974%) e o Centro-Oeste (+748%). 
 
