@@ -16,10 +16,13 @@ Diante deste cenário, torna-se necessária uma ferramenta de auxílio ao invest
 
 O problema que se busca resolver com este projeto é auxiliar o investidor pessoa física, com pouco ou nenhum conhecimento de finanças e tributos, a gerir sua carteira de investimentos, tanto para fins de acompanhamento de sua evolução patrimonial quanto para fins de apuração de impostos a recolher. 
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+[comment]: # (> **Links Úteis**:)
+
+[comment]: # (> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3))
+
+[comment]: # (> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655))
+
+[comment]: # (> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/))
 
 ## Objetivos
 
@@ -30,8 +33,9 @@ Como objetivos específicos, podemos ressaltar:
 * Ajudar o investidor inexperiente no aprendizado das finanças, de forma didática; 
 * Ajudar o investidor a navegar pelo pântano tributário brasileiro de forma simples e sem burocracia, apurando os impostos devidos e evitando problemas com a Receita Federal.  
 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+[comment]: # (> **Links Úteis**:)
+
+[comment]: # (> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/))
 
 ## Justificativa
 
@@ -41,8 +45,9 @@ Embora possa parecer que não haja relação entre a educação financeira e a b
 
 Podemos presumir, contudo, que estas serão justamente as mais penalizadas, uma vez que por terem menor renda e possivelmente terem tido menos acesso à educação financeira, estarão mais sujeitas às multas em razão erros na apuração de resultados e recolhimento dos impostos devidos. Tal fato é particularmente pernicioso, por prejudicá-las na fase inicial de acumulação de capital. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+[comment]: # (> **Links Úteis**:)
+
+[comment]: # (> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/))
 
 ## Público-Alvo
 
@@ -62,8 +67,12 @@ A distribuição entre os tipos de ativos também variou pouco, se mantendo na c
 
 [^3]: BRUHN, M; GARBER, G; KOYAMA, S; ZIA, B. **The Long-Term Impact of High School Financial Education**: evidence from Brazil. Jul 2022. Disponível em: https://www.bcb.gov.br/pec/wps/ingl/wps563.pdf. Acesso em: 16 mar. 2023.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+[comment]: # (> **Links Úteis**:)
+
+[comment]: # (> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/))
+
+[comment]: # (> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/))
+
+[comment]: # (> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/))
+
+[comment]: # (> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/))
