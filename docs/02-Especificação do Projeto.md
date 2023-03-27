@@ -59,7 +59,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-009| O site deve exibir gráficos com às variações de saldo do usuário | MÉDIA |
 |RF-010| O site deve exibir ao usuário os impostos que vão ser gerados pelos seus ativos | MÉDIA |
 |RF-011| O site deve exibir gráficos dos rendimentos ou perdas do usuário | MÉDIA |
-|RF-012| O site deve permitir ao usário importar notas de corretagem ou importar arquivo CSV ou planilha eletrônica com registro das negociações, ou registrar manualmente as negociações | ALTA |
+|RF-012| O site deve permitir ao usuário importar notas de corretagem ou importar arquivo CSV ou planilha eletrônica com registro das negociações, ou registrar manualmente as negociações | ALTA |
 
 ### Requisitos não Funcionais
 
