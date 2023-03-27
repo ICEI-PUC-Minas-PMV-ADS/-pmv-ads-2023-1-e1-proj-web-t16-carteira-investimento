@@ -48,8 +48,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O site deve permitir ao usuário a criar e configurar uma carteira para investimentos | ALTA | 
+|RF-002| O site deve permitir ao usuário cadastrar uma conta  | MÉDIA |
+|RF-003| O site deve permitir ao usuário fazer o login da sua conta | MÉDIA |
+|RF-004| O site deve permitir ao usuário a configurar seu perfil | MÉDIA |
+|RF-005| O site deve oferecer uma funcionalidade de filtro/menu para permitir ao usuário localizar seus ativos/ações | MÉDIA |
+|RF-006| O site deve permitir ao usuário adicionar e remover seus ativos a qualquer instante | MÉDIA |
+|RF-007| O site deve permitir ao usuário visualizar detalhes dos seus ativos | MÉDIA |
+|RF-008| O site deve exibir gráficos com às variações dos ativos | MÉDIA |
+|RF-009| O site deve exibir gráficos com às variações de saldo do usuário | MÉDIA |
+|RF-010| O site deve exibir ao usuário os impostos que vão ser gerados pelos seus ativos | MÉDIA |
+|RF-011| O site deve exibir gráficos dos rendimentos ou perdas do usuário | MÉDIA |
 
 
 ### Requisitos não Funcionais
