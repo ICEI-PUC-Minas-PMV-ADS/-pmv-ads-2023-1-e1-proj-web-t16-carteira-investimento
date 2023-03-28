@@ -6,7 +6,7 @@
 
 `SEMESTRE`: 1º Semestre
 
-Sistema para controle de investimentos e gerenciamento de patrimônio
+Sistema para controle de investimentos, gerenciamento de patrimônio e apuração de imposto de renda.
 
 ## Integrantes
 
