@@ -15,16 +15,16 @@ Abaixo são apresentadas alguns dos perfis que responderam ao questionário:
 |                                                                             |                                                                                 |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | <img src="img/lucas_guimaraes.jpg" width="150" height="150">                | **Lucas Guimarães**                                                             |
-| Idade: entre 19 e 24 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:  Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
+| Idade: entre 19 e 24 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
 | Motivações: Reserva de emergência<br>Fonte de renda extra<br>Aposentadoria      | Frustrações:  Instabilidade política prejudicar investimentos                   |
 | <img src="img/pedro_william.jpg" width="150" height="150">                  | **Pedro Willian**                                                               |
-| Idade: entre 19 e 24 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:  Serviços Financeiros<br>Outros                                      |
+| Idade: entre 19 e 24 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:<br>Serviços Financeiros<br>Outros                                      |
 | Motivações: Lazer                                                           | Frustrações:  Não informou                                                      |
 | <img src="img/barbara_sena.jpg" width="150" height="150">                   | **Bárbara Sena**                                                                |
-| Idade: entre 25 e 39 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:  Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
+| Idade: entre 25 e 39 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
 | Motivações: Lazer<br>Reserva de emergência<br>Viagens<br>Aposentadoria            | Frustrações:  Investir errado e perder dinheiro                                 |
 | <img src="img/fernando_alves.jpg" width="150" height="150">                 | **Fernando Alves**                                                              |
-| Idade: entre 25 e 39 anos<br>Ocupação: Profissional Liberal                 | Aplicativos:  Comunicação<br>Serviços Financeiros                                 |
+| Idade: entre 25 e 39 anos<br>Ocupação: Profissional Liberal                 | Aplicativos:<br>Comunicação<br>Serviços Financeiros                                 |
 | Motivações: Comprar/reformar imóvel ou comprar/trocar o carro<br>Fonte de renda extra<br>Aposentadoria| Frustrações:  Instabilidade política prejudicar investimentos|
 
 <!--- > **Links Úteis**: 
