@@ -10,7 +10,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Para levantamento das Personas, foi realizadada a [Pesquisa - Perfil de investidor](https://docs.google.com/forms/d/e/1FAIpQLSfjqRgOiBQSQ025G97otpiJ7b3VG3CxzBuqh_xigACh5arYlA/closedform), por meio do Google Forms, no período de 24/03/2023 a 28/03/2023.
 
-Abaixo são apresentadas alguns dos perfis que responderam ao questionário:
+Abaixo são apresentados alguns dos perfis que responderam ao questionário:
 
 |                                                                             |                                                                                 |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
