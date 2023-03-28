@@ -12,6 +12,7 @@ Para levantamento das Personas, foi realizadada a **[Pesquisa - Perfil de invest
 
 Abaixo são apresentadas alguns dos perfis que responderam ao questionário:
 
+|                                                                             |                                                                                 |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | <img src="img/lucas_guimaraes.jpg" width="150" height="150">                | **Lucas Guimarães**                                                             |
 | Idade: entre 19 e 24 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
