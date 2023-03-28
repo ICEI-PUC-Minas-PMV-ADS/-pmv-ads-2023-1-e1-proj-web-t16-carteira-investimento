@@ -17,7 +17,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 | Motivações: Lazer                                                           | Frustrações:  Não informou                                                      |
 | <img src="img/barbara_sena.jpg" width="150" height="150">                   | **Bárbara Sena**                                                                |
 | Idade: entre 25 e 39 anos  Ocupação: Empregado no setor privado             | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
-| Motivações: Lazer                                                           | Frustrações:  Investir errado e perder dinheiro                                 |
+| Motivações: Lazer, Reserva de emergência, Viagens, Aposentadoria            | Frustrações:  Investir errado e perder dinheiro                                 |
 | <img src="img/fernando_alves.jpg" width="150" height="150">                 | **Fernando Alves**                                                              |
 | Idade: entre 25 e 39 anos  Ocupação: Profissional Liberal                   | Aplicativos:  Comunicação; Serviços Financeiros                                 |
 | Motivações: Comprar/reformar imóvel ou comprar/trocar o carro, Fonte de renda extra, Aposentadoria| Frustrações:  Instabilidade política prejudicar investimentos|
@@ -36,14 +36,16 @@ Lembre-se que você deve ser enumerar e descrever precisamente e personalizada t
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`            |PARA ... `MOTIVO/VALOR`                              |
+|--------------------|-----------------------------------------------|-----------------------------------------------------|
+|Usuário do sistema  | Cadastrar minhas carteiras de investimentos   | Para acompanhar meus objetivos financeiros          |
+|Usuário do sistema  | Cadastrar meus ativos                         | Para acompanhar o rendimento da carteira            |
+|Usuário do sistema  | Cadastrar minhas negociações                  | Para apurar imposto de renda devido                 |
+|Administrador       | Alterar permissões                            | Permitir que possam administrar contas              |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+<!--- Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
-<!--- > **Links Úteis**:
+> **Links Úteis**:
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
 > - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 > - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
