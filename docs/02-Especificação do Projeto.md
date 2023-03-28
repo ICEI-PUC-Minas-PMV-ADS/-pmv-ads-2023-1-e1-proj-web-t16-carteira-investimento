@@ -7,19 +7,23 @@
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto  --->
 
 ## Personas
-|                                                                             |                                                                                 |
+
+Para levantamento das Personas, foi realizadada a **[Pesquisa - Perfil de investidor]**(https://docs.google.com/forms/d/e/1FAIpQLSfjqRgOiBQSQ025G97otpiJ7b3VG3CxzBuqh_xigACh5arYlA/closedform), por meio do Google Forms, no período de 24/03/2023 a 28/03/2023.
+
+Abaixo são apresentadas alguns dos perfis que responderam ao questionário:
+
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | <img src="img/lucas_guimaraes.jpg" width="150" height="150">                | **Lucas Guimarães**                                                             |
-| Idade: entre 19 e 24 anos  Ocupação: Empregado no setor privado             | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
+| Idade: entre 19 e 24 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
 | Motivações: Reserva de emergência; Fonte de renda extra; Aposentadoria      | Frustrações:  Instabilidade política prejudicar investimentos                   |
 | <img src="img/pedro_william.jpg" width="150" height="150">                  | **Pedro Willian**                                                               |
-| Idade: entre 19 e 24 anos  Ocupação: Empregado no setor privado             | Aplicativos:  Serviços Financeiros; Outros                                      |
+| Idade: entre 19 e 24 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:  Serviços Financeiros; Outros                                      |
 | Motivações: Lazer                                                           | Frustrações:  Não informou                                                      |
 | <img src="img/barbara_sena.jpg" width="150" height="150">                   | **Bárbara Sena**                                                                |
-| Idade: entre 25 e 39 anos  Ocupação: Empregado no setor privado             | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
+| Idade: entre 25 e 39 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
 | Motivações: Lazer, Reserva de emergência, Viagens, Aposentadoria            | Frustrações:  Investir errado e perder dinheiro                                 |
 | <img src="img/fernando_alves.jpg" width="150" height="150">                 | **Fernando Alves**                                                              |
-| Idade: entre 25 e 39 anos  Ocupação: Profissional Liberal                   | Aplicativos:  Comunicação; Serviços Financeiros                                 |
+| Idade: entre 25 e 39 anos<br>Ocupação: Profissional Liberal                 | Aplicativos:  Comunicação; Serviços Financeiros                                 |
 | Motivações: Comprar/reformar imóvel ou comprar/trocar o carro, Fonte de renda extra, Aposentadoria| Frustrações:  Instabilidade política prejudicar investimentos|
 
 <!--- > **Links Úteis**: 
