@@ -12,19 +12,13 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | Idade: entre 19 e 24 anos  Ocupação: Empregado no setor privado             | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
 | Motivações: Reserva de emergência; Fonte de renda extra; Aposentadoria      | Frustrações:  Instabilidade política prejudicar investimentos                   |
-
 | <img src="img/pedro_william.jpg" width="150" height="150">                  | **Pedro Willian**                                                               |
-|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | Idade: entre 19 e 24 anos  Ocupação: Empregado no setor privado             | Aplicativos:  Serviços Financeiros; Outros                                      |
 | Motivações: Lazer                                                           | Frustrações:  Não informou                                                      |
-
 | <img src="img/barbara_sena.jpg" width="150" height="150">                   | **Bárbara Sena**                                                                |
-|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | Idade: entre 25 e 39 anos  Ocupação: Empregado no setor privado             | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
 | Motivações: Lazer                                                           | Frustrações:  Investir errado e perder dinheiro                                 |
-
 | <img src="img/fernando_alves.jpg" width="150" height="150">                 | **Fernando Alves**                                                              |
-|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | Idade: entre 25 e 39 anos  Ocupação: Profissional Liberal                   | Aplicativos:  Comunicação; Serviços Financeiros                                 |
 | Motivações: Comprar/reformar imóvel ou comprar/trocar o carro, Fonte de renda extra, Aposentadoria| Frustrações:  Instabilidade política prejudicar investimentos|
 
