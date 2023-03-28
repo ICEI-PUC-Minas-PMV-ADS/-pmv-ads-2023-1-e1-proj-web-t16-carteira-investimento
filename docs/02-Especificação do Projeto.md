@@ -7,9 +7,9 @@
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto  --->
 
 ## Personas
-
-| <img src="img/lucas_guimaraes.jpg" width="150" height="150">                | **Lucas Guimarães**                                                             |
+|                                                                             |                                                                                 |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| <img src="img/lucas_guimaraes.jpg" width="150" height="150">                | **Lucas Guimarães**                                                             |
 | Idade: entre 19 e 24 anos  Ocupação: Empregado no setor privado             | Aplicativos:  Redes sociais; Comunicação; Transporte; Serviços Financeiros      |
 | Motivações: Reserva de emergência; Fonte de renda extra; Aposentadoria      | Frustrações:  Instabilidade política prejudicar investimentos                   |
 | <img src="img/pedro_william.jpg" width="150" height="150">                  | **Pedro Willian**                                                               |
