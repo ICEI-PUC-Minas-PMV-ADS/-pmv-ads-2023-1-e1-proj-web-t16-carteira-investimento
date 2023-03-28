@@ -8,7 +8,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-| ![](img/lucas_guimaraes.jpg)                                                | **Lucas Guimarães**                                                             |
+| [](img/lucas_guimaraes.jpg)                                                | **Lucas Guimarães**                                                             |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | Idade: entre 19 e 24 anos  Ocupação: Empregado no setor privado             | Aplicativos:  * Redes sociais * Comunicação * Transporte * Serviços Financeiros |
 | Motivações:  * Reserva de emergência * Fonte de renda extra * Aposentadoria | Frustrações:  * Instabilidade política prejudicar investimentos                 |
