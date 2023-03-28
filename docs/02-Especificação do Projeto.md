@@ -8,9 +8,10 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
-
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+| ![](img/lucas_guimaraes.jpg)                                                | **Lucas Guimarães**                                                             |
+|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| Idade: entre 19 e 24 anos  Ocupação: Empregado no setor privado             | Aplicativos:  * Redes sociais * Comunicação * Transporte * Serviços Financeiros |
+| Motivações:  * Reserva de emergência * Fonte de renda extra * Aposentadoria | Frustrações:  * Instabilidade política prejudicar investimentos                 |
 
 > **Links Úteis**:
 > - [Rock Content](https://rockcontent.com/blog/personas/)
