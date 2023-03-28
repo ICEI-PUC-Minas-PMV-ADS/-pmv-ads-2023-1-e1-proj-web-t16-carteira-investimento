@@ -15,17 +15,17 @@ Abaixo são apresentadas alguns dos perfis que responderam ao questionário:
 |                                                                             |                                                                                 |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | <img src="img/lucas_guimaraes.jpg" width="150" height="150">                | **Lucas Guimarães**                                                             |
-| Idade:<br>entre 19 e 24 anos<br>Ocupação:<br>Empregado no setor privado           | Aplicativos:<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
-| Motivações:<br>Reserva de emergência<br>Fonte de renda extra<br>Aposentadoria      | Frustrações:<br>Instabilidade política prejudicar investimentos                   |
+| **Idade:**<br>entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
+| **Motivações:**<br>Reserva de emergência<br>Fonte de renda extra<br>Aposentadoria      | **Frustrações:**<br>Instabilidade política prejudicar investimentos                   |
 | <img src="img/pedro_william.jpg" width="150" height="150">                  | **Pedro Willian**                                                               |
-| Idade: entre 19 e 24 anos<br>Ocupação: Empregado no setor privado           | Aplicativos:<br>Serviços Financeiros<br>Outros                                      |
-| Motivações:<br>Lazer                                                           | Frustrações:<br>Não informou                                                      |
+| **Idade:** entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Serviços Financeiros<br>Outros                                      |
+| **Motivações:**<br>Lazer                                                           | **Frustrações:**<br>Não informou                                                      |
 | <img src="img/barbara_sena.jpg" width="150" height="150">                   | **Bárbara Sena**                                                                |
-| Idade:<br>entre 25 e 39 anos<br>Ocupação:<br>Empregado no setor privado           | Aplicativos:<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
-| Motivações:<br>Lazer<br>Reserva de emergência<br>Viagens<br>Aposentadoria            | Frustrações:<br>Investir errado e perder dinheiro                                 |
+| **Idade:**<br>entre 25 e 39 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
+| **Motivações:**<br>Lazer<br>Reserva de emergência<br>Viagens<br>Aposentadoria            | **Frustrações:**<br>Investir errado e perder dinheiro                                 |
 | <img src="img/fernando_alves.jpg" width="150" height="150">                 | **Fernando Alves**                                                              |
-| Idade:<br>entre 25 e 39 anos<br>Ocupação:<br>Profissional Liberal                 | Aplicativos:<br>Comunicação<br>Serviços Financeiros                                 |
-| Motivações:<br>Comprar/reformar imóvel ou comprar/trocar o carro<br>Fonte de renda extra<br>Aposentadoria| Frustrações:<br>Instabilidade política prejudicar investimentos|
+| **Idade:**<br>entre 25 e 39 anos<br>**Ocupação:**<br>Profissional Liberal                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                                 |
+| **Motivações:**<br>Comprar/reformar imóvel ou comprar/trocar o carro<br>Fonte de renda extra<br>Aposentadoria| **Frustrações:**<br>Instabilidade política prejudicar investimentos|
 
 <!--- > **Links Úteis**: 
 > - [Rock Content](https://rockcontent.com/blog/personas/)
