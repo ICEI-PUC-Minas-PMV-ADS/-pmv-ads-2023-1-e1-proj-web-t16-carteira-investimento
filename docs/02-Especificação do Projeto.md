@@ -65,18 +65,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| CRUD de carteira(s) de investimento(s) | ALTA | 
-|RF-002| CRUD de conta de usuário | MÉDIA |
-|RF-003| O site deve permitir ao usuário fazer o login da sua conta | MÉDIA |
-|RF-004| O site deve permitir ao usuário a configurar seu perfil | MÉDIA |
-|RF-005| O site deve oferecer uma funcionalidade de filtro/menu/busca para permitir ao usuário localizar seus ativos/ações | MÉDIA |
-|RF-006| O site deve permitir ao usuário adicionar, remover e editar seus ativos a qualquer instante | MÉDIA |
-|RF-007| O site deve permitir ao usuário visualizar detalhes de duas carteiras e de seus ativos | MÉDIA |
-|RF-008| O site deve exibir gráficos com às variações das carteiras e dos ativos | MÉDIA |
-|RF-009| O site deve exibir gráficos com às variações de saldo do usuário | MÉDIA |
-|RF-010| O site deve exibir ao usuário os impostos que vão ser gerados pelos seus ativos | MÉDIA |
-|RF-011| O site deve exibir gráficos dos rendimentos ou perdas do usuário | MÉDIA |
-|RF-012| O site deve permitir ao usuário importar notas de corretagem ou importar arquivo CSV ou planilha eletrônica com registro das negociações, ou registrar manualmente as negociações | ALTA |
+|RF-001| O site deve permitir ao usuário a criar uma conta e configurar carteiras para investimentos | ALTA | 
+|RF-002| O site deve permitir ao usuário fazer login em sua conta, configurar e editar seu perfil | MÉDIA |
+|RF-003| O site deve permitir ao usuário adicionar, remover e editar seus ativos a qualquer instante. Além disso, visualizar detalhes de duas carteiras e de seus ativos | MÉDIA |
+|RF-004| O site deve exibir gráficos com às variações das carteiras e dos ativos | MÉDIA |
+|RF-005| O site deve exibir gráficos com às variações de saldo do usuário | MÉDIA |
+|RF-006| O site deve exibir ao usuário os impostos que vão ser gerados pelos seus ativos | MÉDIA |
+|RF-007| O site deve exibir gráficos dos rendimentos ou perdas do usuário | MÉDIA |
+|RF-008| O site deve permitir ao usuário importar notas de corretagem ou importar arquivo CSV ou planilha eletrônica com registro das negociações, ou registrar manualmente as negociações | ALTA |
 
 ### Requisitos não Funcionais
 
@@ -87,6 +83,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku) | ALTA |
 |RNF-004| O site deve ter bom nível de contraste entre os elementos da tela em conformidade | MÉDIA |
 |RNF-005| O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) | ALTA |
+|RNF-006| O site deve conter acessibilidade digital para que todos os grupos de pessoas possam perceber, entender, navegar e interagir de maneira efetiva com as páginas
 
 <!--- Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
