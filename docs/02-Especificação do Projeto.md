@@ -83,7 +83,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku) | ALTA |
 |RNF-004| O site deve ter bom nível de contraste entre os elementos da tela em conformidade | MÉDIA |
 |RNF-005| O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) | ALTA |
-|RNF-006| O site deve conter acessibilidade digital para que todos os grupos de pessoas possam perceber, entender, navegar e interagir de maneira efetiva com as páginas
+|RNF-006| O site deve conter acessibilidade digital para que todos os grupos de pessoas possam perceber, entender, navegar e interagir de maneira efetiva com as páginas | ALTA |
 
 <!--- Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
