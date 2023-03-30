@@ -26,7 +26,7 @@ Abaixo são apresentados alguns dos perfis que responderam ao questionário:
 | <img src="img/fernando_alves.jpg" width="150" height="150">                 | **Fernando Alves**                                                              |
 | **Idade:**<br>Entre 25 e 39 anos<br>**Ocupação:**<br>Profissional Liberal                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                                 |
 | **Motivações:**<br>Comprar/reformar imóvel ou comprar/trocar o carro<br>Fonte de renda extra<br>Aposentadoria| **Frustrações:**<br>Instabilidade política prejudicar investimentos|
-              |
+            |
 | <img src="img/[Luciano pesquisa].jpeg" width= "150" heigth = "150">         | **Luciano Bragatto**                                                            |                                                            |
 | **Idade:**<br>Entre 40 e 59 anos<br>**Ocupação:**<br>Empregado do setor público            | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros
                |             
