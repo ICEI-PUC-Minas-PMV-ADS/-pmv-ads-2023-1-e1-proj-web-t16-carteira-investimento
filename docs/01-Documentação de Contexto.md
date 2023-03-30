@@ -26,7 +26,7 @@ Como objetivos específicos, podemos destacar:
 
 -   Ajudar o investidor inexperiente no aprendizado das finanças, visando o aumento de seu patrimônio; 
 -   Ajudar o investidor inexperiente a apurar os impostos devidos sobre os investimentos, diminuindo e/ou eliminando eventuais recolhimentos de multas e juros junto à Receita Federal. 
--   
+
 <!--- Aumentar o nível de proficiência do investidor é algo que não teríamos como medir, seu aumento de patrimônio sim.
 O quantitativo pago de juros e multas à Receita Federal é algo que teríamos como medir --->
 
