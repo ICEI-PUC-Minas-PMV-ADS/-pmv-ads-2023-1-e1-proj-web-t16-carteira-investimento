@@ -15,18 +15,27 @@ Abaixo são apresentados alguns dos perfis que responderam ao questionário:
 |                                                                             |                                                                                 |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | <img src="img/lucas_guimaraes.jpg" width="150" height="150">                | **Lucas Guimarães**                                                             |
-| **Idade:**<br>entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
+| **Idade:**<br>Entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
 | **Motivações:**<br>Reserva de emergência<br>Fonte de renda extra<br>Aposentadoria      | **Frustrações:**<br>Instabilidade política prejudicar investimentos                   |
 | <img src="img/pedro_william.jpg" width="150" height="150">                  | **Pedro Willian**                                                               |
-| **Idade:**<br>entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Serviços Financeiros<br>Outros                                      |
+| **Idade:**<br>Entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Serviços Financeiros<br>Outros                                      |
 | **Motivações:**<br>Lazer                                                           | **Frustrações:**<br>Não informou                                                      |
 | <img src="img/barbara_sena.jpg" width="150" height="150">                   | **Bárbara Sena**                                                                |
-| **Idade:**<br>entre 25 e 39 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
+| **Idade:**<br>Entre 25 e 39 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros      |
 | **Motivações:**<br>Lazer<br>Reserva de emergência<br>Viagens<br>Aposentadoria            | **Frustrações:**<br>Investir errado e perder dinheiro                                 |
 | <img src="img/fernando_alves.jpg" width="150" height="150">                 | **Fernando Alves**                                                              |
-| **Idade:**<br>entre 25 e 39 anos<br>**Ocupação:**<br>Profissional Liberal                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                                 |
+| **Idade:**<br>Entre 25 e 39 anos<br>**Ocupação:**<br>Profissional Liberal                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                                 |
 | **Motivações:**<br>Comprar/reformar imóvel ou comprar/trocar o carro<br>Fonte de renda extra<br>Aposentadoria| **Frustrações:**<br>Instabilidade política prejudicar investimentos|
-
+              |
+| <img src="img/[Luciano pesquisa].jpeg" width= "150" heigth = "150">            | **Luciano Bragatto**                                                              |
+| **Idade:**<br>Entre 40 e 59 anos<br>**Ocupação:**<br>Empregado do setor público                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                                 |
+| **Motivações:**<br>Lazer<br>Consumo de bens e serviço<br>Reserva de emergência<br>Viajens| **Frustrações:**<br>Variaçao de mercado|
+       |
+| <img src="img/[ahyla_cabral].jpg" width="150"  height="150">                   | **Ahyla Cabral**                                                                 |
+| **Idade:**<br>Entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes<br>Comunicação sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros     
+                   |
+| **Motivações:**<br>Lazer<br>Reserva de emergência<br>Viagens<br>Aposentadoria            | **Frustrações:**<br>Investir errado e perder dinheiro e o cenário político atrapalhar|
+      
 <!--- > **Links Úteis**: 
 > - [Rock Content](https://rockcontent.com/blog/personas/)
 > - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
@@ -47,6 +56,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Usuário do sistema  | Cadastrar meus ativos                         | Para acompanhar o rendimento da carteira            |
 |Usuário do sistema  | Cadastrar minhas negociações                  | Para apurar imposto de renda devido                 |
 |Administrador       | Alterar permissões                            | Permitir que possam administrar contas              |
+|Usuário do sistema  | Cadastrar as variações do mercado             | Encontrar padrões e vizualizar melhor as mudanças   |
+|Usuário do sistema  | Cadastrar minhas perdas e investimentos       | Para acompanhar minhas perdas e ganhos              |
 
 <!--- Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
