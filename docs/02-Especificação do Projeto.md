@@ -22,7 +22,7 @@ Abaixo são apresentados alguns dos perfis que responderam ao questionário, e q
 | <img src="img/fernando_alves.jpg" width="150" height="150">                 | **Fernando Alves**                                                              |
 | **Idade:**<br>Entre 25 e 39 anos<br>**Ocupação:**<br>Profissional Liberal         | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros|
 | **Motivações:**<br>Comprar/reformar imóvel ou comprar/trocar o carro<br>Fonte de renda extra<br>Aposentadoria| **Frustrações:**<br>Instabilidade política prejudicar investimentos|
-| <img src="img/luciano pesquisa.jpeg" width= "150" heigth = "150">           | **Luciano Bragatto**                                                            |       
+| <img src="img/Luciano%20pesquisa.jpeg" width= "150" heigth = "150">           | **Luciano Bragatto**                                                          |     
 | **Idade:**<br>Entre 40 e 59 anos<br>**Ocupação:**<br>Empregado do setor público    | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                  |       
 | **Motivações:**<br>Lazer<br>Consumo de bens e serviço<br>Reserva de emergência<br>Viajens   | **Frustrações:**<br>Variaçao de mercado                         |
 | <img src="img/Ahyla__Cabral.jpg" width="150"  height="150">                 | **Ahyla Cabral**                                                                |       
