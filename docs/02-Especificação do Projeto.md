@@ -27,13 +27,13 @@ Abaixo são apresentados alguns dos perfis que responderam ao questionário:
 | **Idade:**<br>Entre 25 e 39 anos<br>**Ocupação:**<br>Profissional Liberal                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                                 |
 | **Motivações:**<br>Comprar/reformar imóvel ou comprar/trocar o carro<br>Fonte de renda extra<br>Aposentadoria| **Frustrações:**<br>Instabilidade política prejudicar investimentos|
               |
-| <img src="img/[Luciano pesquisa].jpeg" width= "150" heigth = "150">            | **Luciano Bragatto**                                                              |
-| **Idade:**<br>Entre 40 e 59 anos<br>**Ocupação:**<br>Empregado do setor público                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                                 |
+| <img src="img/[Luciano pesquisa](https://user-images.githubusercontent.com/100219068/228844827-b24d79b2-5297-4ad0-8ed8-287b0660e5e2.jpeg)" width= "150" heigth = "150">            | **Luciano Bragatto**                                                                                                                        |
+| **Idade:**<br>Entre 40 e 59 anos<br>**Ocupação:**<br>Empregado do setor público                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                           |
 | **Motivações:**<br>Lazer<br>Consumo de bens e serviço<br>Reserva de emergência<br>Viajens| **Frustrações:**<br>Variaçao de mercado|
        |
-| <img src="img/[ahyla_cabral].jpg" width="150"  height="150">                   | **Ahyla Cabral**                                                                 |
+| <img src="img/![ahyla_cabral](https://user-images.githubusercontent.com/100219068/228845100-2149b9c6-7fcd-4373-9781-a2a2ad1fc238.jpg)" width="150"  height="150">                   | **Ahyla Cabral**                                                                                                                                |
 | **Idade:**<br>Entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes<br>Comunicação sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros     
-                   |
+              |
 | **Motivações:**<br>Lazer<br>Reserva de emergência<br>Viagens<br>Aposentadoria            | **Frustrações:**<br>Investir errado e perder dinheiro e o cenário político atrapalhar|
       
 <!--- > **Links Úteis**: 
