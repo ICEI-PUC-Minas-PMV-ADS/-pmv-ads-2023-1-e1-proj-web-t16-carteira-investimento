@@ -27,14 +27,14 @@ Abaixo são apresentados alguns dos perfis que responderam ao questionário:
 | **Idade:**<br>Entre 25 e 39 anos<br>**Ocupação:**<br>Profissional Liberal                 | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros                                 |
 | **Motivações:**<br>Comprar/reformar imóvel ou comprar/trocar o carro<br>Fonte de renda extra<br>Aposentadoria| **Frustrações:**<br>Instabilidade política prejudicar investimentos|
             |
-| <img src="img/[Luciano pesquisa].jpeg" width= "150" heigth = "150">         | **Luciano Bragatto**                                                            |                                                            |
+| <img src="img/[Luciano pesquisa].jpeg" width= "150" heigth = "150">         | **Luciano Bragatto**                                                            |       
 | **Idade:**<br>Entre 40 e 59 anos<br>**Ocupação:**<br>Empregado do setor público            | **Aplicativos:**<br>Comunicação<br>Serviços Financeiros
                |             
 | **Motivações:**<br>Lazer<br>Consumo de bens e serviço<br>Reserva de emergência<br>Viajens   | **Frustrações:**<br>Variaçao de mercado|
               |
-| <img src="img/![ahyla_cabral].jpeg" width="150"  height="150">              | **Ahyla Cabral**                                                                |                                                                  |
+| <img src="img/![ahyla_cabral].jpeg" width="150"  height="150">              | **Ahyla Cabral**                                                                |       
 | **Idade:**<br>Entre 19 e 24 anos<br>**Ocupação:**<br>Empregado no setor privado           | **Aplicativos:**<br>Redes<br>Comunicação sociais<br>Comunicação<br>Transporte<br>Serviços Financeiros     
-              |
+               |
 | **Motivações:**<br>Lazer<br>Reserva de emergência<br>Viagens<br>Aposentadoria            | **Frustrações:**<br>Investir errado e perder dinheiro e o cenário político atrapalhar|
       
 <!--- > **Links Úteis**: 
