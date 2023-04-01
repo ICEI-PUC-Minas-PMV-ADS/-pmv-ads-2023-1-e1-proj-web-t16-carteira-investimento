@@ -1,5 +1,7 @@
 # Capitalize: Sistema para controle de investimentos e gerenciamento de patrimônio 
 
+<img src="docs/img/logo_marca.png">
+
 `CURSO`: Análise e Desenvolvimento de Sistemas
 
 `DISCIPLINA`: Eixo 1 - Projeto: Desenvolvimento de Aplicação Web Front-End
