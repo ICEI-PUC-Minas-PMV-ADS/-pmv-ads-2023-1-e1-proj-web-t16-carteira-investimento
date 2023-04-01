@@ -1,6 +1,6 @@
-# Capitalize: Sistema para controle de investimentos e gerenciamento de patrimônio 
-
 <img src="docs/img/logo_marca.png">
+
+# Capitalize: Sistema para controle de investimentos e gerenciamento de patrimônio 
 
 `CURSO`: Análise e Desenvolvimento de Sistemas
 
