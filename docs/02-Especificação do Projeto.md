@@ -33,14 +33,15 @@ Abaixo são apresentados alguns dos perfis que responderam ao questionário, e q
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`            |PARA ... `MOTIVO/VALOR`                              |
-|--------------------|-----------------------------------------------|-----------------------------------------------------|
-|Usuário do sistema  | Cadastrar minhas carteiras de investimentos   | Para acompanhar meus objetivos financeiros          |
-|Usuário do sistema  | Cadastrar meus ativos                         | Para acompanhar o rendimento da carteira            |
-|Usuário do sistema  | Cadastrar minhas negociações                  | Para apurar imposto de renda devido                 |
-|Administrador       | Alterar permissões                            | Permitir que possam administrar contas              |
-|Usuário do sistema  | Cadastrar as variações do mercado             | Encontrar padrões e vizualizar melhor as mudanças   |
-|Usuário do sistema  | Cadastrar minhas perdas e investimentos       | Para acompanhar minhas perdas e ganhos              |
+| EU COMO   ... `PERSONA` | QUERO/PRECISO ...   `FUNCIONALIDADE`                                                                           | PARA ... `MOTIVO/VALOR`                                                                  |
+|-------------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| Usuário   do sistema    | Cadastrar meus investimentos na aplicação                                                                      | Gerenciá-los e acompanhar seu desempenho ao longo do tempo                               |
+| Usuário   do sistema    | Que a aplicação calcule automaticamente a rentabilidade dos   meus investimentos                               | Avaliar seu desempenho de forma precisa e eficiente                                      |
+| Usuário do sistema      | Visualizar gráficos e relatórios de desempenho dos meus   investimentos                                        | Tomar decisões mais informadas sobre onde investir meu   dinheiro                        |
+| Usuário do sistema      | Receber alertas e notificações sobre mudanças significativas   nos meus investimentos, como vencimento próximo | Tomar decisões oportunas e relevantes                                                    |
+| Usuário do sistema      | Simular investimentos futuros em diferentes cenários de   mercado                                              | Avaliar o potencial de retorno e risco em diferentes   circunstâncias                    |
+| Usuário do sistema      | Cadastrar todos os meus investimentos em diferentes corretoras                                                 | Gerenciá-los de forma centralizada                                                       |
+| Usuário do sistema      | Apurar meus tributos                                                                                           | Geração da guia de recolhimento e demonstrativos de resultados   para o imposto de renda |
 
 ## Requisitos
 
