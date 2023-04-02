@@ -33,15 +33,15 @@ Abaixo são apresentados alguns dos perfis que responderam ao questionário, e q
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-| EU COMO   ... `PERSONA` | QUERO/PRECISO ...   `FUNCIONALIDADE`                                                                           | PARA ... `MOTIVO/VALOR`                                                                  |
-|-------------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| Usuário   do sistema    | Cadastrar meus investimentos na aplicação                                                                      | Gerenciá-los e acompanhar seu desempenho ao longo do tempo                               |
-| Usuário   do sistema    | Que a aplicação calcule automaticamente a rentabilidade dos   meus investimentos                               | Avaliar seu desempenho de forma precisa e eficiente                                      |
-| Usuário do sistema      | Visualizar gráficos e relatórios de desempenho dos meus   investimentos                                        | Tomar decisões mais informadas sobre onde investir meu   dinheiro                        |
-| Usuário do sistema      | Receber alertas e notificações sobre mudanças significativas   nos meus investimentos, como vencimento próximo | Tomar decisões oportunas e relevantes                                                    |
-| Usuário do sistema      | Simular investimentos futuros em diferentes cenários de   mercado                                              | Avaliar o potencial de retorno e risco em diferentes   circunstâncias                    |
-| Usuário do sistema      | Cadastrar todos os meus investimentos em diferentes corretoras                                                 | Gerenciá-los de forma centralizada                                                       |
-| Usuário do sistema      | Apurar meus tributos                                                                                           | Geração da guia de recolhimento e demonstrativos de resultados   para o imposto de renda |
+| EU COMO ... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR` |
+|---|---|---|
+| Usuário do sistema | Cadastrar meus investimentos na aplicação | Gerenciá-los e acompanhar seu desempenho ao longo do tempo |
+| Usuário do sistema | Que a aplicação calcule automaticamente a rentabilidade dos meus investimentos | Avaliar seu desempenho de forma precisa e eficiente |
+| Usuário do sistema | Visualizar gráficos e relatórios de desempenho dos meus investimentos | Tomar decisões mais informadas sobre onde investir meu dinheiro |
+| Usuário do sistema | Receber alertas e notificações sobre mudanças significativas nos meus investimentos, como vencimento próximo | Tomar decisões oportunas e relevantes |
+| Usuário do sistema | Simular investimentos futuros em diferentes cenários de mercado | Avaliar o potencial de retorno e risco em diferentes circunstâncias |
+| Usuário do sistema | Cadastrar todos os meus investimentos em diferentes corretoras | Gerenciá-los de forma centralizada |
+| Usuário do sistema | Apurar meus tributos | Geração da guia de recolhimento e demonstrativos de resultados para o imposto de renda |
 
 ## Requisitos
 
@@ -49,27 +49,26 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| O site deve permitir ao usuário a criar uma conta e configurar carteiras para investimentos | ALTA | 
-|RF-002| O site deve permitir ao usuário fazer login em sua conta, configurar e editar seu perfil | MÉDIA |
-|RF-003| O site deve permitir ao usuário adicionar, remover e editar seus ativos a qualquer instante. Além disso, visualizar detalhes de duas carteiras e de seus ativos | MÉDIA |
-|RF-004| O site deve exibir gráficos com às variações das carteiras e dos ativos | MÉDIA |
-|RF-005| O site deve exibir gráficos com às variações de saldo do usuário | MÉDIA |
-|RF-006| O site deve exibir ao usuário os impostos que vão ser gerados pelos seus ativos | MÉDIA |
-|RF-007| O site deve exibir gráficos dos rendimentos ou perdas do usuário | MÉDIA |
-|RF-008| O site deve permitir ao usuário importar notas de corretagem ou importar arquivo CSV ou planilha eletrônica com registro das negociações, ou registrar manualmente as negociações | ALTA |
+| ID | Descrição do Requisito | Prioridade |
+|---|---|---|
+| RF-001 | A aplicação deve permitir que o usuário cadastre e gerencie seus investimentos, com informações como valor investido, tipo de investimento, data de vencimento, taxa de juros, etc. | ALTA |
+| RF-002 | A aplicação deve ser capaz de calcular a rentabilidade dos investimentos cadastrados pelo usuário. | ALTA |
+| RF-003 | A aplicação deve fornecer ferramentas para análise de desempenho dos investimentos, como dashboards, gráficos e relatórios. | MÉDIA |
+| RF-004 | A aplicação deve permitir que o usuário configure alertas e notificações para acompanhar o desempenho dos seus investimentos, como avisos de vencimento, mudanças nas taxas de juros, etc. | MÉDIA |
+| RF-005 | A aplicação deve permitir que o usuário simule investimentos futuros, de acordo com diferentes cenários de mercado. | MÉDIA |
+| RF-006 | A aplicação deve permitir que o usuário visualize seus investimentos realizados em diferentes corretoras. | ALTA |
+| RF-007 | A aplicação deve permitir que o usuário gere a guia de recolhimento e relatórios de demonstrativos de resultados para fins de declaração de imposto de renda. | ALTA |
 
 ### Requisitos não Funcionais
 
-|ID | Descrição do Requisito  |Prioridade |
-|------|-----------------------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-003| O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku) | ALTA |
-|RNF-004| O site deve ter bom nível de contraste entre os elementos da tela em conformidade | MÉDIA |
-|RNF-005| O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) | ALTA |
-|RNF-006| O site deve conter acessibilidade digital para que todos os grupos de pessoas possam perceber, entender, navegar e interagir de maneira efetiva com as páginas | ALTA |
+| ID | Descrição do Requisito |
+|---|---|
+| RNF-001 | Usabilidade: a aplicação deve ser fácil de usar e intuitiva, com interface amigável e boa experiência do usuário. |
+| RNF-002 | Segurança: a aplicação deve garantir a segurança das informações do usuário, utilizando protocolos de segurança, criptografia e autenticação adequados. |
+| RNF-003 | Confiabilidade: a aplicação deve ser confiável, com baixa probabilidade de erros ou falhas. |
+| RNF-004 | Performance: a aplicação deve ser rápida e responsiva, com boa performance mesmo em situações de alta carga de uso. |
+| RNF-005 | Escalabilidade: a aplicação deve ser capaz de lidar com um grande número de usuários e investimentos cadastrados, sem comprometer sua performance ou segurança. |
+| RNF-006 | Manutenibilidade: a aplicação deve ser facilmente mantida e atualizada, com código organizado e documentação clara. |
 
 ## Restrições
 
