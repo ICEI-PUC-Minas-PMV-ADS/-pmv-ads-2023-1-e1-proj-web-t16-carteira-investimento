@@ -43,7 +43,7 @@ Desta forma, a equipa está organizada da seguinte maneira:
 - `Scrum Master`: Marco
 - `Product Owner`: Wagner Cipriano da Silva
 - `Equipe de Desenvolvimento`: Ahyla, Caê, Lucas, Marco, Paulo e Pedro
-- `Equipe de Design: Ahyla, Caê, Lucas, Marco, Paulo e Pedro
+- `Equipe de Design`: Ahyla, Caê, Lucas, Marco, Paulo e Pedro
 
 ### Processo
 
