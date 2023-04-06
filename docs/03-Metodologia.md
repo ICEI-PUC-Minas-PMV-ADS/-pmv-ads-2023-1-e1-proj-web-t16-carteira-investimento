@@ -41,6 +41,11 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 Desta forma, a equipa está organizada da seguinte maneira:
 
+- `Scrum Master`: Marco
+- `Product Owner`: Wagner Cipriano da Silva
+- `Equipe de Desenvolvimento`: Ahyla, Caê, Lucas, Marco, Paulo e Pedro
+- `Equipe de Design: Ahyla, Caê, Lucas, Marco, Paulo e Pedro
+
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
 > Projeto](https://mindmaster.com.br/scrum-11-passos/)
