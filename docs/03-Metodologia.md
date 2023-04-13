@@ -28,7 +28,7 @@ Para a organização e distribuição das tarefas do projeto, o grupo esta utili
 As ferramentas empregadas no projeto são:
 
 | **Ambiente** | **Plataforma** | **Link de acesso** |
-|:---:|:---:|:---:|
+|:----|:---|:-----|
 | Comunicação | Teams <br> Whatsapp | https://teams.microsoft.com/ <br> https://www.whatsapp.com/ |
 | Documentos do Projeto | Github <br> Sharepoint | https://github.com/ <br> https://sgapucminasbr.sharepoint.com/ |
 | Editor de código | Visual Studio Code | https://code.visualstudio.com |
