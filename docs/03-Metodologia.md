@@ -30,11 +30,11 @@ As ferramentas empregadas no projeto são:
 | **Ambiente** | **Plataforma** | **Link de acesso** |
 |:---:|:---:|:---:|
 | Comunicação | Teams <br> Whatsapp | https://teams.microsoft.com/ <br> https://www.whatsapp.com/ |
-| Documentos do Projeto | Github <br> Sharepoint | https://github.com/ICEI-PUC-Minas-PMV-ADS/-pmv-ads-2023-1-e1-proj-web-t16-carteira-investimento <br> https://sgapucminasbr.sharepoint.com/:f:/s/Projeto272/EhTZbZwuFYdFnYwtImbQFt0B8a_1sEC3gaU67XPEUcWcWg?e=vATPjz |
+| Documentos do Projeto | Github <br> Sharepoint | https://github.com/ <br> https://sgapucminasbr.sharepoint.com/ |
 | Editor de código | Visual Studio Code | https://code.visualstudio.com |
-| Gerenciamento do Projeto | Github | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/295 |
+| Gerenciamento do Projeto | Github | https://github.com/ |
 | Projeto de Interface e Wireframe |  |  |
-| Respositório do Código Fonte | Github | https://github.com/ICEI-PUC-Minas-PMV-ADS/-pmv-ads-2023-1-e1-proj-web-t16-carteira-investimento |
+| Respositório do Código Fonte | Github | https://github.com/ |
 
 O Teams será usado para videoconferências das reuniões de planejamento do sprint, backlog do sprint, revisão do sprit e revisão do sprint. O Whatsapp para comunicações pontuais no decorrer do dia.
 
