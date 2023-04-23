@@ -8,6 +8,10 @@ Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com
 
 <img src="img/design_style.png">
 
+## Template padrão
+
+
+
 > **Links Úteis**:
 >
 > - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
