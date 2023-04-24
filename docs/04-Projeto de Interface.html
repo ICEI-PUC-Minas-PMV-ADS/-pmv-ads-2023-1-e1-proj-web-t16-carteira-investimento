@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.649">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>projeto-de-interface</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="04-Projeto de Interface_files/libs/clipboard/clipboard.min.js"></script>
+<script src="04-Projeto de Interface_files/libs/quarto-html/quarto.js"></script>
+<script src="04-Projeto de Interface_files/libs/quarto-html/popper.min.js"></script>
+<script src="04-Projeto de Interface_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="04-Projeto de Interface_files/libs/quarto-html/anchor.min.js"></script>
+<link href="04-Projeto de Interface_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="04-Projeto de Interface_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="04-Projeto de Interface_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="04-Projeto de Interface_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="04-Projeto de Interface_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="projeto-de-interface" class="level1">
+<h1>Projeto de Interface</h1>
+<p>Estamos enfatizando atributos importantes na criação da interface do sistema, como agilidade, acessibilidade e usabilidade. Como resultado, todas as telas do projeto possuem uma identidade visual consistente, projetadas para funcionar tanto em desktops quanto em dispositivos móveis.</p>
+<!-- <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+
+Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
+
+ Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>. -->
+<section id="user-flow" class="level2">
+<h2 class="anchored" data-anchor-id="user-flow">User Flow</h2>
+<p>A figura abaixo ilustra o fluxo de interação do usuário através das telas do sistema. As telas individuais são descritas em detalhes na seção de Wireframes subsequente.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/user_flow.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Exemplo de UserFlow</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="wireframes" class="level2">
+<h2 class="anchored" data-anchor-id="wireframes">Wireframes</h2>
+<p>As telas do projeto são apresentadas e seguem uma estrutura comum, que consiste em três grandes blocos: 1. Cabeçalho - contém elementos fixos de identidade, como o logotipo, e a navegação principal do site, como o menu da aplicação. 2. Barra lateral - exibe elementos de navegação secundária à esquerda. 3. Conteúdo - apresenta o conteúdo específico da tela em questão.</p>
+<section id="tela---home-page" class="level3">
+<h3 class="anchored" data-anchor-id="tela---home-page">Tela - Home Page</h3>
+<p>A Home Page apresenta opções de direcionamento para login e cadastro e para mais informações sobre a características do serviço, planos, FAQ e sobre a empresa (âncoras na própria Home - site One page). As telas <code>Criar Conta</code>, <code>Fazer Login</code> e <code>Redefinir Senha</code>, exibidas na sequência, podem ser acessadas a partir da Home.</p>
+<p><img src="img/Homepage.jpg" height="50%"></p>
+</section>
+<section id="tela---criar-conta" class="level3">
+<h3 class="anchored" data-anchor-id="tela---criar-conta">Tela - Criar Conta</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/criarConta.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Criar-conta</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---fazer-login" class="level3">
+<h3 class="anchored" data-anchor-id="tela---fazer-login">Tela - Fazer Login</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/fazerLogin.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Fazer-Login</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---redefinir-senha" class="level3">
+<h3 class="anchored" data-anchor-id="tela---redefinir-senha">Tela - Redefinir Senha</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/telaRedefinirSenha.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Redefinir-Senha</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="tela---dashboard">Tela - Dashboard</h3>
+<p>Após o login, o usuário é direcionado para a tela Dashboard (template de Wireframe padrão), que apresenta gráficos e informações resumidas sobre o(s) portfólio(s) do usuário. Informações mais detalhadas sobre cada item, bem como geração de relatórios dos mesmos, devem ser buscados nas páginas específicas, por meio do menu lateral.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/dashBoard.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">DashBoard</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---configurar-carteira" class="level3">
+<h3 class="anchored" data-anchor-id="tela---configurar-carteira">Tela - Configurar Carteira</h3>
+<p>Teste</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/telaConfigCarteira.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Configurar Carteira</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---configurar-carteira-1" class="level3">
+<h3 class="anchored" data-anchor-id="tela---configurar-carteira-1">Tela - Configurar Carteira</h3>
+<p>Teste</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/telaConfigCarteira2.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Configurar Carteira</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---proventos" class="level3">
+<h3 class="anchored" data-anchor-id="tela---proventos">Tela - Proventos</h3>
+<p>Teste</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/telaProventos.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Proventos</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---evolução-patrimônio" class="level3">
+<h3 class="anchored" data-anchor-id="tela---evolução-patrimônio">Tela - Evolução Patrimônio</h3>
+<p>Teste</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/telaEvoluçãoPatrimonio.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Evolução Patrimônio</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---imposto-de-renda" class="level3">
+<h3 class="anchored" data-anchor-id="tela---imposto-de-renda">Tela - Imposto de Renda</h3>
+<p>Teste</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/telaIR.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Imposto de Renda</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tela---perfil" class="level3">
+<h3 class="anchored" data-anchor-id="tela---perfil">Tela - Perfil</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/telaPerfil.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Perfil</figcaption><p></p>
+</figure>
+</div>
+<!-- São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
+ 
+> **Links Úteis**:
+> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
+> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
+> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+> - [Figma](https://www.figma.com/)
+> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
+> - [Axure](https://www.axure.com/edu) (Licença Educacional)
+> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional) -->
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

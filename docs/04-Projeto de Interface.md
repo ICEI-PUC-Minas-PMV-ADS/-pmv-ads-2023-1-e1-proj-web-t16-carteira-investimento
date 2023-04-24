@@ -13,15 +13,7 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 A figura abaixo ilustra o fluxo de interação do usuário através das telas do sistema. As telas individuais são descritas em detalhes na seção de Wireframes subsequente.
 
-![Exemplo de UserFlow](img/user_flow.svg)
-
-<!-- Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools) -->
-
+![Exemplo de UserFlow](img/user_flow.png)
 
 ## Wireframes
 
@@ -30,79 +22,44 @@ As telas do projeto são apresentadas e seguem uma estrutura comum, que consiste
 2. Barra lateral - exibe elementos de navegação secundária à esquerda.
 3. Conteúdo - apresenta o conteúdo específico da tela em questão.
 
-### Tela - Home Page
+### Telas - Home Page, Criar Conta, Login e Redefinir Senha
 
-A Home Page apresenta opção de login, para usuário já cadastrado, de cadastro, para usuário ainda não cadastrado. Também conta com links para mais informações sobre a características do serviço, planos, FAQ e informações sobre a empresa (âncoras na própria Home - site One page).
- 
-![Home-Page](img/Homepage.jpg)
+A Home Page apresenta opções de direcionamento para login e cadastro e para mais informações sobre a características do serviço, planos, FAQ e sobre a empresa (âncoras na própria Home - site One page). As telas `Criar Conta`, `Fazer Login` e `Redefinir Senha`, exibidas na sequência, podem ser acessadas a partir da Home.
 
-### Tela - Criar Conta
-
-Teste
+<img src="img/Homepage.jpg" height="50%"> 
 
 ![Criar-conta](img/criarConta.jpg)
  
-### Tela - Fazer Login
-
-Teste
-
 ![Fazer-Login](img/fazerLogin.jpg)
- 
-### Tela - Redefinir Senha
-
-Teste
- 
+  
 ![Redefinir-Senha](img/telaRedefinirSenha.jpg)
 
 ### Tela - Dashboard
 
-Teste
+Após o login, o usuário é direcionado para a tela Dashboard (template de Wireframe padrão), que apresenta gráficos e informações resumidas sobre o(s) portfólio(s) do usuário. Informações mais detalhadas sobre cada item, bem como geração de relatórios dos mesmos, devem ser buscados nas páginas específicas, por meio do menu lateral.
  
 ![DashBoard](img/dashBoard.jpg)
  
-### Tela - Perfil
+### Tela - Carteira
 
-Teste
- 
-![Perfil](img/telaPerfil.jpg)
- 
-### Tela - Configurar Carteira
-
-Teste
+No menu `Carteira` podem ser acessadas as opções referentes à `Configuração`, à `Rentabilidade`, ao `Patrimônio`, às `Transações` e ao `Proventos`, conforme imagens abaixo. 
  
 ![Configurar Carteira](img/telaConfigCarteira.jpg)
  
-### Tela - Configurar Carteira
-
-Teste
- 
 ![Configurar Carteira](img/telaConfigCarteira2.jpg)
- 
-### Tela - Proventos
 
-Teste
- 
+![Evolução Patrimônio](img/telaEvoluçãoPatrimonio.jpg)
+
 ![Proventos](img/telaProventos.jpg)
  
-### Tela - Evolução Patrimônio
+### Tela - Relatórios 
 
-Teste
- 
-![Evolução Patrimônio](img/telaEvoluçãoPatrimonio.jpg)
- 
-### Tela - Imposto de Renda
-
-Teste
+A partir de cada uma das telas no menu `Carteira` é possível acessar seus respectivos relatórios, exceto o relatório do `Imposto de Renda`, cujo acesso se dá apenas pelo menu `Relatórios`. Neta tela é possível verificar o imposto de renda apurado no exercício e emitir o Documento de Arrecadação de Receitas Federais (DARF) para seu pagamento, bem como exibir relatório para Declaração de Ajuste Anual do Imposto de Renda de Pessoa Física.  
  
 ![Imposto de Renda](img/telaIR.jpg)
- 
-<!-- São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional) -->
+
+### Tela - Perfil
+
+Esta tela permite ao usuário configurar seu perfil e alterar dados cadastrais.
+
+![Perfil](img/telaPerfil.jpg)
