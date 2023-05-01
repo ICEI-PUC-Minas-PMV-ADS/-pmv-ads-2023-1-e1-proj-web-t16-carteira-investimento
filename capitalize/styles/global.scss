@@ -1,0 +1,12 @@
+:root {
+  --primary: #205366;
+  --secondary: #6da0b3;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
