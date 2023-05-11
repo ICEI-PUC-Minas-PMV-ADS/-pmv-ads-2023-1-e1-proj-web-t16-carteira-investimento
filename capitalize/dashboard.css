@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.page-master {
+    width: 100%;
+    background: whitesmoke;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .navbar-container {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.navbar-container nav {
+    width: 100%;
+    height: 50px;
+    background-color: #2187ab
+} */
+
+.container-page {
+    background: whitesmoke;
+    display: flex;
+    flex: 1;
+}
+
+/* .container-menu {
+    width: 200px;
+    background-color: #205366;
+    margin-right: 30px;
+} */
+
+.sidebar-container{
+    width: 200px;
+}
+
+.container-dashboard {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container-ativos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.ativo {
+    height: 100px;
+    background-color: whitesmoke;
+    width: 25%;
+    padding: 15px;
+    display: flex;
+    border: solid 1px;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+.inner-ativo {
+    background-color: #6da0b3;
+    display: flex;
+    flex: 1;
+}
+
+.fluxo-container {
+    flex-direction: row;
+    display: flex;
+    flex: 1;
+}
+
+.container-transacoes {
+    background-color: whitesmoke;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: 5px;
+}
+
+.container-planejamento {
+    background-color: whitesmoke;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.container-ganhos {
+    width: 90%;
+    background: whitesmoke;
+    height: 50%;
+    border: solid 1px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.transacoes-container {
+    width: 40%;
+    background: whitesmoke;
+    height: 40%;
+    border: solid 1px;
+    border-radius: 3px;
+}
+
+.planejamento-container {
+    width: 40%;
+    background: whitesmoke;
+    height: 40%;
+    border: solid 1px;
+    border-radius: 3px;
+    margin-left: 80px;
+}
+
+.cartao {
+    background-color: whitesmoke;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.dados {
+    background-color: whitesmoke;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.inserir {
+    background-color: whitesmoke;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+}
