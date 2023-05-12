@@ -13,35 +13,12 @@
   </head>
   <body>
     <!-- ---------------- HEADER ----------------  -->
-    <header class="py-3 mb-3 border-bottom bg-primary">
+    <header class="py-3 border-bottom bg-primary w-100">
       <div
         class="container-fluid d-grid gap-3 align-items-center"
         style="grid-template-columns: 1fr 2fr"
       >
-        <div class="dropdown">
-          <a
-            href="#"
-            class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <svg class="bi me-2" width="40" height="32">
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-          </a>
-          <ul class="dropdown-menu text-small shadow" style="">
-            <li>
-              <a class="dropdown-item active" href="#" aria-current="page"
-                >Overview</a
-              >
-            </li>
-            <li><a class="dropdown-item" href="#">Inventory</a></li>
-            <li><a class="dropdown-item" href="#">Customers</a></li>
-            <li><a class="dropdown-item" href="#">Products</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Reports</a></li>
-            <li><a class="dropdown-item" href="#">Analytics</a></li>
-          </ul>
+        <div >
         </div>
 
         <div class="d-flex align-items-center">
@@ -80,7 +57,7 @@
     </header>
 
     <!-- ---------------- SIDEBAR ----------------  -->
-    <div class="flex-shrink-0 p-3 bg-secondary" style="width: 280px">
+    <div class="flex-shrink-0 p-3 bg-secondary sidebar">
       <a
         href="/"
         class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
@@ -97,76 +74,10 @@
             data-bs-toggle="collapse"
             data-bs-target="#home-collapse"
             aria-expanded="false"
-          >
-            Home
-          </button>
-          <div class="collapse" id="home-collapse" style="">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <a
-                  href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                  >Overview</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                  >Updates</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                  >Reports</a
-                >
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="mb-1">
-          <button
-            class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-            data-bs-toggle="collapse"
-            data-bs-target="#dashboard-collapse"
-            aria-expanded="false"
+            onclick="carregaPagina('pages/dashboard.html')"
           >
             Dashboard
           </button>
-          <div class="collapse" id="dashboard-collapse" style="">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li>
-                <a
-                  href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                  >Overview</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                  >Weekly</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                  >Monthly</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                  >Annually</a
-                >
-              </li>
-            </ul>
-          </div>
         </li>
         <li class="mb-1">
           <button
@@ -255,18 +166,6 @@
         </li>
       </ul>
     </div>
-    <nav>
-      <ul>
-        <li>
-          <a href="pages/home.html" class="nav-link-to" onclick="carregaPagina()"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a href="pages/profile.html" class="nav-link-to-content" onclick="carregaPagina()">Profile</a>
-        </li>
-      </ul>
-    </nav>
     <div id="content"></div>
 
     <script

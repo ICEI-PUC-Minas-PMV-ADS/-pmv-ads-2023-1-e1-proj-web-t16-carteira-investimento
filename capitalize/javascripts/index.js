@@ -1,6 +1,6 @@
-function carregaPagina() {
+function carregaPagina(pagina) {
   event.preventDefault();
-  const url = event.target.href;
+  const url = pagina;
   let xhr = new XMLHttpRequest();
   xhr.open("GET", url);
   xhr.onload = function () {
