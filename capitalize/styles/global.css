@@ -16,6 +16,8 @@ body {
   position: absolute;
   width: 280px;
   height: calc(100% - 71px);
+  background-color: var(--neutra-light);
+  color: white;
 }
 
 #content {
@@ -25,10 +27,25 @@ body {
   height: calc(100% - 71px);
 }
 
-.bg-primary {
-  background-color: var(--primary);
+header {
+  background-color: var(--secondary);
+  padding-inline: 25px;
 }
 
-.bg-secondary {
-  background-color: var(--secondary);
+.logo-header {
+  width: 250px;
+  height: 54px;
+  z-index: 9999;
+}
+
+.button-sidebar {
+  background-color: transparent;
+  color: var(--secondary);
+  font-weight: 600;
+
+  transition: all 0.5s;
+}
+
+.button-sidebar:hover {
+  color: var(--background-color);
 }
