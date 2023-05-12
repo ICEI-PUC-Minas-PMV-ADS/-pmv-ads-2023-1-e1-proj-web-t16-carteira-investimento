@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Login - Capitalize</title>
+
+        <!-- Bootstrap Scripts -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/login.css">
+
+        <!-- Font Awesome JS -->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <!-- Popper.JS -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+        <!-- Custom JS -->
+        <script defer src="js/login.js"></script>
+        
+    </head>
+
+    <body>
+
+      <!-- Header Section  -->
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+          
+        <div class="col-md-6 mb-2 mb-md-0">
+            <figure class="login-figure">
+                <img class="login-image" src="img/logo_marca_02.png" alt="">
+            </figure>
+        </div>
+    
+        <ul class="nav col-md-6 mb-2 justify-content-center mb-md-0">
+          <div>
+            <a href="#">Política de Privacidade</a>
+            &middot;
+            <a href="#">Termos &amp; Condições</a>
+          </div>
+            <!-- <li><a href="#prices" class="nav-link px-2">Preços</a></li>
+            <li><a href="#faq" class="nav-link px-2">FAQs</a></li>
+            <li><a href="#about" class="nav-link px-2">Sobre</a></li> -->
+        </ul>
+      
+      </header>
+
+      <!-- Page content -->
+      <div class="modal modal-sheet position-static d-block p-4 py-md-3" tabindex="-1" role="dialog" id="modalSignin">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-4 shadow">
+
+            <div class="modal-header p-5 pb-3 border-bottom-0">
+              <h1 class="fw-bold mb-0 fs-2">Entrar</h1>
+              <button type="button" id="close-button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <div class="modal-body p-5 pt-0">
+              <form id="login-form" class="form" method="post">
+                <div class="form-floating mb-3 form-group">
+                  <input type="text" class="form-control rounded-3" id="email" name="email">
+                  <label for="email" class="text-info">Endereço de e-mail</label>
+                </div>
+                <div class="form-floating mb-3 form-group">
+                  <input type="password" class="form-control rounded-3" id="password" name="password">
+                  <label for="password" class="text-info">Senha</label>
+                </div>
+                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-login" name="submit" type="submit">Entrar</button>
+                <hr class="my-4">
+                <h2 class="fs-5 fw-bold mb-3 text-center">ou</h2>
+                <!-- <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                  <i class="fa-brands fa-twitter"></i>
+                  Continue com Twitter
+                </button>
+                <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  Continue com Facebook
+                </button>
+                <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                  <i class="fa-brands fa-google"></i>
+                  Continue com Google
+                </button> -->
+                <div class="form-floating mt-4">
+                  <button type="button" class="w-100 mb-2 btn btn-lg rounded-3 btn-registro" data-toggle="modal" data-target="#loginModal" onclick="registerButton()">Criar nova Conta</button>
+                </div>
+                
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+ 
+
+      <!-- Footer Section -->
+      <div id="layoutAuthentication_footer">
+        <footer class="py-4 mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-around small">
+                    <div class="text-muted">&copy; 2023 Capitalize</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+  </body>
+
+</html>
