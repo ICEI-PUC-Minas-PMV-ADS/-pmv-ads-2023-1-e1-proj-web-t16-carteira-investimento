@@ -1,0 +1,94 @@
+/*
+    Index CSS
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Unica+One&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #6DA0B3;
+    min-width: 350px;
+    color:white
+}
+
+section {
+    padding: 50px 0 300px 0;
+}
+
+.modal-dialog {
+    width: 380px;
+    transition: bottom .75s ease-in-out;
+  }
+
+#capitalize {
+    color: #205366;
+    font-family: 'Unica One', cursive;
+    font-size: 2.25rem;
+}
+
+.login-figure {
+    text-align: center;
+    margin: 0 !important;
+}
+
+.login-image {
+    width: 300px;
+}
+
+.center-content {
+    align-items: center;
+}
+
+.intro-text {
+    color: white;
+    text-align: center;
+}
+
+.btn-registro {
+    background-color: white;
+    border-color: #205366;
+    color: #205366;
+}
+
+.btn-registro:hover {
+    background-color: white;
+    border: none;
+    color: #205366;
+}
+
+.header-gratuito {
+    background-color: #205366;
+    color: white;
+}
+
+.nav-link,
+header a {
+    color: white !important;
+    text-decoration: none;
+}
+
+a.small {
+    color: #205366;
+    text-decoration: none;
+}
+
+.small a {
+    color: #205366;
+    text-decoration: none;
+}
+.text-muted {
+    color: white !important;
+}
+
+.btn-outline-primary {
+    background-color: white;
+    border:none;
+    color: #205366 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #205366;
+    border: none;
+    color: white !important;
+}

@@ -1,4 +1,5 @@
 
+// Login function
 
 function login(email, password) {
     email = document.getElementById("email").value;
@@ -31,20 +32,22 @@ function login(email, password) {
     sessionStorage.setItem("currentUser", JSON.stringify(matchingUser));
   
     alert("Login efetuado com sucesso!");
-    window.location = "index.html"
-  };
+    window.location = "home.html"
+};
 
 const loginForm = document.getElementById("login-form");
     loginForm.addEventListener("submit", function(event) {
     event.preventDefault();
     login();
-    });
+});
 
+// Close view
 const closeButton = document.getElementById("close-button");
     closeButton.addEventListener("click", function(event) {
-        window.location = "home.html";
- });
+        window.location = "index.html";
+});
 
- function registerButton() {
+// Go to register
+function registerButton() {
     window.location = "register.html"
 }

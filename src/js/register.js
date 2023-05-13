@@ -32,7 +32,7 @@ function registerUser() {
   // check if user already exists
     const existingUser = users.find((user) => user.email === email);
     if (existingUser) {
-      alert("User with that email already exists");
+      alert("Email já cadastrado");
       return;
     }
 
@@ -76,7 +76,7 @@ function generateUUID() { // Public Domain/MIT
 
 const closeButton = document.getElementById("close-button");
     closeButton.addEventListener("click", function(event) {
-        window.location = "home.html";
+        window.location = "index.html";
  });
 
  function loginButton() {
