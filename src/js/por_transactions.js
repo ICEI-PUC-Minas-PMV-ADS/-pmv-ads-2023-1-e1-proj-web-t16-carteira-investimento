@@ -4,7 +4,7 @@ function importDataFromFile(filePath, storageKey) {
     .then(response => response.json())
     .then(data => {
       localStorage.setItem(storageKey, JSON.stringify(data));
-      console.log("Data imported successfully!");
+      // console.log("Dados importados com sucesso!");
     })
     .catch(error => console.error(error));
 }
@@ -15,9 +15,7 @@ importDataButton.addEventListener("click", function(event) {
   alert("Importação dos dados concluída com sucesso!");
 });
 
-
 // build dynamic table using DataTables
-
 $(document).ready(function () {
   tradeData = JSON.parse(localStorage.getItem("tradeData"));
   $('#trade-data').DataTable({
@@ -38,7 +36,6 @@ $(document).ready(function () {
     ],
   });
 });
-
 
 // Function to register transaction
 function registerTransaction() {
@@ -66,6 +63,17 @@ function registerTransaction() {
   // get trade data from local storage
   let tradeData = JSON.parse(localStorage.getItem("tradeData")) || [];
 
+  // find user with matching email and password
+  let matchingTransaction = null;
+
+  for (let i = 0; i < tradeData.length; i++) {
+    if (tradeData[i].corretora === corretora && tradeData[i].notaCorretagem === notaCorretagem &&
+      tradeData[i].ativo === ativo && tradeData[i].dataPregao === dataPregao && tradeData[i].operacao === operacao) {
+      alert("Transação já cadastrada!");
+      return;
+    }
+  }
+
   let item = tradeData.length + 1;
 
   // create an object to hold the transaction data
@@ -89,7 +97,6 @@ function registerTransaction() {
 
   // store updated user data in local storage
   localStorage.setItem("tradeData", JSON.stringify(tradeData));
-
   alert("Ativo cadastrado com sucesso!");
 
 };  
@@ -98,6 +105,11 @@ function registerTransaction() {
 const transactionRegisterButton = document.getElementById("register-button");
 transactionRegisterButton.addEventListener("click", function(event) {
   registerTransaction();
+
+  setTimeout(() => {
+    document.location.reload();
+  }, 3000);
+  
 });
 
 
