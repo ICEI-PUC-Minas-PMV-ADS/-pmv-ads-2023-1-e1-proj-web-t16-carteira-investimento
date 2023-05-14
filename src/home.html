@@ -22,13 +22,14 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <!-- Popper.JS -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 
     <!-- Custom JS -->
     <script defer src="js/login.js"></script>
+    <script defer src="js/menu.js"></script>
     <script defer src="js/home.js"></script>
     
 </head>
@@ -86,10 +87,7 @@
                 <div>
                     <ul class="list-unstyled components">
                         <li class="active">
-                            <a href="#" onClick="dashboardButton()">
-                                <i class="fas fa-briefcase"></i>
-                                Dashboard
-                            </a>
+                            <a href="#" id="dashboard"><i class="fas fa-briefcase"></i>Dashboard</a>
                         </li>
                         <li>
                             <a href="#homeSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -97,22 +95,22 @@
                                 Carteira
                             </a>
                             <ul class="collapse list-unstyled" id="homeSubmenu">
-                                <li><a href="#">Configuração</a></li>
-                                <li><a href="#">Rentabilidade</a></li>
-                                <li><a href="#">Patrimônio</a></li>
-                                <li><a href="#">Transações</a></li>
-                                <li><a href="#">Provento</a></li>
+                                <li><a href="#" id="portfolio-settings">Configuração</a></li>
+                                <li><a href="#" id="portfolio-returns">Rentabilidade</a></li>
+                                <li><a href="#" id="portfolio-equity">Patrimônio</a></li>
+                                <li><a href="#" id="portfolio-transactions">Transações</a></li>
+                                <li><a href="#" id="portfolio-dividends">Provento</a></li>
                             </ul>
                             <a href="#pageSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                 <i class="fas fa-copy"></i>
                                 Relatórios
                             </a>
                             <ul class="collapse list-unstyled" id="pageSubmenu">
-                                <li><a href="#">Rentabilidade</a></li>
-                                <li><a href="#">Patrimônio</a></li>
-                                <li><a href="#">Transações</a></li>
-                                <li><a href="#">Provento</a></li>
-                                <li><a href="#">Imposto de Renda</a></li>
+                                <li><a href="#" id="report-returns">Rentabilidade</a></li>
+                                <li><a href="#" id="report-equity">Patrimônio</a></li>
+                                <li><a href="#" id="report-transactions">Transações</a></li>
+                                <li><a href="#" id="report-dividends">Provento</a></li>
+                                <li><a href="#" id="report-taxes">Imposto de Renda</a></li>
                             </ul>
                         </li>
                     </ul>

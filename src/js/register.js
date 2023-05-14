@@ -68,17 +68,17 @@ function generateUUID() { // Public Domain/MIT
  // Associar salvamento ao botao
 //  document.getElementById ('btn-register').addEventListener ('click', salvaLogin);
 
- const registrationForm = document.getElementById("registration-form");
- registrationForm.addEventListener("submit", function(event) {
-   event.preventDefault();
-   registerUser();
- });
+const registrationForm = document.getElementById("registration-form");
+registrationForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  registerUser();
+});
 
 const closeButton = document.getElementById("close-button");
-    closeButton.addEventListener("click", function(event) {
-        window.location = "index.html";
- });
+closeButton.addEventListener("click", function(event) {
+  window.location = "index.html";
+});
 
- function loginButton() {
-    window.location = "login.html"
+function loginButton() {
+  window.location = "login.html"
 };
