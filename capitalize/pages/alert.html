@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel ="stylesheet" href ="Notification.css">
+    <title>Notificação e Alertas</title>
+</head>
+<body>
+      <h1>Definir Alertas e Notificações</h1>
+      
+      <label for="mensagem" class="Legenda">Digite o nome do seu investimento e selecione a data do vencimento:</label>
+      <input type="text" id="mensagem" class="inputLabel">
+      
+      <label for="data" class="Legenda"> Data:</label>
+      <input type="datetime-local" id="data" class="inputLabel">
+      
+      <div class="DivBtn">
+        <button onclick="definirAlerta()" class="btn">Definir Alerta</button>
+        <button onclick="definirNotificacao()" class="btn">Definir Notificação</button>
+      </div>
+
+<!-- Código JavaScript -->
+<script>
+    function definirAlerta() {
+      var mensagem = document.getElementById("mensagem").value;
+      var data = document.getElementById("data").value;
+      
+      var dataAtual = new Date();
+      var dataSelecionada = new Date(data);
+      
+      var diferenca = dataSelecionada.getTime() - dataAtual.getTime();
+      
+      if (diferenca > 0) {
+        setTimeout(function() {
+          alert("Seu investimento " + mensagem + " está próximo do vencimento que é dia " + dataSelecionada.toLocaleString());
+        }, diferenca);
+      } else {
+        alert("Selecione uma data futura.");
+      }
+    }
+    
+    function definirNotificacao() {
+      var mensagem = document.getElementById("mensagem").value;
+      var data = document.getElementById("data").value;
+      
+      var dataAtual = new Date();
+      var dataSelecionada = new Date(data);
+      
+      var diferenca = dataSelecionada.getTime() - dataAtual.getTime();
+      
+      if (!("Notification" in window)) {
+        alert("Este navegador não suporta notificações.");
+      } else if (Notification.permission === "granted") {
+        exibirNotificacao(mensagem, diferenca);
+      } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(function (permission) {
+          if (permission === "granted") {
+            exibirNotificacao(mensagem, diferenca);
+          }
+        });
+      }
+      
+      function exibirNotificacao(mensagem, diferenca) {
+        if (diferenca > 0) {
+          setTimeout(function() {
+            var options = {
+              body: "Seu investimento " + mensagem + " está próximo do vencimento que é dia " + dataSelecionada.toLocaleString(),
+              icon: "path/para/o/icone.png"
+            };
+            
+            var notificacao = new Notification("Notificação", options);
+            
+            setTimeout(function() {
+              notificacao.close();
+            }, 5000);
+          }, diferenca);
+        } else {
+          alert("Selecione uma data futura.");
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
