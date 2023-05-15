@@ -34,7 +34,7 @@ $(document).ready(function () {
         style:    'multi',
         selector: 'td:first-child'
     },
-    order: [[ 3, 'desc' ]],
+    order: [[ 0, 'desc' ]],
     columns: [
         // { data: 'item' },
         {
@@ -80,7 +80,7 @@ function registerTransaction() {
   preco = preco.replace(',', '.');
   corretagem = corretagem.replace(',', '.');
   outrosCustos = outrosCustos.replace(',', '.');
-  valorTotal = (parseFloat(quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
+  let valorTotal = (parseFloat(quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
 
   // get trade data from local storage
   let tradeData = JSON.parse(localStorage.getItem("tradeData")) || [];

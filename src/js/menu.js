@@ -49,8 +49,8 @@ const portfolioReturns = document.getElementById("portfolio-returns");
 });
 
 const portfolioEquity = document.getElementById("portfolio-equity");
-    logoutButton.addEventListener("click", function() {
-    window.location = "#";
+portfolioEquity.addEventListener("click", function() {
+    window.location = "por_equity.html";
 });
 
 const portfolioTransactions = document.getElementById("portfolio-transactions");
