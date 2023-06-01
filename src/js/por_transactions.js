@@ -51,10 +51,10 @@ $(document).ready(function () {
         { data: 'operacao' },
         { data: 'ativo' },
         { data: 'quantidade' },
-        { data: 'preco' },
-        { data: 'corretagem' },
-        { data: 'outrosCustos' },
-        { data: 'valorTotal' }
+        { data: 'preco', render: $.fn.dataTable.render.number(".",",",2,"R$") },
+        { data: 'corretagem', render: $.fn.dataTable.render.number(".",",",2,"R$") },
+        { data: 'outrosCustos', render: $.fn.dataTable.render.number(".",",",2,"R$") },
+        { data: 'valorTotal', render: $.fn.dataTable.render.number(".",",",2,"R$") }
     ],
   });
 });
