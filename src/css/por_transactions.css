@@ -2,20 +2,25 @@
     Table
 ----------------------------------------------------- */
 
-/* table tr:nth-child(odd) td{
-    background-color:lightcyan;
+table th {
+    background-color: #205366;
+    color: white
 }
-table tr:nth-child(even) td{
+
+table tr:nth-child(odd) td {
+    background-color: #b1ced8;
+}
+table tr:nth-child(even) td {
     background-color: white;
-} */
-
-
-.table thead, tfoot{
-    font-size: 0.75rem ;
 }
 
-.table tbody{
-    font-size: 0.65rem;
+
+table, thead, tfoot {
+    font-size: 0.85rem !important;
+}
+
+table, tbody, td{
+    font-size: 0.70rem !important;
 }
 
 #file-input {

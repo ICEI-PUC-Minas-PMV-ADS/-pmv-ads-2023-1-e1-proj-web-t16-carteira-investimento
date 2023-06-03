@@ -1,139 +1,141 @@
-// get transaction data to local storage
-function importDataFromFile(filePath, storageKey) {
-  fetch(filePath)
+// tradeData = JSON.parse(localStorage.getItem("tradeData"));
+
+// function to add trade data to local storage  
+function addData() {
+
+    // read values from form to variables
+    let corretora = document.getElementById("corretora").value;
+    let notaCorretagem = document.getElementById("notaCorretagem").value;
+    let dataPregao = document.getElementById("dataPregao").value;
+    let ativo = document.getElementById("ativo").value;
+    let quantidade = document.getElementById("quantidade").value;
+    let operacao = document.getElementById("operacao").value;
+    let tipoAtivo = document.getElementById("tipoAtivo").value;
+    let preco = document.getElementById("preco").value;
+    let corretagem = document.getElementById("corretagem").value;
+    let outrosCustos = document.getElementById("outrosCustos").value;
+  
+    // check if all fields are filled
+    if (!corretora || !notaCorretagem || !dataPregao || !ativo || !quantidade || !operacao || 
+        !tipoAtivo || !preco || !corretagem || !outrosCustos) {
+        alert("Todos os campos devem ser preenchidos!");
+    }
+
+    // replace decimal digit character in order to calculate total value
+    preco = preco.replace(',', '.');
+    corretagem = corretagem.replace(',', '.');
+    outrosCustos = outrosCustos.replace(',', '.');
+    valorTotal = (parseFloat(quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
+
+    // get trade data from localstorage, or return empyt vector if not existing
+    // tradeData = JSON.parse(localStorage.getItem("tradeData")) || [];
+    getData();
+
+    let item = tradeData.length + 1;
+
+    // create an object to hold the transaction data
+    const transactionData = {
+        item,
+        corretora,
+        notaCorretagem,
+        dataPregao,
+        tipoAtivo,
+        operacao,
+        ativo,
+        quantidade,
+        preco,
+        corretagem,
+        outrosCustos,
+        valorTotal
+    };
+    
+    // add current transaction to transaction history
+    tradeData.push(transactionData);
+
+    // store updated user data in local storage
+    localStorage.setItem("tradeData", JSON.stringify(tradeData));
+}
+var tradeData = new Array();
+
+function getData() {
+    var tempData = localStorage.getItem("tradeData");
+    if (tempData != null) {
+        tradeData = JSON.parse(tempData);
+    }
+
+}
+
+function loadData (filePath, storageKey) {
+    fetch(filePath)
     .then(response => response.json())
     .then(data => {
-      localStorage.setItem(storageKey, JSON.stringify(data));
-      // console.log("Dados importados com sucesso!");
+        localStorage.setItem(storageKey, JSON.stringify(data));
     })
     .catch(error => console.error(error));
 }
 
-const importDataButton = document.getElementById("import-button");
-importDataButton.addEventListener("click", function(event) {
-  importDataFromFile("data/trade_history.JSON", "tradeData");
-  alert("Importação dos dados concluída com sucesso!");
-  setTimeout(() => {
-    document.location.reload();
-  }, 1000);
-});
+function showData() {
+    
+    getData();
 
-// build dynamic table using DataTables
-$(document).ready(function () {
-  tradeData = JSON.parse(localStorage.getItem("tradeData"));
-  $('#trade-data').DataTable({
-    data: tradeData,
-    // columnDefs: [ {
-    //   orderable: false,
-    //   data: null,
-    //   defaultContent: '',
-    //   className: 'select-checkbox',
-    //   targets:   0
-    // } ],
-    select: {
-        style:    'multi',
-        selector: 'td:first-child'
-    },
-    order: [[ 3, 'desc' ]],
-    columns: [
-        // { data: 'item' },
-        {
-          className: 'select-checkbox',
-          orderable: false,
-          data: null,
-          defaultContent: '',
-          // targets:   0
-        },
-        { data: 'corretora' },
-        { data: 'notaCorretagem' },
-        { data: 'dataPregao' },
-        { data: 'tipoAtivo' },
-        { data: 'operacao' },
-        { data: 'ativo' },
-        { data: 'quantidade' },
-        { data: 'preco', render: $.fn.dataTable.render.number(".",",",2,"R$") },
-        { data: 'corretagem', render: $.fn.dataTable.render.number(".",",",2,"R$") },
-        { data: 'outrosCustos', render: $.fn.dataTable.render.number(".",",",2,"R$") },
-        { data: 'valorTotal', render: $.fn.dataTable.render.number(".",",",2,"R$") }
-    ],
-  });
-});
-
-// Function to register transaction
-function registerTransaction() {
-  let corretora = document.getElementById("corretora").value;
-  let notaCorretagem = document.getElementById("notaCorretagem").value;
-  let dataPregao = document.getElementById("dataPregao").value;
-  let ativo = document.getElementById("ativo").value;
-  let quantidade = document.getElementById("quantidade").value;
-  let operacao = document.getElementById("operacao").value;
-  let tipoAtivo = document.getElementById("tipoAtivo").value;
-  let preco = document.getElementById("preco").value;
-  let corretagem = document.getElementById("corretagem").value;
-  let outrosCustos = document.getElementById("outrosCustos").value;
+    const table = document.getElementById('trade-data');
   
-  if (!corretora || !notaCorretagem || !dataPregao || !ativo || !quantidade || !operacao || 
-    !tipoAtivo || !preco || !corretagem || !outrosCustos) {
-    alert("Todos os campos devem ser preenchidos!");
-  }
+    // Clear existing table
+    table.innerHTML = '';
 
-  preco = preco.replace(',', '.');
-  corretagem = corretagem.replace(',', '.');
-  outrosCustos = outrosCustos.replace(',', '.');
-  valorTotal = (parseFloat(quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
-
-  // get trade data from local storage
-  let tradeData = JSON.parse(localStorage.getItem("tradeData")) || [];
-
-  // find user with matching email and password
-  let matchingTransaction = null;
-
-  for (let i = 0; i < tradeData.length; i++) {
-    if (tradeData[i].corretora === corretora && tradeData[i].notaCorretagem === notaCorretagem &&
-      tradeData[i].ativo === ativo && tradeData[i].dataPregao === dataPregao && tradeData[i].operacao === operacao) {
-      alert("Transação já cadastrada!");
-      return;
+    // Generate table heder
+    const tableHeader = document.createElement('tr');
+    for (const key in tradeData[0]) {
+      const th = document.createElement('th');
+      th.textContent = key;
+      tableHeader.appendChild(th);
     }
-  }
-
-  let item = tradeData.length + 1;
-
-  // create an object to hold the transaction data
-  const transactionData = {
-    item,
-    corretora,
-    notaCorretagem,
-    dataPregao,
-    tipoAtivo,
-    operacao,
-    ativo,
-    quantidade,
-    preco,
-    corretagem,
-    outrosCustos,
-    valorTotal
-  };
+    table.appendChild(tableHeader);
   
-  // add current transaction to transaction history
-  tradeData.push(transactionData);
+    // Generate table rows
+    tradeData.forEach(data => {
+      const row = document.createElement('tr');
+      for (const key in data) {
+        const cell = document.createElement('td');
+        cell.textContent = data[key];
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    });
+}
 
-  // store updated user data in local storage
-  localStorage.setItem("tradeData", JSON.stringify(tradeData));
-  alert("Ativo cadastrado com sucesso!");
+function delData() {
+    localStorage.removeItem("tradeData");
+}
 
-};  
-
-// call registerTransaction function
-const transactionRegisterButton = document.getElementById("register-button");
-transactionRegisterButton.addEventListener("click", function(event) {
-  registerTransaction();
-
-  setTimeout(() => {
-    document.location.reload();
-  }, 3000);
-  
+const importButton = document.getElementById("import-button");
+importButton.addEventListener("click", function() {
+    loadData("data/trade_history.JSON", "tradeData");
+    alert("Dados carregados com sucesso no localStorage!");
+    setTimeout(() => {
+        document.location.reload();
+      }, 1000);
 });
 
+const deleteButton = document.getElementById("delete-button");
+deleteButton.addEventListener("click", function() {
+    delData();
+    alert("Dados excluídos com sucesso do localStorage!");
+    setTimeout(() => {
+        document.location.reload();
+      }, 1000);
+});
 
+const addButton = document.getElementById("add-button");
+addButton.addEventListener("click", function() {
+    addData();
+    alert("Transação cadastrada com sucesso!");
+    setTimeout(() => {
+        document.location.reload();
+      }, 1000);
+});
 
-
+// Run scripts on page load
+document.addEventListener("DOMContentLoaded", function() {
+    showData();
+  });
