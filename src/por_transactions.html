@@ -23,6 +23,7 @@
 
     <!-- Font Awesome JS -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/home.css">
@@ -135,20 +136,41 @@
                     <div class="btn-toolbar mb-2 mb-md-0">
                       <div class="btn-group me-2">
                         <button type="button" id="import-button" class="btn btn-sm btn-outline-secondary">Inicializar Dados</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalAddData" class="btn btn-sm btn-outline-secondary">Cadastrar transação</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalTradeData" class="btn btn-sm btn-outline-secondary">Cadastrar transação</button>
                         <button type="button" id="delete-button" class="btn btn-sm btn-outline-secondary">Excluir dados</button>
                       </div>
                     </div>
                 </div>
 
-                <div class="table-responsive px-3" id="table-content">
-                    <table class="table table-striped" id="trade-data">
+                <div class="table-responsive px-3" id="table-header">
+                    <table class="table table-container-content" id="trade-header">
+                        <tr>
+                            <th class="align-middle">Item</th>
+                            <th class="align-middle">Corretora</th>
+                            <th class="align-middle">Nota de Corretagem</th>
+                            <th class="align-middle">Data do Pregão</th>
+                            <th class="align-middle">Tipo de Ativo</th>
+                            <th class="align-middle">Operação</th>
+                            <th class="align-middle">Ticker </th>
+                            <th class="align-middle">Quantidade</th>
+                            <th class="align-middle">Preço</th>
+                            <th class="align-middle">Corretagem</th>
+                            <th class="align-middle">Outros Custos</th>
+                            <th class="align-middle">Valor Total</th>
+                            <th class="align-middle">Ação</th>
+                            <th class="align-middle">localStorageID</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table-responsive table-container-content px-3" id="table-content">
+                    <table class="table table-container-content" id="trade-data">
               
                     </table>
                 </div>
 
                 <!-- Modal input transaction -->
-                <div class="modal fade" id="modalAddData" aria-hidden="true" aria-labelledby="modalAddData" tabindex="-1">
+                <div class="modal fade" id="modalTradeData" aria-hidden="true" aria-labelledby="modalTradeData" tabindex="-1">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content rounded-4 shadow">
                             <div class="modal-header p-5 pb-4 border-bottom-0">
@@ -252,7 +274,7 @@
                                     <div class="row g-2">
                                         <div class="col-md">
                                             <div class="form-floating mb-3">
-
+                                                <button class="w-100 mb-2 btn rounded-3 btn-primary" id="cancel-button" type="reset">Cancelar</button>
                                             </div>
                                         </div>
                                         <div class="col-md">

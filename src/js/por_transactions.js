@@ -28,10 +28,10 @@ function addData() {
     valorTotal = (parseFloat(quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
 
     // get trade data from localstorage, or return empyt vector if not existing
-    // tradeData = JSON.parse(localStorage.getItem("tradeData")) || [];
     getData();
 
     let item = tradeData.length + 1;
+    let uniqueEmpId = new Date().getTime();
 
     // create an object to hold the transaction data
     const transactionData = {
@@ -46,7 +46,8 @@ function addData() {
         preco,
         corretagem,
         outrosCustos,
-        valorTotal
+        valorTotal,
+        uniqueEmpId
     };
     
     // add current transaction to transaction history
@@ -62,14 +63,14 @@ function getData() {
     if (tempData != null) {
         tradeData = JSON.parse(tempData);
     }
-
 }
 
-function loadData (filePath, storageKey) {
+function loadData(filePath, storageKey) {
     fetch(filePath)
-    .then(response => response.json())
-    .then(data => {
-        localStorage.setItem(storageKey, JSON.stringify(data));
+        .then(response => response.json())
+        .then(data => {
+            localStorage.setItem(storageKey, JSON.stringify(data)
+        );
     })
     .catch(error => console.error(error));
 }
@@ -77,23 +78,14 @@ function loadData (filePath, storageKey) {
 function showData() {
     
     getData();
-
+    
     const table = document.getElementById('trade-data');
   
     // Clear existing table
     table.innerHTML = '';
-
-    // Generate table heder
-    const tableHeader = document.createElement('tr');
-    for (const key in tradeData[0]) {
-      const th = document.createElement('th');
-      th.textContent = key;
-      tableHeader.appendChild(th);
-    }
-    table.appendChild(tableHeader);
   
     // Generate table rows
-    tradeData.forEach(data => {
+    tradeData.slice().reverse().forEach(data => {
       const row = document.createElement('tr');
       for (const key in data) {
         const cell = document.createElement('td');
@@ -139,3 +131,5 @@ addButton.addEventListener("click", function() {
 document.addEventListener("DOMContentLoaded", function() {
     showData();
   });
+
+
