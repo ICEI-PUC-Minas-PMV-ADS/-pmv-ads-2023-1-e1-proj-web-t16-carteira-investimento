@@ -202,36 +202,6 @@ function editRow(tr,uniqueId) {
     console.log(typeof(edUniqueID));
 }
 
-//  
-// function editLocalStorage(tr, uniqueId) {
-  
-//     if (tempData.id === parseInt(uniqueId)) {
-//         tempData.data.corretora = tr.cells[0].textContent;
-//         tempData.data.notaCorretagem = tr.cells[1].textContent;
-//         tempData.data.dataPregao = tr.cells[2].textContent;
-//         tempData.data.tipoAtivo = tr.cells[3].textContent;
-//         tempData.data.operacao = tr.cells[4].textContent;
-//         tempData.data.ativo = tr.cells[5].textContent;
-//         tempData.data.quantidade = tr.cells[6].textContent;
-//         tempData.data.preco = tr.cells[7].textContent;
-//         tempData.data.corretagem = tr.cells[8].textContent;
-//         tempData.data.outrosCustos = tr.cells[9].textContent;
-//         tempData.data.valorTotal = tr.cells[10].textContent;
-      
-//         preco = tempData.data.preco.replace(',', '.');
-//         tempData.data.preco = parseFloat(preco).toFixed(2);
-//         corretagem = tempData.data.corretagem.replace(',', '.');
-//         tempData.data.corretagem = parseFloat(corretagem).toFixed(2);
-//         outrosCustos = tempData.data.outrosCustos.replace(',', '.');
-//         tempData.data.outrosCustos = parseFloat(outrosCustos).toFixed(2);
-//         valorTotal = (parseFloat(tempData.data.quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
-//         tempData.data.valorTotal = valorTotal.toFixed(2);
-
-//         return tempData;
-//     };
-
-//     localStorage.setItem("tradeData", JSON.stringify(tradeData));
-// }
 
 editButton.addEventListener("click", function () {
      
