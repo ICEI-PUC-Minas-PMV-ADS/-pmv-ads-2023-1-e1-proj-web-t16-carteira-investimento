@@ -297,6 +297,131 @@
                         </div>
                     </div>
                 </div>
+
+
+                <!-- ############### MODAL EDITAR ############### -->
+                <!-- ###############                 ############### -->
+                <div class="modal fade" id="modalEdit" aria-hidden="true" aria-labelledby="modalEdit" tabindex="-1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content rounded-4 shadow">
+                            <div class="modal-header p-5 pb-4 border-bottom-0">
+                                <h1 class="fw-bold mb-0 fs-2">Cadastrar transação</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                  
+                            <div class="modal-body p-5 pt-0">
+                                <form class="">
+
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="edCorretora">
+                                                <label for="corretora">Corretora</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="edNotaCorretagem">
+                                                <label for="notaCorretagem">Nota de corretagem</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <input type="date" class="form-control rounded-3" id="edDataPregao">
+                                                <label for="dataPregao">Data do pregão</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                                <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="edAtivo">
+                                                <label for="ativo">Ativo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="edQuantidade">
+                                                <label for="quantidade">Quantidade</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <select class="form-select" id="edOperacao" aria-label="Floating label select example">
+                                                    <option value="Compra">Compra</option>
+                                                    <option value="Venda">Venda</option>
+                                                    </select>
+                                                    <label for="operacao">Operação</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <select class="form-select" id="edTipoAtivo" aria-label="Floating label select example">
+                                                    <option value="Ação">Ação</option>
+                                                    <option value="BDR">BDR</option>
+                                                    <option value="Cripto">Cripto</option>
+                                                    <option value="ETF">ETF</option>
+                                                    <option value="FI-Agro">FI-Agro</option>
+                                                    <option value="FI-Infra">FI-Infra</option>
+                                                    <option value="FIA">FIA</option>
+                                                    <option value="FIDC">FIDC</option>
+                                                    <option value="FII">FII</option>
+                                                    <option value="FIP">FIP</option>
+                                                    <option value="Opção">Opção</option>
+                                                    </select>
+                                                    <label for="tipoAtivo">Tipo de ativo</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="edPreco">
+                                                <label for="preco">Preço</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="edCorretagem">
+                                                <label for="corretagem">Corretagem</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="edOutrosCustos">
+                                                <label for="outrosCustos">Outros custos</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3" id="edDivValorTotal">
+                                                <input type="text" class="form-control rounded-3" id="edValorTotal">
+                                                <label for="valorTotal">Valor Total</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="form-floating ">
+                                                <button class="w-100 mb-2 btn rounded-3 btn-primary" id="edit-button" type="submit">Salvar Alteração</button>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 
             </main>
         </div>

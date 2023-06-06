@@ -1,14 +1,16 @@
 let submitButton = document.getElementById("register-button");
+let editButton = document.getElementById("edit-button");
 
 let tableContainerContent = document.querySelector(".table-container-content");
 
 let tradeTable = document.getElementById("table-content");
 
-let modal = document.getElementById("modalRegister")
+let addModal = document.getElementById("modalRegister")
+let editModal = document.getElementById("modalEdit")
 
 tableContainerContent.addEventListener("click", deleteRowRecord);
 
-tableContainerContent.addEventListener("click", editRow);
+// tableContainerContent.addEventListener("click", editRow);
 
 let corretora = document.getElementById("corretora");
 let notaCorretagem = document.getElementById("notaCorretagem");
@@ -125,6 +127,11 @@ document.addEventListener("click", function(e) {
 
 function deleteRowRecord(uniqueId) {
 
+    var confirmed = confirm("Are you sure you want to delete this row?");
+    if (!confirmed) {
+      return; // Do nothing if user cancels the delete operation
+    }
+
     getData();
     var table = document.getElementById("table-content");
     var rows = table.getElementsByTagName("tr");
@@ -144,93 +151,27 @@ function deleteRowRecord(uniqueId) {
     }
 }
 
+
+//// edit table row
+
 document.addEventListener("click", function(e) {
     if (e.target.classList.contains("edit-row")) {
-        modal.showModal();
-        const btnToogle = document.createAttribute("data-bs-toggle");
-        const btnTarget = document.createAttribute("data-bs-target");
-        btnToogle.value = "modal";
-        btnTarget.value = "#modalRegister";
-
-
+        tr = e.target.parentNode.parentNode;
+        $("#modalEdit").modal("show");
+        var row = e.target.parentNode.parentNode;
+        var uniqueId = row.closest("tr").getAttribute("data-id");
+        // console.log("uniqueId ", uniqueId);
+        editLocalStorage(tr,uniqueId);
     }
 });
 
-//// edit table row
-function editRow(e) {
-  
-    console.log("e ", e);
-    tr = e.target.parentNode.parentNode;
-    console.log("tr ", tr);
-    let tdCorretora = tr.cells[0].textContent;
-    let tdNotaCorretagem = tr.cells[1].textContent;
-    let tdDataPregao = tr.cells[2].textContent;
-    let tdAtivo = tr.cells[3].textContent;
-    let tdQuantidade = tr.cells[4].textContent;
-    let tdOperacao = tr.cells[5].textContent;
-    let tdTipoAtivo = tr.cells[6].textContent;
-    let tdPreco = tr.cells[7].textContent;
-    let tdCorretagem = tr.cells[8].textContent;
-    let tdOutrosCustos = tr.cells[9].textContent;
-    let tdValorTotal = tr.cells[10].textContent;  
+// 
 
-    corretora.value = tdCorretora;
-    notaCorretagem.value = tdNotaCorretagem;
-    dataPregao.value = tdDataPregao;
-    ativo.value = tdAtivo;
-    quantidade.value = tdQuantidade;
-    operacao.value = tdOperacao;
-    tipoAtivo.value = tdTipoAtivo;
-    preco.value = tdPreco;
-    corretagem.value = tdCorretagem;
-    outrosCustos.value = tdOutrosCustos;
-    valorTotal.value = tdValorTotal;
-}
-
-//// update table row
-
-function tableUpdate(tr) {
-
-    let tdCorretora = document.getElementById("tdCorretora");
-    let tdNotaCorretagem = document.getElementById("tdNotaCorretagem");
-    let tdDataPregao = document.getElementById("tdDataPregao");
-    let tdAtivo = document.getElementById("tdAtivo");
-    let tdQuantidade = document.getElementById("tdQuantidade");
-    let tdOperacao = document.getElementById("tdOperacao");
-    let tdTipoAtivo = document.getElementById("tdTipoAtivo");
-    let tdPreco = document.getElementById("tdPreco");
-    let tdCorretagem = document.getElementById("tdCorretagem");
-    let tdOutrosCustos = document.getElementById("tdOutrosCustos");
-    let tdValorTotal = document.getElementById("tdValorTotal");
+function editLocalStorage(tr,uniqueId) {
+    
+    getData();
   
-    console.log(tr);
-
-    tr.cells[0].textContent = corretora.value;
-    tr.cells[1].textContent = notaCorretagem.value;3
-    tr.cells[2].textContent = dataPregao.value;
-    tr.cells[3].textContent = ativo.value;
-    tr.cells[4].textContent = quantidade.value;
-    tr.cells[5].textContent = operacao.value;
-    tr.cells[6].textContent = tipoAtivo.value;
-    tr.cells[7].textContent = preco.value;
-    tr.cells[8].textContent = corretagem.value;
-    tr.cells[9].textContent = outrosCustos.value;
-    tr.cells[10].textContent = valorTotal.value;
-  
-    editID = tr.dataset.id;
-  
-    modalForm.reset();
-    modal.close();
-  
-    editLocalStorage(editID, tr);
-}
-
-//// Edit Local Storage
-function editLocalStorage(editID, tr) {
-    let tradeData = JSON.parse(localStorage.getItem("tradeData"));
-  
-    tradeData = tradeData.map((tempData) => {
-      if (tempData.id === parseInt(editID)) {
+    if (tempData.id === parseInt(uniqueId)) {
         tempData.data.corretora = tr.cells[0].textContent;
         tempData.data.notaCorretagem = tr.cells[1].textContent;
         tempData.data.dataPregao = tr.cells[2].textContent;
@@ -242,11 +183,103 @@ function editLocalStorage(editID, tr) {
         tempData.data.corretagem = tr.cells[8].textContent;
         tempData.data.outrosCustos = tr.cells[9].textContent;
         tempData.data.valorTotal = tr.cells[10].textContent;
-      }
-      return tempData;
-    });
+      
+
+        preco = tempData.data.preco.replace(',', '.');
+        tempData.data.preco = parseFloat(preco).toFixed(2);
+        corretagem = tempData.data.corretagem.replace(',', '.');
+        tempData.data.corretagem = parseFloat(corretagem).toFixed(2);
+        outrosCustos = tempData.data.outrosCustos.replace(',', '.');
+        tempData.data.outrosCustos = parseFloat(outrosCustos).toFixed(2);
+        valorTotal = (parseFloat(tempData.data.quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
+        tempData.data.valorTotal = valorTotal.toFixed(2);
+
+        return tempData;
+    };
+
     localStorage.setItem("tradeData", JSON.stringify(tradeData));
-  }
+}
+
+editButton.addEventListener("click", function () {
+    console.log("teste");
+});
+
+
+
+
+// function editRow(e, uniqueId) {
+  
+//         tr = e.target.parentNode.parentNode;
+    
+//         let edCorretora = document.getElementById("edCorretora");
+//         let edNotaCorretagem = document.getElementById("edNotaCorretagem");
+//         let edDataPregao = document.getElementById("edDataPregao");
+//         let edAtivo = document.getElementById("edAtivo");
+//         let edQuantidade = document.getElementById("edQuantidade");
+//         let edOperacao = document.getElementById("edOperacao");
+//         let edTipoAtivo = document.getElementById("edTipoAtivo");
+//         let edPreco = document.getElementById("edPreco");
+//         let edCorretagem = document.getElementById("edCorretagem");
+//         let edOutrosCustos = document.getElementById("edOutrosCustos");
+//         let edValorTotal = document.getElementById("edValorTotal");
+    
+//         edCorretora.value = tr.cells[0].textContent;
+//         edNotaCorretagem.value = tr.cells[1].textContent;
+//         edDataPregao.value = tr.cells[2].textContent;
+//         edAtivo.value = tr.cells[3].textContent;
+//         edQuantidade.value = tr.cells[4].textContent;
+//         edOperacao.value = tr.cells[5].textContent;
+//         edTipoAtivo.value = tr.cells[6].textContent;
+//         edPreco.value = tr.cells[7].textContent;
+//         edCorretagem.value = tr.cells[8].textContent;
+//         edOutrosCustos.value = tr.cells[9].textContent;
+//         edValorTotal.value = tr.cells[10].textContent;
+//         let edUniqueId = uniqueId;
+    
+//         // editLocalStorage(tr,edCorretora,edNotaCorretagem,edDataPregao,edAtivo,edQuantidade,edOperacao,edTipoAtivo,edPreco,edCorretagem,edOutrosCustos,edValorTotal);
+//     }
+
+
+//// update table row
+
+// function tableUpdate(tr) {
+
+//     let tdCorretora = document.getElementById("tdCorretora");
+//     let tdNotaCorretagem = document.getElementById("tdNotaCorretagem");
+//     let tdDataPregao = document.getElementById("tdDataPregao");
+//     let tdAtivo = document.getElementById("tdAtivo");
+//     let tdQuantidade = document.getElementById("tdQuantidade");
+//     let tdOperacao = document.getElementById("tdOperacao");
+//     let tdTipoAtivo = document.getElementById("tdTipoAtivo");
+//     let tdPreco = document.getElementById("tdPreco");
+//     let tdCorretagem = document.getElementById("tdCorretagem");
+//     let tdOutrosCustos = document.getElementById("tdOutrosCustos");
+//     let tdValorTotal = document.getElementById("tdValorTotal");
+  
+//     console.log(tr);
+
+//     tr.cells[0].textContent = corretora.value;
+//     tr.cells[1].textContent = notaCorretagem.value;3
+//     tr.cells[2].textContent = dataPregao.value;
+//     tr.cells[3].textContent = ativo.value;
+//     tr.cells[4].textContent = quantidade.value;
+//     tr.cells[5].textContent = operacao.value;
+//     tr.cells[6].textContent = tipoAtivo.value;
+//     tr.cells[7].textContent = preco.value;
+//     tr.cells[8].textContent = corretagem.value;
+//     tr.cells[9].textContent = outrosCustos.value;
+//     tr.cells[10].textContent = valorTotal.value;
+  
+//     editID = tr.dataset.id;
+  
+//     modalForm.reset();
+//     modal.close();
+  
+//     editLocalStorage(editID, tr);
+// }
+
+//// Edit Local Storage
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
