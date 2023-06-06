@@ -1,3 +1,8 @@
+const importButton = document.getElementById("import-button");
+const addButton = document.getElementById("add-button");
+const deleteButton = document.getElementById("delete-button");
+
+
 // tradeData = JSON.parse(localStorage.getItem("tradeData"));
 
 // function to add trade data to local storage  
@@ -14,6 +19,8 @@ function addData() {
     let preco = document.getElementById("preco").value;
     let corretagem = document.getElementById("corretagem").value;
     let outrosCustos = document.getElementById("outrosCustos").value;
+    let acao = " ";
+    let uniqueEmpId = new Date().getTime();
   
     // check if all fields are filled
     if (!corretora || !notaCorretagem || !dataPregao || !ativo || !quantidade || !operacao || 
@@ -31,7 +38,6 @@ function addData() {
     getData();
 
     let item = tradeData.length + 1;
-    let uniqueEmpId = new Date().getTime();
 
     // create an object to hold the transaction data
     const transactionData = {
@@ -47,6 +53,7 @@ function addData() {
         corretagem,
         outrosCustos,
         valorTotal,
+        acao,
         uniqueEmpId
     };
     
@@ -55,8 +62,40 @@ function addData() {
 
     // store updated user data in local storage
     localStorage.setItem("tradeData", JSON.stringify(tradeData));
+
+    createTableRow(transactionData);
+
 }
-var tradeData = new Array();
+
+let editID = "";
+
+function createTableRow (transactionData) {
+    const element = document.createElement("tr");
+    let attr = document.createAttribute("data-id");
+    attr.value = transactionData.uniqueEmpId;
+    element.setAttributeNode(attr);
+    element.classList.add("fullEmpDetail");
+    element.innerHTML = `
+    <td id=itemTD">${transactionData.item}</td>,
+    <td id=corretoraTD">${transactionData.corretora}</td>,
+    <td id=notaCorretagemTD">${transactionData.notaCorretagemT}</td>,
+    <td id=dataPregaoTD">${transactionData.dataPregao}</td>,
+    <td id=tipoAtivoTD">${transactionData.tipoAtivo}</td>,
+    <td id=operacaoTD">${transactionData.operacao}</td>,
+    <td id=quantidadeTD">${transactionData.quantidade}</td>,
+    <td id=precoTD">${transactionData.preco}</td>,
+    <td id=corretagemTD">${transactionData.corretagem}</td>,
+    <td id=outrosCustosTD">${transactionData.outrosCustos}</td>,
+    <td id=valorTotalTD">${transactionData.valorTotal}</td>,
+    <td>
+      <i class="fas fa-eye"></i>
+      <i value="Edit" type="button" id="update-row" class="edit-row fas fa-pencil-alt"></i>
+      <i value="Delete" type="button" class="remove-row fas fa-trash-alt"></i>
+    </td>
+`;
+
+    transactionData.appendChild(element);
+}
 
 function getData() {
     var tempData = localStorage.getItem("tradeData");
@@ -100,7 +139,7 @@ function delData() {
     localStorage.removeItem("tradeData");
 }
 
-const importButton = document.getElementById("import-button");
+
 importButton.addEventListener("click", function() {
     loadData("data/trade_history.JSON", "tradeData");
     alert("Dados carregados com sucesso no localStorage!");
@@ -109,7 +148,7 @@ importButton.addEventListener("click", function() {
       }, 1000);
 });
 
-const deleteButton = document.getElementById("delete-button");
+
 deleteButton.addEventListener("click", function() {
     delData();
     alert("Dados excluídos com sucesso do localStorage!");
@@ -118,7 +157,7 @@ deleteButton.addEventListener("click", function() {
       }, 1000);
 });
 
-const addButton = document.getElementById("add-button");
+
 addButton.addEventListener("click", function() {
     addData();
     alert("Transação cadastrada com sucesso!");
@@ -130,6 +169,4 @@ addButton.addEventListener("click", function() {
 // Run scripts on page load
 document.addEventListener("DOMContentLoaded", function() {
     showData();
-  });
-
-
+});

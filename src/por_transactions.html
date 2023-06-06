@@ -13,27 +13,32 @@
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    
+
+    <!-- DataTables script -->
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/sp-2.1.2/sl-1.6.2/datatables.min.js"></script>
+
     <!-- Bootstrap Scripts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/por_transactions.css">
 
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
 
     <!-- Font Awesome JS -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/por_transactions.css">
 
     <!-- Custom JS -->
     <script defer src="js/login.js"></script>
     <script defer src="js/menu.js"></script>
     <script defer src="js/home.js"></script>
-    <script defer src="js/por_transactions.js"></script>    
+    <script defer src="js/transactions.js"></script>    
+
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/sp-2.1.2/sl-1.6.2/datatables.min.css" rel="stylesheet"/>
 
     
 </head>
@@ -126,8 +131,8 @@
         <!-- ###############                            ############### -->
         <!-- ############### ALTERAR SOMENTE ESTA SEÇÃO ############### -->
         <!-- ###############                            ############### -->
-        <!-- Body Content -->
-        
+       
+        <!-- Body Content --> 
         <div class="w-100">
             <main>
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-3 mb-3 px-3">
@@ -135,17 +140,17 @@
                     <!-- <input type="file" accept=".json" id="file-input" > -->
                     <div class="btn-toolbar mb-2 mb-md-0">
                       <div class="btn-group me-2">
-                        <button type="button" id="import-button" class="btn btn-sm btn-outline-secondary">Inicializar Dados</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalTradeData" class="btn btn-sm btn-outline-secondary">Cadastrar transação</button>
-                        <button type="button" id="delete-button" class="btn btn-sm btn-outline-secondary">Excluir dados</button>
+                        <!-- <button type="button" id="import-button" class="btn btn-sm btn-outline-secondary">Inicializar Dados</button> -->
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalRegister">Cadastrar Transação</button>
+                        <!-- <button type="button" id="export-button" class="btn btn-sm btn-outline-secondary">Exportar</button> -->
                       </div>
                     </div>
                 </div>
 
-                <div class="table-responsive px-3" id="table-header">
-                    <table class="table table-container-content" id="trade-header">
+                <div class="table-responsive table-container-header px-3" id="divtable-header">
+                    <table class="table" id="table-header">
                         <tr>
-                            <th class="align-middle">Item</th>
+                            <!-- <th class="align-middle">Item</th> -->
                             <th class="align-middle">Corretora</th>
                             <th class="align-middle">Nota de Corretagem</th>
                             <th class="align-middle">Data do Pregão</th>
@@ -158,19 +163,20 @@
                             <th class="align-middle">Outros Custos</th>
                             <th class="align-middle">Valor Total</th>
                             <th class="align-middle">Ação</th>
-                            <th class="align-middle">localStorageID</th>
+                            <th class="align-middle idHeader">localStorageID</th>
                         </tr>
                     </table>
                 </div>
 
-                <div class="table-responsive table-container-content px-3" id="table-content">
-                    <table class="table table-container-content" id="trade-data">
+                <div class="table-responsive table-container-content px-3" id="divtable-content">
+                    <table class="table" id="table-content">
               
                     </table>
                 </div>
 
-                <!-- Modal input transaction -->
-                <div class="modal fade" id="modalTradeData" aria-hidden="true" aria-labelledby="modalTradeData" tabindex="-1">
+                <!-- ############### MODAL CADASTRAR ############### -->
+                <!-- ###############                 ############### -->
+                <div class="modal fade" id="modalRegister" aria-hidden="true" aria-labelledby="modalRegister" tabindex="-1">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content rounded-4 shadow">
                             <div class="modal-header p-5 pb-4 border-bottom-0">
@@ -184,102 +190,103 @@
                                     <div class="row g-2">
                                         <div class="col-md">
                                             <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="corretora">
+                                                <label for="corretora">Corretora</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" id="notaCorretagem">
                                                 <label for="notaCorretagem">Nota de corretagem</label>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="row g-2">
                                         <div class="col-md">
                                             <div class="form-floating mb-3">
                                                 <input type="date" class="form-control rounded-3" id="dataPregao">
                                                 <label for="dataPregao">Data do pregão</label>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row g-2">
                                         <div class="col-md">
-                                            <div class="form-floating mb-3">
+                                                <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" id="ativo">
                                                 <label for="ativo">Ativo</label>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="row g-2">
                                         <div class="col-md">
-                                                <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control rounded-3" id="quantidade">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="quantidade">
                                                 <label for="quantidade">Quantidade</label>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row g-2">
                                         <div class="col-md">
                                             <div class="form-floating mb-3">
                                                 <select class="form-select" id="operacao" aria-label="Floating label select example">
-                                                <option value="Compra">Compra</option>
-                                                <option value="Venda">Venda</option>
-                                                </select>
-                                                <label for="operacao">Operação</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="form-floating mb-3">
-                                                <select class="form-select" id="tipoAtivo" aria-label="Floating label select example">
-                                                <option value="Ação">Ação</option>
-                                                <option value="BDR">BDR</option>
-                                                <option value="Cripto">Cripto</option>
-                                                <option value="ETF">ETF</option>
-                                                <option value="FI-Agro">FI-Agro</option>
-                                                <option value="FI-Infra">FI-Infra</option>
-                                                <option value="FIA">FIA</option>
-                                                <option value="FIDC">FIDC</option>
-                                                <option value="FII">FII</option>
-                                                <option value="FIP">FIP</option>
-                                                <option value="Opção">Opção</option>
-                                                </select>
-                                                <label for="tipoAtivo">Tipo de ativo</label>
+                                                    <option value="Compra">Compra</option>
+                                                    <option value="Venda">Venda</option>
+                                                    </select>
+                                                    <label for="operacao">Operação</label>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <select class="form-select" id="tipoAtivo" aria-label="Floating label select example">
+                                                    <option value="Ação">Ação</option>
+                                                    <option value="BDR">BDR</option>
+                                                    <option value="Cripto">Cripto</option>
+                                                    <option value="ETF">ETF</option>
+                                                    <option value="FI-Agro">FI-Agro</option>
+                                                    <option value="FI-Infra">FI-Infra</option>
+                                                    <option value="FIA">FIA</option>
+                                                    <option value="FIDC">FIDC</option>
+                                                    <option value="FII">FII</option>
+                                                    <option value="FIP">FIP</option>
+                                                    <option value="Opção">Opção</option>
+                                                    </select>
+                                                    <label for="tipoAtivo">Tipo de ativo</label>
+                                            </div>
+                                        </div>
                                         <div class="col-md">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" id="preco">
                                                 <label for="preco">Preço</label>
                                             </div>
                                         </div>
-                                        <div class="col-md">
-                                            <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control rounded-3" id="corretagem">
-                                                <label for="corretagem">Corretagem</label>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <div class="row g-2">
+                                        <div class="col-md">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="corretagem">
+                                                <label for="corretagem">Corretagem</label>
+                                            </div>
+                                        </div>
                                         <div class="col-md">
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-3" id="outrosCustos">
                                                 <label for="outrosCustos">Outros custos</label>
                                             </div>
                                         </div>
-                                        <div class="col-md">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control rounded-3" id="corretora">
-                                                <label for="corretora">Corretora</label>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <div class="row g-2">
                                         <div class="col-md">
-                                            <div class="form-floating mb-3">
-                                                <button class="w-100 mb-2 btn rounded-3 btn-primary" id="cancel-button" type="reset">Cancelar</button>
+                                            <div class="form-floating mb-3" id="divValorTotal">
+                                                <input type="text" class="form-control rounded-3" id="valorTotal">
+                                                <label for="valorTotal">Valor Total</label>
                                             </div>
                                         </div>
                                         <div class="col-md">
                                             <div class="form-floating ">
-                                                <button class="w-100 mb-2 btn rounded-3 btn-primary" id="add-button" type="submit">Salvar</button>
+                                                <button class="w-100 mb-2 btn rounded-3 btn-primary" id="register-button" type="submit">Salvar</button>
                                             </div>
                                         </div>
                                     </div>
