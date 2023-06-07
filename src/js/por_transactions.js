@@ -139,7 +139,6 @@ function delData() {
     localStorage.removeItem("tradeData");
 }
 
-
 importButton.addEventListener("click", function() {
     loadData("data/trade_history.JSON", "tradeData");
     alert("Dados carregados com sucesso no localStorage!");

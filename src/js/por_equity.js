@@ -1,139 +1,67 @@
-// get transaction data to local storage
-function importDataFromFile(filePath, storageKey) {
-  fetch(filePath)
-    .then(response => response.json())
-    .then(data => {
-      localStorage.setItem(storageKey, JSON.stringify(data));
-      // console.log("Dados importados com sucesso!");
-    })
-    .catch(error => console.error(error));
+function getData() {
+  var tempData = localStorage.getItem("tradeData");
+  if (tempData != null) {
+      tradeData = JSON.parse(tempData);
+  }
 }
 
-const importDataButton = document.getElementById("import-button");
-importDataButton.addEventListener("click", function(event) {
-  importDataFromFile("data/trade_history.JSON", "tradeData");
-  alert("Importação dos dados concluída com sucesso!");
-  setTimeout(() => {
-    document.location.reload();
-  }, 1000);
-});
-
-// build dynamic table using DataTables
-$(document).ready(function () {
-  tradeData = JSON.parse(localStorage.getItem("tradeData"));
-  $('#trade-data').DataTable({
-    data: tradeData,
-    // columnDefs: [ {
-    //   orderable: false,
-    //   data: null,
-    //   defaultContent: '',
-    //   className: 'select-checkbox',
-    //   targets:   0
-    // } ],
-    select: {
-        style:    'multi',
-        selector: 'td:first-child'
-    },
-    order: [[ 0, 'desc' ]],
-    columns: [
-        // { data: 'item' },
-        {
-          className: 'select-checkbox',
-          orderable: false,
-          data: null,
-          defaultContent: '',
-          // targets:   0
-        },
-        { data: 'corretora' },
-        { data: 'notaCorretagem' },
-        { data: 'dataPregao' },
-        { data: 'tipoAtivo' },
-        { data: 'operacao' },
-        { data: 'ativo' },
-        { data: 'quantidade' },
-        { data: 'preco' },
-        { data: 'corretagem' },
-        { data: 'outrosCustos' },
-        { data: 'valorTotal' }
-    ],
-  });
-});
-
-// Function to register transaction
-function registerTransaction() {
-  let corretora = document.getElementById("corretora").value;
-  let notaCorretagem = document.getElementById("notaCorretagem").value;
-  let dataPregao = document.getElementById("dataPregao").value;
-  let ativo = document.getElementById("ativo").value;
-  let quantidade = document.getElementById("quantidade").value;
-  let operacao = document.getElementById("operacao").value;
-  let tipoAtivo = document.getElementById("tipoAtivo").value;
-  let preco = document.getElementById("preco").value;
-  let corretagem = document.getElementById("corretagem").value;
-  let outrosCustos = document.getElementById("outrosCustos").value;
-  
-  if (!corretora || !notaCorretagem || !dataPregao || !ativo || !quantidade || !operacao || 
-    !tipoAtivo || !preco || !corretagem || !outrosCustos) {
-    alert("Todos os campos devem ser preenchidos!");
-  }
-
-  preco = preco.replace(',', '.');
-  corretagem = corretagem.replace(',', '.');
-  outrosCustos = outrosCustos.replace(',', '.');
-  let valorTotal = (parseFloat(quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
-
-  // get trade data from local storage
-  let tradeData = JSON.parse(localStorage.getItem("tradeData")) || [];
-
-  // find user with matching email and password
-  let matchingTransaction = null;
-
+var ativoSet = new Set();
+function getAssets() {
+  getData();
   for (let i = 0; i < tradeData.length; i++) {
-    if (tradeData[i].corretora === corretora && tradeData[i].notaCorretagem === notaCorretagem &&
-      tradeData[i].ativo === ativo && tradeData[i].dataPregao === dataPregao && tradeData[i].operacao === operacao) {
-      alert("Transação já cadastrada!");
-      return;
+    ativoSet.add(tradeData[i].data.ativo);
+  }
+}
+
+function getEquity() {
+  getData();
+  getAssets();
+
+  for (let ativo of ativoSet) {
+    // console.log(ativo);
+
+    // let patrimonio = new Array();
+    let quantidade = 0;
+    let valorTotal = 0.0;
+
+    for (let i = 0; i < tradeData.length; i++) {
+      // console.log(tradeData[i].data);
+      // console.log("i ", i);
+      // console.log("ativoSet ", ativo);
+      // console.log("ativoTradeData ", tradeData[i].data.ativo);
+      console.log("operacao ", tradeData[i].data.operacao);
+      // console.log("ativo = ativo", ativo === tradeData[i].data.ativo);
+      console.log("operacao Compra", tradeData[i].data.operaco == 0);
+      console.log("operacao Venda", tradeData[i].data.operaco == 1);
+
+      if (ativo == tradeData[i].data.ativo & tradeData[i].data.operaco == 0) {
+        valorTotal += parseDouble(tradeData[i].data.valorTotal);
+        quantidade += parseInt(tradeData[i].data.quantidade);
+      } 
+      else if (ativo == tradeData[i].data.ativo & tradeData[i].data.operaco == 1) {
+        valorTotal -= parseDouble(tradeData[i].data.valorTotal);
+        quantidade -= parseInt(tradeData[i].data.quantidade);
+      } 
+
+
+      // console.log(ativo);
+      console.log("quantidade ", quantidade);
+      console.log("valorTotal ", valorTotal);
+
+      // patrimonio[i] = {
+      //   "ativo": ativo,
+      //   "quantidade": quantidade,
+      //   "valorTotal": valorTotal
+      // }
     }
   }
-
-  let item = tradeData.length + 1;
-
-  // create an object to hold the transaction data
-  const transactionData = {
-    item,
-    corretora,
-    notaCorretagem,
-    dataPregao,
-    tipoAtivo,
-    operacao,
-    ativo,
-    quantidade,
-    preco,
-    corretagem,
-    outrosCustos,
-    valorTotal
-  };
-  
-  // add current transaction to transaction history
-  tradeData.push(transactionData);
-
-  // store updated user data in local storage
-  localStorage.setItem("tradeData", JSON.stringify(tradeData));
-  alert("Ativo cadastrado com sucesso!");
-
-};  
-
-// call registerTransaction function
-const transactionRegisterButton = document.getElementById("register-button");
-transactionRegisterButton.addEventListener("click", function(event) {
-  registerTransaction();
-
-  setTimeout(() => {
-    document.location.reload();
-  }, 3000);
-  
-});
+  // console.log(patrimonio);
+}
 
 
 
 
+// Run scripts on page load
+// document.addEventListener("DOMContentLoaded", function() {
+//   getAssets();
+// });
