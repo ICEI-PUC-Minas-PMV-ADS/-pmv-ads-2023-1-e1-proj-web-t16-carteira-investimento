@@ -12,7 +12,7 @@ function getAssets() {
   }
 }
 
-function totalValueEquity() {
+function totalReturn() {
 
   getData();
 
@@ -33,7 +33,7 @@ function totalValueEquity() {
   console.log(valorTotal);
 }
 
-function totalValueByEquity() {
+function totalReturnByEquity() {
 
   getData();
   getAssets();
@@ -63,14 +63,24 @@ function totalValueByEquity() {
       tempData = {
         ativo,
         quantidade,
-        valorTotal      
+        valorTotal  
       }; 
     }
     patrimonio.push(tempData);
   }
-  console.log(patrimonio);
+  return(patrimonio);
 }
 
+
+function getTop5() {
+  let patrimonio = totalReturnByEquity();
+  patrimonio = patrimonio.sort((a, b) => {
+    if (a.valorTotal < b.valorTotal) {
+      return -1;
+    }
+  });
+  console.log(patrimonio);
+}
 
 
 
@@ -78,3 +88,25 @@ function totalValueByEquity() {
 // document.addEventListener("DOMContentLoaded", function() {
 //   getAssets();
 // });
+
+
+const ctx = document.getElementById('myAreaChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});

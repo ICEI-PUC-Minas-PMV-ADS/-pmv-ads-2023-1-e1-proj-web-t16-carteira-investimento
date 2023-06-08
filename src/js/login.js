@@ -19,6 +19,7 @@ function login(email, password) {
     for (let i = 0; i < users.length; i++) {
       if (users[i].email === email && users[i].password === password) {
         matchingUser = users[i];
+        console.log(matchingUser);
         break;
       }
     }
