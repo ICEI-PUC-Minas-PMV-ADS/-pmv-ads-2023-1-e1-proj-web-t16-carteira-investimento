@@ -6,17 +6,17 @@
 
 Ao acessar o histórico de transações (menu Carteira > Transações), o usuário tem a opção de carregar uma base de dados de testes no localStorage (botão `Inicializar Dados`). 
 
-![Tela de Histórico de Transações](img/rf_01_transacoes.jpg)
+![Tela de Histórico de Transações](img/rf_01_transacoes.png)
 
 O usuário também pode cadastrar transações de forma manual (botão `Cadastrar Transação`).
 
-![Tela de Cadastro de Transações](img/rf_01_cadastrar_transacoes.jpg)
+![Tela de Cadastro de Transações](img/rf_01_cadastrar_transacoes.png)
 
 A partir da tabela de transações, o usuário pode editar os dados (ícone do lápis na coluna `Ação`) ou excluir o registro (ícone da lixeira na coluna `Ação`). 
 
-![Tela de Edição de Transações](img/rf_01_editar_transacoes.jpg)
+![Tela de Edição de Transações](img/rf_01_editar_transacoes.png)
 
-![Tela de Exclusão de Transações](img/rf_01_excluir_transacoes.jpg)
+![Tela de Exclusão de Transações](img/rf_01_excluir_transacoes.png)
 
 #### Artefatos da funcionalidade
 
@@ -34,9 +34,9 @@ A partir da tabela de transações, o usuário pode editar os dados (ícone do l
 
 A página Home (Dashboard) exibe o retorno esperado dos ativos que o usuário possui. Para facilitar a leitura, o card muda de cor se o resultadofor positivo (verde) ou negativo (vermelho).
 
-![Resultado positivo](img/rf_02_rentabilidade_01.jpg)
+![Resultado positivo](img/rf_02_rentabilidade_01.png)
 
-![Resultado negativo](img/rf_02_rentabilidade_02.jpg)
+![Resultado negativo](img/rf_02_rentabilidade_02.png)
 
 
 
