@@ -1,101 +1,35 @@
+let submitButton = document.getElementById("register-button");
+let editButton = document.getElementById("edit-button");
 const importButton = document.getElementById("import-button");
-const addButton = document.getElementById("add-button");
-const deleteButton = document.getElementById("delete-button");
 
+let tableContainerContent = document.querySelector(".table-container-content");
 
-// tradeData = JSON.parse(localStorage.getItem("tradeData"));
+let tradeTable = document.getElementById("table-content");
 
-// function to add trade data to local storage  
-function addData() {
+let addModal = document.getElementById("modalRegister")
+let editModal = document.getElementById("modalEdit")
 
-    // read values from form to variables
-    let corretora = document.getElementById("corretora").value;
-    let notaCorretagem = document.getElementById("notaCorretagem").value;
-    let dataPregao = document.getElementById("dataPregao").value;
-    let ativo = document.getElementById("ativo").value;
-    let quantidade = document.getElementById("quantidade").value;
-    let operacao = document.getElementById("operacao").value;
-    let tipoAtivo = document.getElementById("tipoAtivo").value;
-    let preco = document.getElementById("preco").value;
-    let corretagem = document.getElementById("corretagem").value;
-    let outrosCustos = document.getElementById("outrosCustos").value;
-    let acao = " ";
-    let uniqueEmpId = new Date().getTime();
-  
-    // check if all fields are filled
-    if (!corretora || !notaCorretagem || !dataPregao || !ativo || !quantidade || !operacao || 
-        !tipoAtivo || !preco || !corretagem || !outrosCustos) {
-        alert("Todos os campos devem ser preenchidos!");
-    }
+tableContainerContent.addEventListener("click", deleteRowRecord);
 
-    // replace decimal digit character in order to calculate total value
-    preco = preco.replace(',', '.');
-    corretagem = corretagem.replace(',', '.');
-    outrosCustos = outrosCustos.replace(',', '.');
-    valorTotal = (parseFloat(quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
+// tableContainerContent.addEventListener("click", editRow);
 
-    // get trade data from localstorage, or return empyt vector if not existing
-    getData();
+let corretora = document.getElementById("corretora");
+let notaCorretagem = document.getElementById("notaCorretagem");
+let dataPregao = document.getElementById("dataPregao");
+let ativo = document.getElementById("ativo");
+let quantidade = document.getElementById("quantidade");
+let operacao = document.getElementById("operacao");
+let tipoAtivo = document.getElementById("tipoAtivo");
+let preco = document.getElementById("preco");
+let corretagem = document.getElementById("corretagem");
+let outrosCustos = document.getElementById("outrosCustos");
+let valorTotal = document.getElementById("valorTotal");
+let uniqueId = document.getElementById("uniqueId");
 
-    let item = tradeData.length + 1;
-
-    // create an object to hold the transaction data
-    const transactionData = {
-        item,
-        corretora,
-        notaCorretagem,
-        dataPregao,
-        tipoAtivo,
-        operacao,
-        ativo,
-        quantidade,
-        preco,
-        corretagem,
-        outrosCustos,
-        valorTotal,
-        acao,
-        uniqueEmpId
-    };
-    
-    // add current transaction to transaction history
-    tradeData.push(transactionData);
-
-    // store updated user data in local storage
-    localStorage.setItem("tradeData", JSON.stringify(tradeData));
-
-    createTableRow(transactionData);
-
-}
+let tr = null;
+let tradeData = [];
 
 let editID = "";
-
-function createTableRow (transactionData) {
-    const element = document.createElement("tr");
-    let attr = document.createAttribute("data-id");
-    attr.value = transactionData.uniqueEmpId;
-    element.setAttributeNode(attr);
-    element.classList.add("fullEmpDetail");
-    element.innerHTML = `
-    <td id=itemTD">${transactionData.item}</td>,
-    <td id=corretoraTD">${transactionData.corretora}</td>,
-    <td id=notaCorretagemTD">${transactionData.notaCorretagemT}</td>,
-    <td id=dataPregaoTD">${transactionData.dataPregao}</td>,
-    <td id=tipoAtivoTD">${transactionData.tipoAtivo}</td>,
-    <td id=operacaoTD">${transactionData.operacao}</td>,
-    <td id=quantidadeTD">${transactionData.quantidade}</td>,
-    <td id=precoTD">${transactionData.preco}</td>,
-    <td id=corretagemTD">${transactionData.corretagem}</td>,
-    <td id=outrosCustosTD">${transactionData.outrosCustos}</td>,
-    <td id=valorTotalTD">${transactionData.valorTotal}</td>,
-    <td>
-      <i class="fas fa-eye"></i>
-      <i value="Edit" type="button" id="update-row" class="edit-row fas fa-pencil-alt"></i>
-      <i value="Delete" type="button" class="remove-row fas fa-trash-alt"></i>
-    </td>
-`;
-
-    transactionData.appendChild(element);
-}
 
 function getData() {
     var tempData = localStorage.getItem("tradeData");
@@ -103,6 +37,212 @@ function getData() {
         tradeData = JSON.parse(tempData);
     }
 }
+
+//// submit data
+
+submitButton.addEventListener("click", function () {
+    
+    getData();
+
+    console.log(tradeData);
+
+    if (corretora && notaCorretagem && dataPregao && ativo && quantidade && operacao && tipoAtivo && preco && corretagem && outrosCustos != "") {
+
+        let tempData = {
+            id: new Date().getTime(),
+            data: {
+                corretora: corretora.value,
+                notaCorretagem: notaCorretagem.value,
+                dataPregao: dataPregao.value,
+                ativo: ativo.value,
+                quantidade: quantidade.value,
+                operacao: operacao.value,
+                tipoAtivo: tipoAtivo.value,
+                preco: preco.value,
+                corretagem: corretagem.value,
+                outrosCustos: outrosCustos.value,
+                uniqueId: new Date().getTime(),
+            },
+        };
+
+        // replace decimal digit character in order to calculate total value
+        preco = tempData.data.preco.replace(',', '.');
+        tempData.data.preco = parseFloat(preco).toFixed(2);
+        corretagem = tempData.data.corretagem.replace(',', '.');
+        tempData.data.corretagem = parseFloat(corretagem).toFixed(2);
+        outrosCustos = tempData.data.outrosCustos.replace(',', '.');
+        tempData.data.outrosCustos = parseFloat(outrosCustos).toFixed(2);
+        valorTotal = (parseFloat(tempData.data.quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
+        tempData.data.valorTotal = valorTotal.toFixed(2);
+
+        tradeData.push(tempData);
+
+        localStorage.setItem("tradeData", JSON.stringify(tradeData));
+    }
+});
+
+
+//// create table row
+
+function createTableRow(tempData) {
+    const element = document.createElement("tr");
+    let attr = document.createAttribute("data-id");
+    attr.value = tempData.id;
+    element.setAttributeNode(attr);
+    element.classList.add("fulltempData");
+    element.innerHTML = `
+        <td id="tdCorretora">${tempData.data.corretora}</td>
+        <td id="tdNotaCorretagem">${tempData.data.notaCorretagem}</td>
+        <td id="tdDataPregao">${tempData.data.dataPregao}</td>
+        <td id="tdTipoAtivo">${tempData.data.tipoAtivo}</td>
+        <td id="tdOperacao">${tempData.data.operacao}</td>
+        <td id="tdAtivo">${tempData.data.ativo}</td>
+        <td id="tdQuantidade">${tempData.data.quantidade}</td>
+        <td id="tdPreco">${tempData.data.preco}</td>
+        <td id="tdCorretagem">${tempData.data.corretagem}</td>
+        <td id="tdOutrosCustos">${tempData.data.outrosCustos}</td>
+        <td id="tdValorTotal">${tempData.data.valorTotal}</td>
+        <td>
+            <i value="Edit" type="button" id="update-row" class="edit-row fas fa-pencil-alt"></i>
+            <i class="fa-thin fa-square" style="color: #00FFFFFF;"></i>
+            <i value="Delete" type="button" class="remove-row fas fa-trash-alt"></i>
+        </td>
+  `;
+    tradeTable.appendChild(element);
+}
+
+
+//// remove table row and data record
+
+document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("remove-row")) {
+
+        var confirmed = confirm("Confirma a exclusão deste registro?");
+        if (!confirmed) {
+          return; // Do nothing if user cancels the delete operation
+        }
+
+        var row = e.target.parentNode.parentNode;
+        var uniqueId = row.closest("tr").getAttribute("data-id");
+        deleteRowRecord(uniqueId);
+    }
+});
+
+function deleteRowRecord(uniqueId) {
+
+    getData();
+    var table = document.getElementById("table-content");
+    var rows = table.getElementsByTagName("tr");
+
+    for (var i = 0; i < rows.length; i++) {
+        var cell = rows[i].closest("tr").getAttribute("data-id");
+        // console.log(uniqueId);
+        if (cell === uniqueId) {
+            // remove the data from localStorage
+            tradeData.splice(i,1);   
+            localStorage.setItem("tradeData", JSON.stringify(tradeData));
+            // remove the row from the table
+            table.deleteRow(i);
+            // reload page to update table 
+            setTimeout(() => {
+                document.location.reload();
+            }, 1000);
+            break; // exit the loop after remove row and record
+        }
+    }
+}
+
+
+//// edit record
+
+// open modal, load data into inputs
+document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("edit-row")) {
+        tr = e.target.parentNode.parentNode;
+        $("#modalEdit").modal("show");
+        var row = e.target.parentNode.parentNode;
+        var uniqueId = row.closest("tr").getAttribute("data-id");
+        editRow(tr,uniqueId);
+    }
+});
+
+// load data into inputs
+function editRow(tr,uniqueId) {
+
+    let edCorretora = document.getElementById("edCorretora");
+    let edNotaCorretagem = document.getElementById("edNotaCorretagem");
+    let edDataPregao = document.getElementById("edDataPregao");
+    let edTipoAtivo = document.getElementById("edTipoAtivo");
+    let edOperacao = document.getElementById("edOperacao");
+    let edAtivo = document.getElementById("edAtivo");
+    let edQuantidade = document.getElementById("edQuantidade");
+    let edPreco = document.getElementById("edPreco");
+    let edCorretagem = document.getElementById("edCorretagem");
+    let edOutrosCustos = document.getElementById("edOutrosCustos");
+    let edValorTotal = document.getElementById("edValorTotal");
+
+    edCorretora.value = tr.cells[0].textContent;
+    edNotaCorretagem.value = tr.cells[1].textContent;
+    edDataPregao.value = tr.cells[2].textContent;
+    edTipoAtivo.value = tr.cells[3].textContent;
+    edOperacao.value = tr.cells[4].textContent;
+    edAtivo.value = tr.cells[5].textContent;
+    edQuantidade.value = tr.cells[6].textContent;
+    edPreco.value = tr.cells[7].textContent;
+    edCorretagem.value = tr.cells[8].textContent;
+    edOutrosCustos.value = tr.cells[9].textContent;
+    edValorTotal.value = tr.cells[10].textContent;
+    edUniqueID = parseInt(uniqueId);
+    console.log(edUniqueID);
+    console.log(typeof(edUniqueID));
+}
+
+
+editButton.addEventListener("click", function () {
+     
+    getData();
+
+    if (edCorretora && edNotaCorretagem && edDataPregao && edAtivo && edQuantidade && edOperacao && edTipoAtivo && edPreco && edCorretagem && edOutrosCustos != "") {
+
+        let tempData = {
+            id: edUniqueID,
+            data: {
+                corretora: edCorretora.value,
+                notaCorretagem: edNotaCorretagem.value,
+                dataPregao: edDataPregao.value,
+                ativo: edAtivo.value,
+                quantidade: edQuantidade.value,
+                operacao: edOperacao.value,
+                tipoAtivo: edTipoAtivo.value,
+                preco: edPreco.value,
+                corretagem: edCorretagem.value,
+                outrosCustos: edOutrosCustos.value,
+                uniqueId: edUniqueID,
+            },
+        };
+
+        // replace decimal digit character in order to calculate total value
+        preco = tempData.data.preco.replace(',', '.');
+        tempData.data.preco = parseFloat(preco).toFixed(2);
+        corretagem = tempData.data.corretagem.replace(',', '.');
+        tempData.data.corretagem = parseFloat(corretagem).toFixed(2);
+        outrosCustos = tempData.data.outrosCustos.replace(',', '.');
+        tempData.data.outrosCustos = parseFloat(outrosCustos).toFixed(2);
+        valorTotal = (parseFloat(tempData.data.quantidade) * parseFloat(preco)) + parseFloat(corretagem) + parseFloat(outrosCustos);
+        tempData.data.valorTotal = valorTotal.toFixed(2);
+
+        localStorage.setItem("tempData", JSON.stringify(tempData));
+
+        for (let i = 0; i < tradeData.length; i++) {
+            // console.log(tradeData[i].id === edUniqueID);
+            if(tradeData[i].id === edUniqueID) {
+                tradeData[i] = tempData;
+            }
+        }
+
+        localStorage.setItem("tradeData", JSON.stringify(tradeData));
+    }
+});
 
 function loadData(filePath, storageKey) {
     fetch(filePath)
@@ -114,58 +254,64 @@ function loadData(filePath, storageKey) {
     .catch(error => console.error(error));
 }
 
-function showData() {
-    
-    getData();
-    
-    const table = document.getElementById('trade-data');
-  
-    // Clear existing table
-    table.innerHTML = '';
-  
-    // Generate table rows
-    tradeData.slice().reverse().forEach(data => {
-      const row = document.createElement('tr');
-      for (const key in data) {
-        const cell = document.createElement('td');
-        cell.textContent = data[key];
-        row.appendChild(cell);
-      }
-      table.appendChild(row);
-    });
-}
-
-function delData() {
-    localStorage.removeItem("tradeData");
-}
-
 importButton.addEventListener("click", function() {
     loadData("data/trade_history.JSON", "tradeData");
+
+    if (localStorage.getItem("tradeData") != null) {
+
+        let tradeData = JSON.parse(localStorage.getItem("tradeData"));
+
+        for (let i = 0; i < tradeData.length; i++) {
+            createTableRow(tradeData[i]);
+        }
+    }
+
+    setTimeout(() => {
+        document.location.reload();
+    }, 1000);
+
     alert("Dados carregados com sucesso no localStorage!");
-    setTimeout(() => {
-        document.location.reload();
-      }, 1000);
+
 });
 
-
-deleteButton.addEventListener("click", function() {
-    delData();
-    alert("Dados excluídos com sucesso do localStorage!");
-    setTimeout(() => {
-        document.location.reload();
-      }, 1000);
-});
-
-
-addButton.addEventListener("click", function() {
-    addData();
-    alert("Transação cadastrada com sucesso!");
-    setTimeout(() => {
-        document.location.reload();
-      }, 1000);
-});
-
-// Run scripts on page load
 document.addEventListener("DOMContentLoaded", function() {
-    showData();
+    
+    if (localStorage.getItem("tradeData") != null) {
+
+        let tradeData = JSON.parse(localStorage.getItem("tradeData"));
+
+        for (let i = 0; i < tradeData.length; i++) {
+            createTableRow(tradeData[i]);
+        }
+    }
 });
+
+
+
+// function transformJSON() {
+//     getData();
+//     let tempData = new Array();
+//     console.log(tempData);
+//     for (let i = 0; i < tradeData.length; i++) {
+//         tempData[i] = {
+//             "id": tradeData[i].id,
+//             "data": {
+//                 "corretora": tradeData[i].corretora,
+//                 "notaCorretagem": tradeData[i].notaCorretagem,
+//                 "dataPregao": tradeData[i].dataPregao,
+//                 "tipoAtivo": tradeData[i].tipoAtivo,
+//                 "operacao": tradeData[i].operacao,
+//                 "ativo": tradeData[i].ativo,
+//                 "quantidade": tradeData[i].quantidade,
+//                 "preco": tradeData[i].preco,
+//                 "corretagem": tradeData[i].corretagem,
+//                 "outrosCustos": tradeData[i].outrosCustos,
+//                 "valorTotal": tradeData[i].valorTotal,
+//                 "acao": "",
+//                 "uniqueEmpId": tradeData[i].uniqueEmpId,
+//             }
+//         }
+//     }
+//     console.log(tempData);
+//     localStorage.setItem("tempData", JSON.stringify(tempData));
+// }
