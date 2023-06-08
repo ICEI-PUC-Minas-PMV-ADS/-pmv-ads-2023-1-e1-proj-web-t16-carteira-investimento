@@ -29,10 +29,8 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 
     <!-- Chart.js  -->
-    <!-- <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.js" integrity="sha512-L6yov5P1r9QnZX2ZRiq+XBLsm1GQ38zfSDJ6gy3pKmPCqkWvK2nz8Ojlju9q36+zOsMmMB+hYgGrJtJWo4Gy/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.js.map"></script>
-
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <!-- Custom JS -->
     <script defer src="js/login.js"></script>
     <script defer src="js/menu.js"></script>
@@ -168,12 +166,12 @@
 
                         <div class="col-xl-6">
                             <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-chart-area me-1"></i>
-                                    Area Chart Example
+                                <div class="card-header up">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    Melhores resultados
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="myAreaChart" width="100%" height="40">
+                                    <canvas id="bestResults" width="100%" height="40">
 
                                     </canvas>
                                 </div>
@@ -182,12 +180,12 @@
 
                         <div class="col-xl-6">
                             <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-chart-bar me-1"></i>
-                                    Bar Chart Example
+                                <div class="card-header down">
+                                    <i class="fa-solid fa-arrow-trend-down"></i>
+                                    Piores resultados
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="myBarChart" width="100%" height="40">
+                                    <canvas id="worstResults" width="100%" height="40">
 
                                     </canvas>
                                 </div>

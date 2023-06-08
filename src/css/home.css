@@ -240,6 +240,14 @@ a.article:hover {
     transition: all 0.3s;
 }
 
+.up {
+    background-color: lightgreen;
+}
+
+.down {
+    background-color: lightcoral;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */

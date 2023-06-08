@@ -72,17 +72,37 @@ function totalReturnByEquity() {
 }
 
 
-function getTop5() {
+function getTopN(start = -5, end) {
   let patrimonio = totalReturnByEquity();
   patrimonio = patrimonio.sort((a, b) => {
     if (a.valorTotal < b.valorTotal) {
       return -1;
     }
   });
-  console.log(patrimonio);
+
+  let topN = patrimonio.slice(start, end);
+  // console.log("topN ", topN);
+
+  let outArray = new Array();
+
+  for (let i = 0; i < topN.length; i++){
+
+    let ativo = topN[i].ativo;
+    // console.log("ativo ",ativo);
+    let valorTotal = topN[i].valorTotal;
+    // console.log("valorTotal ",valorTotal);
+
+    var inArray = {
+      valorTotal: valorTotal,
+      ativo: ativo
+    }    
+    // console.log(inArray.data.datasets.data);
+    // console.log(inArray.labels);
+    outArray.push(inArray);
+  }
+  // console.log(outArray);
+  return(outArray);
 }
-
-
 
 // Run scripts on page load
 // document.addEventListener("DOMContentLoaded", function() {
@@ -90,23 +110,85 @@ function getTop5() {
 // });
 
 
-const ctx = document.getElementById('myAreaChart');
+const best = document.getElementById('bestResults');
+const worst = document.getElementById('worstResults');
 
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
+function loadCharts() {
+
+  let topN = getTopN();
+  let bottomN = getTopN(0,5);
+  
+  let topValorTotal = new Array();
+  let bottomValorTotal = new Array();
+  let topAtivo = new Array();
+  let bottomAtivo = new Array();
+
+  for (let i = 0; i < topN.length; i++) {
+    topValorTotal.push(topN[i].valorTotal);
+    console.log(topValorTotal);
+    topAtivo.push(topN[i].ativo);
+    console.log(topAtivo);
+  }
+
+  for (let i = 0; i < bottomN.length; i++) {
+    bottomValorTotal.push(bottomN[i].valorTotal);
+    console.log(bottomValorTotal);
+    bottomAtivo.push(bottomN[i].ativo);
+    console.log(bottomAtivo);
+  }
+
+  new Chart(best, {
+    type: 'bar',
+    data: {
+      labels: topAtivo,
+      datasets: [{
+        label: '# of Votes',
+        data: topValorTotal,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
       }
     }
-  }
+  });
+  
+  new Chart(worst, {
+    type: 'bar',
+    data: {
+      labels: bottomAtivo,
+      datasets: [{
+        label: '# of Votes',
+        data: bottomValorTotal,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+
+}
+
+// Run scripts on page load
+document.addEventListener("DOMContentLoaded", function() {
+  loadCharts();
 });
+
