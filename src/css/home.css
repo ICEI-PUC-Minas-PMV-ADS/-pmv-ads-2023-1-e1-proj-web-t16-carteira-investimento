@@ -248,13 +248,12 @@ a.article:hover {
     background-color: lightcoral;
 }
 
-.card-header,
-.card-footer {
+.card-body {
     font-size: 0.9rem;
     padding: 4px 16px;
 }
 
-.card-body {
+.card-footer {
     font-size: 1.5rem;
     padding: 4px 16px;
 }

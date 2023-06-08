@@ -75,7 +75,7 @@ function totalAquisitonCost() {
 
 let aquisitonCost = totalAquisitonCost();
 aquisitonCost = parseFloat(aquisitonCost).toFixed(2);
-document.getElementById("total-cost").textContent = aquisitonCost;
+document.getElementById("total-cost").textContent = "R$ " + aquisitonCost;
 
 
 function totalMarketValue() {
@@ -93,13 +93,12 @@ function totalMarketValue() {
 
 let marketValue = totalMarketValue();
 marketValue = parseFloat(marketValue).toFixed(2);
-document.getElementById("market-value").textContent = marketValue;
-
+document.getElementById("market-value").textContent = "R$ " + marketValue;
 
 let expectetdReturn = marketValue - aquisitonCost
 
 expectetdReturn = parseFloat(expectetdReturn).toFixed(2);
-document.getElementById("return").textContent = expectetdReturn;
+document.getElementById("return").textContent = "R$ " + expectetdReturn;
 if(expectetdReturn >= 0) {
   document.getElementById("return-card").classList.add("bg-success");
 }
@@ -107,6 +106,9 @@ else {
   document.getElementById("return-card").classList.add("bg-danger");
 }
 
+let relativeVariation = (expectetdReturn / marketValue) * 100;
+relativeVariation = relativeVariation.toFixed(2);
+document.getElementById("relative-variation").textContent = relativeVariation + "%";
 
 function getTopN(start = -5, end) {
   let patrimonio = totalReturnByEquity();
@@ -232,27 +234,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //// página rentabilidade
 
-function historicalReturn() {
+// function historicalReturn() {
 
-  patrimonio = totalReturnByEquity();
+//   patrimonio = totalReturnByEquity();
 
-  let totalReturn = 0.0;
+//   let totalReturn = 0.0;
 
-  for (let i = 0; i < patrimonio.length; i++) {
-    if (parseInt(patrimonio[i].quantidade) == 0) {
-      totalReturn += parseFloat(patrimonio[i].valorTotal);
-    }
-  // console.log(totalReturn);
-  }
-  return totalReturn;
-}
+//   for (let i = 0; i < patrimonio.length; i++) {
+//     if (parseInt(patrimonio[i].quantidade) == 0) {
+//       totalReturn += parseFloat(patrimonio[i].valorTotal);
+//     }
+//   // console.log(totalReturn);
+//   }
+//   return totalReturn;
+// }
 
-let retorno = historicalReturn();
-retorno = parseFloat(retorno).toFixed(2);
-document.getElementById("").textContent = retorno;
-if(retorno >= 0) {
-  document.getElementById("return-card").classList.add("bg-success");
-}
-else {
-  document.getElementById("return-card").classList.add("bg-danger");
-}
+// let retorno = historicalReturn();
+// retorno = parseFloat(retorno).toFixed(2);
+// document.getElementById("").textContent = retorno;
+// if(retorno >= 0) {
+//   document.getElementById("return-card").classList.add("bg-success");
+// }
+// else {
+//   document.getElementById("return-card").classList.add("bg-danger");
+// }
