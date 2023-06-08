@@ -12,6 +12,7 @@ function getData() {
   if (tempData != null) {
       tradeData = JSON.parse(tempData);
   }
+  return tradeData;
 }
 
 var ativoSet = new Set();
@@ -23,24 +24,50 @@ function getAssets() {
 
 function totalReturn() {
 
-  getData();
+  patrimonio = totalReturnByEquity();
+  // console.log(patrimonio);
 
-  let valorTotal = 0.0;
+  let totalReturn = 0.0;
 
-  for (let i = 0; i < tradeData.length; i++) {
-
-    if (tradeData[i].data.operacao == "Compra") {
-      valorTotal += parseFloat(tradeData[i].data.valorTotal);
-    } 
-    else if (tradeData[i].data.operacao == "Venda") {
-      valorTotal -= parseFloat(tradeData[i].data.valorTotal);
-    } 
-    else {
-      continue;
+  for (let i = 0; i < patrimonio.length; i++) {
+    if (parseInt(patrimonio[i].quantidade) == 0) {
+      totalReturn += parseFloat(patrimonio[i].valorTotal);
     }
-  }; 
-  console.log(valorTotal);
+  // console.log(totalReturn);
+  }
+  return totalReturn;
 }
+
+let retorno = totalReturn();
+retorno = parseFloat(retorno).toFixed(2);
+document.getElementById("return").textContent = retorno;
+if(retorno >= 0) {
+  document.getElementById("return-card").classList.add("bg-success");
+}
+else {
+  document.getElementById("return-card").classList.add("bg-danger");
+}
+
+
+function totalAquisitonCost() {
+  patrimonio = totalReturnByEquity();
+  // console.log(patrimonio);
+
+  let aquisitionCost = 0.0;
+
+  for (let i = 0; i < patrimonio.length; i++) {
+    if (parseInt(patrimonio[i].quantidade) != 0) {
+      aquisitionCost += parseFloat(patrimonio[i].valorTotal);
+    }
+  // console.log(aquisitionCost);
+  }
+  return aquisitionCost;
+}
+
+let totalCost = totalAquisitonCost();
+totalCost = parseFloat(totalCost).toFixed(2);
+document.getElementById("total-cost").textContent = totalCost;
+
 
 function totalReturnByEquity() {
 
@@ -90,7 +117,7 @@ function getTopN(start = -5, end) {
   });
 
   let topN = patrimonio.slice(start, end);
-  // console.log("topN ", topN);
+
 
   let outArray = new Array();
 
@@ -134,16 +161,16 @@ function loadCharts() {
 
   for (let i = 0; i < topN.length; i++) {
     topValorTotal.push(topN[i].valorTotal);
-    console.log(topValorTotal);
+    // console.log(topValorTotal);
     topAtivo.push(topN[i].ativo);
-    console.log(topAtivo);
+    // console.log(topAtivo);
   }
 
   for (let i = 0; i < bottomN.length; i++) {
     bottomValorTotal.push(bottomN[i].valorTotal);
-    console.log(bottomValorTotal);
+    // console.log(bottomValorTotal);
     bottomAtivo.push(bottomN[i].ativo);
-    console.log(bottomAtivo);
+    // console.log(bottomAtivo);
   }
 
   new Chart(best, {
