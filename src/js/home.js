@@ -22,53 +22,6 @@ function getAssets() {
   }
 }
 
-function totalReturn() {
-
-  patrimonio = totalReturnByEquity();
-  // console.log(patrimonio);
-
-  let totalReturn = 0.0;
-
-  for (let i = 0; i < patrimonio.length; i++) {
-    if (parseInt(patrimonio[i].quantidade) == 0) {
-      totalReturn += parseFloat(patrimonio[i].valorTotal);
-    }
-  // console.log(totalReturn);
-  }
-  return totalReturn;
-}
-
-let retorno = totalReturn();
-retorno = parseFloat(retorno).toFixed(2);
-document.getElementById("return").textContent = retorno;
-if(retorno >= 0) {
-  document.getElementById("return-card").classList.add("bg-success");
-}
-else {
-  document.getElementById("return-card").classList.add("bg-danger");
-}
-
-
-function totalAquisitonCost() {
-  patrimonio = totalReturnByEquity();
-  // console.log(patrimonio);
-
-  let aquisitionCost = 0.0;
-
-  for (let i = 0; i < patrimonio.length; i++) {
-    if (parseInt(patrimonio[i].quantidade) != 0) {
-      aquisitionCost += parseFloat(patrimonio[i].valorTotal);
-    }
-  // console.log(aquisitionCost);
-  }
-  return aquisitionCost;
-}
-
-let totalCost = totalAquisitonCost();
-totalCost = parseFloat(totalCost).toFixed(2);
-document.getElementById("total-cost").textContent = totalCost;
-
-
 function totalReturnByEquity() {
 
   getData();
@@ -105,6 +58,53 @@ function totalReturnByEquity() {
     patrimonio.push(tempData);
   }
   return(patrimonio);
+}
+
+function totalAquisitonCost() {
+  patrimonio = totalReturnByEquity();
+  let aquisitionCost = 0.0;
+
+  for (let i = 0; i < patrimonio.length; i++) {
+    if (parseInt(patrimonio[i].quantidade) != 0) {
+      aquisitionCost += parseFloat(patrimonio[i].valorTotal);
+    }
+  // console.log(aquisitionCost);
+  }
+  return aquisitionCost;
+}
+
+let aquisitonCost = totalAquisitonCost();
+aquisitonCost = parseFloat(aquisitonCost).toFixed(2);
+document.getElementById("total-cost").textContent = aquisitonCost;
+
+
+function totalMarketValue() {
+  patrimonio = totalAquisitonCost();
+
+  let result = Math.random();
+  
+  if (result >= 0.5) {
+    patrimonio *= (1 + (Math.random() * 0.2));
+  } else {
+    patrimonio *= (1 -  (Math.random() * 0.2));
+  }
+  return patrimonio;
+}
+
+let marketValue = totalMarketValue();
+marketValue = parseFloat(marketValue).toFixed(2);
+document.getElementById("market-value").textContent = marketValue;
+
+
+let expectetdReturn = marketValue - aquisitonCost
+
+expectetdReturn = parseFloat(expectetdReturn).toFixed(2);
+document.getElementById("return").textContent = expectetdReturn;
+if(expectetdReturn >= 0) {
+  document.getElementById("return-card").classList.add("bg-success");
+}
+else {
+  document.getElementById("return-card").classList.add("bg-danger");
 }
 
 
@@ -178,7 +178,7 @@ function loadCharts() {
     data: {
       labels: topAtivo,
       datasets: [{
-        label: '# of Votes',
+        label: 'Lucro R$',
         data: topValorTotal,
         borderWidth: 1
       }]
@@ -202,7 +202,7 @@ function loadCharts() {
     data: {
       labels: bottomAtivo,
       datasets: [{
-        label: '# of Votes',
+        label: 'Prejuízo R$',
         data: bottomValorTotal,
         borderWidth: 1
       }]
@@ -229,3 +229,30 @@ document.addEventListener("DOMContentLoaded", function() {
   loadCharts();
 });
 
+
+//// página rentabilidade
+
+function historicalReturn() {
+
+  patrimonio = totalReturnByEquity();
+
+  let totalReturn = 0.0;
+
+  for (let i = 0; i < patrimonio.length; i++) {
+    if (parseInt(patrimonio[i].quantidade) == 0) {
+      totalReturn += parseFloat(patrimonio[i].valorTotal);
+    }
+  // console.log(totalReturn);
+  }
+  return totalReturn;
+}
+
+let retorno = historicalReturn();
+retorno = parseFloat(retorno).toFixed(2);
+document.getElementById("").textContent = retorno;
+if(retorno >= 0) {
+  document.getElementById("return-card").classList.add("bg-success");
+}
+else {
+  document.getElementById("return-card").classList.add("bg-danger");
+}
