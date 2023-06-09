@@ -14,6 +14,7 @@
     
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/profile.css">
 
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
@@ -27,15 +28,11 @@
     <!-- Popper.JS -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 
-    <!-- Chart.js  -->
-    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
     <!-- Custom JS -->
     <script defer src="js/login.js"></script>
     <script defer src="js/menu.js"></script>
     <script defer src="js/home.js"></script>
-    <script defer src="Js/profileImg.js"></script>
-    <script defer src="Js/notification.js"></script>
+    <script src="js/profileImg.js" defer></script>
     
 </head>
 
@@ -59,7 +56,7 @@
                     <div class="flex-shrink-0 dropdown navbar-div">
                         <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <figure>
-                                <img src="https://source.unsplash.com/random" alt="mdo" width="36" height="36" class="rounded-circle">
+                                <img id="preview-image-min" alt="mdo" width="36" height="36" class="rounded-circle">
                             </figure>
                         </a>
                         <ul class="dropdown-menu text-small shadow">
@@ -100,7 +97,7 @@
                                 Carteira
                             </a>
                             <ul class="collapse list-unstyled" id="homeSubmenu">
-                                <li><a onclick="goNotification()" style="cursor: pointer;" id="portfolio-settings">Configuração</a></li>
+                                <li><a href="#" id="portfolio-settings">Configuração</a></li>
                                 <li><a href="#" id="portfolio-returns">Rentabilidade</a></li>
                                 <li><a href="#" id="portfolio-equity">Patrimônio</a></li>
                                 <li><a href="#" id="portfolio-transactions">Transações</a></li>
@@ -131,69 +128,19 @@
             <main>
                 <div id="content" class="container-fluid">
 
-                    <div class="row justify-content-between">
-
-                        <div class="col-xl-4 col-md-6">
-                            <div class="card bg-primary text-white">
-                                <div class="card-body">Custo de Aquisição</div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <p class="small text-white" id="total-cost"></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-md-6">
-                            <div class="card bg-warning text-white mb-4">
-                                <div class="card-body">Valor de Mercado</div>
-                                <div class="card-footer">
-                                    <p class="small text-white" id="market-value"></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-md-6">
-                            <div class="card text-white mb-4" id="return-card">
-                                <div class="card-body">Retorno Esperado</div>
-                                <div class="card-footer">
-                                    <p class="small text-white d-inline text-left" id="return"></p> 
-                                    <p class="small text-white d-inline text-right" id="relative-variation"></p>
-                                </div>
-                            </div>
-                        </div>
-
+        <!-- ############### Input para o suário colocar a foto de perfil ############### -->
+                    <div>
+                        <span>Escolha sua foto de perfil: </span>
+                        <input type="file" name="image" id="image" style="width: 150px;">
+                        <img id="preview-image" class="ImgProfileMain">
                     </div>
-
-                    <div class="row justify-content-between">
-
-                        <div class="col-xl-6">
-                            <div class="card mb-4">
-                                <div class="card-header up">
-                                    <i class="fa-solid fa-arrow-trend-up"></i>
-                                    Melhores resultados
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="bestResults" width="100%" height="40">
-
-                                    </canvas>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6">
-                            <div class="card mb-4">
-                                <div class="card-header down">
-                                    <i class="fa-solid fa-arrow-trend-down"></i>
-                                    Piores resultados
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="worstResults" width="100%" height="40">
-
-                                    </canvas>
-                                </div>
-                            </div>
-                        </div>
+            
+                    <div>
+                        <ul>
+                            <li class="liPerfil">Nome: <span id="mName" class="spanPerfil"></span></li>
+                            <li class="liPerfil">Email: <span id="mEmail" class="spanPerfil"></span></li>
+                        </ul>
                     </div>
-                    
                 </div>
             </main>
         </div>
