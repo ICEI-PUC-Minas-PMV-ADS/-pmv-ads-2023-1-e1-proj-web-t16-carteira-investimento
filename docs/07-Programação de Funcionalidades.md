@@ -64,6 +64,14 @@ A página Home (Dashboard) exibe o retorno esperado dos ativos que o usuário po
 
 ### A aplicação deve permitir que o usuário configure alertas e notificações para acompanhar o desempenho dos seus investimentos, como avisos de vencimento, mudanças nas taxas de juros, etc.
 
+#### Artefatos da funcionalidade
+
+- notification.html (Caê Moreira Euphrásio)
+
+- notification.js (Caê Moreira Euphrásio)
+
+- notification.css (Caê Moreira Euphrásio)
+
 ## RF-005 
 
 ### A aplicação deve permitir que o usuário simule investimentos futuros, de acordo com diferentes cenários de mercado.
