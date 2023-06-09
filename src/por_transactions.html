@@ -35,7 +35,8 @@
     <script defer src="js/login.js"></script>
     <script defer src="js/menu.js"></script>
     <script defer src="js/home.js"></script>
-    <script defer src="js/por_transactions.js"></script>    
+    <script defer src="js/por_transactions.js"></script>
+    <script src="js/profileImg.js" defer></script>
 
     <!-- DataTables CSS -->
     <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/sp-2.1.2/sl-1.6.2/datatables.min.css" rel="stylesheet"/>
@@ -69,7 +70,7 @@
                         <ul class="dropdown-menu text-small shadow">
                             <li><a class="dropdown-item" href="#"><span id="current-user"></span></a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" onclick="goProfile()" style="cursor: pointer;">Perfil</a></li>
                             <li><a class="dropdown-item" href="#">Configurações</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" id="logout-link" href="#">Sair</a></li>
