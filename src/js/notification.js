@@ -60,5 +60,5 @@ function definirNotificacao() {
 }
 
 function goNotification() {
-    window.location = "notification.htm"
+    window.location = "notification.html"
 }
