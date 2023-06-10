@@ -61,3 +61,7 @@ document.addEventListener("DOMContentLoaded", function(){
 function goProfile() {
   window.location = "profile.html"
 }
+
+function goRentabilidade() {
+  window.location = "rentabilidade.html"
+}
