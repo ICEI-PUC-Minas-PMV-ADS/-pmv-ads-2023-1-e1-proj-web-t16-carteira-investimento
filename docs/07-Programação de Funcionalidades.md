@@ -76,6 +76,12 @@ A página Home (Dashboard) exibe o retorno esperado dos ativos que o usuário po
 
 ### A aplicação deve permitir que o usuário simule investimentos futuros, de acordo com diferentes cenários de mercado.
 
+- rentabilidade.html (Caê Moreira Euphrásio)
+
+- rentabilidade.js (Caê Moreira Euphrásio)
+
+- rentabilidade.css (Caê Moreira Euphrásio)
+- 
 ## RF-006 
 
 ### A aplicação deve permitir que o usuário visualize seus investimentos realizados em diferentes corretoras.
