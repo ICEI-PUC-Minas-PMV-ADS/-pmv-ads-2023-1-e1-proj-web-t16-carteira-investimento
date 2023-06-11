@@ -12,9 +12,11 @@ O usuário também pode cadastrar transações de forma manual (botão `Cadastra
 
 ![Tela de Cadastro de Transações](img/rf_01_cadastrar_transacoes.png)
 
-A partir da tabela de transações, o usuário pode editar os dados (ícone do lápis na coluna `Ação`) ou excluir o registro (ícone da lixeira na coluna `Ação`). 
+A partir da tabela de transações, o usuário pode editar os dados (ícone do lápis na coluna `Ação`)  
 
 ![Tela de Edição de Transações](img/rf_01_editar_transacoes.png)
+
+ou excluir o registro (ícone da lixeira na coluna `Ação`).
 
 ![Tela de Exclusão de Transações](img/rf_01_excluir_transacoes.png)
 
