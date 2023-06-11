@@ -96,7 +96,7 @@ A página home exibe dashboard com alguns dos KPIs mais importantes para o inves
 
 ### A aplicação deve permitir que o usuário visualize seus investimentos realizados em diferentes corretoras.
 
-Ver RF-001 
+**Ver RF-001** 
 
 ## RF-007 
 
