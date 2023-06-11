@@ -76,6 +76,10 @@ A página Home (Dashboard) exibe o retorno esperado dos ativos que o usuário po
 
 ### A aplicação deve permitir que o usuário simule investimentos futuros, de acordo com diferentes cenários de mercado.
 
+![Resultado negativo](img/rf_03_simulacao_01.png)
+
+![Resultado negativo](img/rf_03_simulacao_02.png)
+
 - rentabilidade.html (Caê Moreira Euphrásio)
 
 - rentabilidade.js (Caê Moreira Euphrásio)
