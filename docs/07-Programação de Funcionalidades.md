@@ -22,7 +22,6 @@ A estrutura de dados é a seguinte:
 
 ![Estrutura de dados](img/rf_04_estrutura_dados.png)
 
-
 #### Artefatos da funcionalidade
 
 - por_transactions.html (Marco de Pereira Binda)
@@ -43,8 +42,6 @@ A página Home (Dashboard) exibe o retorno esperado dos ativos que o usuário po
 
 ![Resultado negativo](img/rf_02_rentabilidade_02.png)
 
-
-
 #### Artefatos da funcionalidade
 
 - home.html (Marco de Pereira Binda)
@@ -56,6 +53,10 @@ A página Home (Dashboard) exibe o retorno esperado dos ativos que o usuário po
 ## RF-003 
 
 ### A aplicação deve fornecer ferramentas para análise de desempenho dos investimentos, como dashboards, gráficos e relatórios.
+
+A página home exibe dashboard com alguns dos KPIs mais importantes para o investidor.
+
+![Dashboard na home](img/rf_03_dashboard.png)
 
 #### Artefatos da funcionalidade
 
