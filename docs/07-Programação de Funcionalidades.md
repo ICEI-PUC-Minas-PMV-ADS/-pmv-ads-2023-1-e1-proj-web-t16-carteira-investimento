@@ -18,6 +18,11 @@ A partir da tabela de transações, o usuário pode editar os dados (ícone do l
 
 ![Tela de Exclusão de Transações](img/rf_01_excluir_transacoes.png)
 
+A estrutura de dados é a seguinte:
+
+![Estrutura de dados](img/rf_04_estrutura_dados.png)
+
+
 #### Artefatos da funcionalidade
 
 - por_transactions.html (Marco de Pereira Binda)
