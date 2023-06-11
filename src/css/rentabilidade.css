@@ -10,7 +10,7 @@
     font-weight: 600;
     font-size: 2rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 3.5rem;
+    /* margin-left: 3.5rem; */
     margin-top: 1rem;
 }
 
@@ -43,7 +43,7 @@
     font-weight: 400;
     font-size: 1rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 
 .resultcal{
@@ -51,7 +51,7 @@
     font-size: 1.5rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 2rem;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 .inputcal{
@@ -60,4 +60,12 @@
     font-size: 1rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 0.5rem;
+}
+
+.label {
+    padding-left: 2px;;
+}
+
+form {
+    width: 50%;
 }

@@ -51,7 +51,7 @@
 
     <!-- Header Section  -->
     <header id="header-section">
-        <div class="container-fluid"></div>
+        <div class="container-fluid">
         <nav class="navbar navbar-expand-lg">
             <div class="d-flex col-md-2 col-sm-2 navbar-div">
                 <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -143,32 +143,66 @@
         <!-- ############### ALTERAR SOMENTE ESTA SEÇÃO ############### -->
         <!-- ###############                            ############### -->
         <!-- Body Content -->
-        <div>
-            <h1 class="h1cal">Simular rendimento</h1>
         
+        <div class="w-100 row g-2">
+               
+            <div class="container-fluid col-xl-6 col-md-6">
 
-        <label class="labelcal" for="principal">Valor inicial:</label>
-        <input class="inputcal" type="number" id="principal" min="0">
-        <br>
+                <h1 class="h1cal">Simular rendimento</h1>
 
-        <label class="labelcal" for="interest">Aporte:</label>
-        <input class="inputcal" type="number" id="aporte" min="0">
-        <br>
+                <!-- <form> -->
+                <div class="w-75">
+                    <div class="form-floating mx-3 my-3">
+                        <input class="form-control rounded-3" type="number" id="principal" min="0">
+                        <label for="principal" >Investimento inicial</label>
+                    </div>
+                </div>
 
-        <label class="labelcal" for="time">Tempo (em meses) no máximo cinco anos:</label>
-        <input class="inputcal" type="number" id="time" min="0">
-        <br>
+                <div class="w-75">
+                    <div class="form-floating mx-3 my-3">
+                        <input class="form-control rounded-3" type="number" id="aporte" min="0">
+                        <label for="aporte" >Aporte mensal</label>
+                    </div>
+                </div>
 
-        <label class="labelcal" for="interest">Taxa de juros (%):</label>
-        <input class="inputcal" type="number" id="interest" min="0">
-        <br>
+                <div class="w-75">
+                    <div class="form-floating mx-3 my-3">
+                        <input class="form-control rounded-3" type="number" id="time" min="0">
+                        <label for="time" >Tempo (em meses)</label>
+                    </div>
+                </div>
 
-        <button class="btncal" onclick="calculate()">Calcular</button>
-        <br>
+                <div class="w-75">
+                    <div class="form-floating mx-3 my-3">
+                        <input class="form-control rounded-3" type="number" id="interest" min="0" step=".01">
+                        <label for="interest" >Taxa de juros a.m. (%)</label>
+                    </div>
+                </div>
 
-        <h2 class="h2cal">Resultado:</h2>
-        <span class=" spancal">Observação: os cálculos podem variar dependendo da precisão da taxa de juros e do arrendondamento adotado.</span>
-        <div class="resultcal" id="result"></div>
+                <div class="w-75">
+                    <div class="form-floating mx-3 my-3">
+                        <button class="w-100 mb-2 btn rounded-3 btn-primary" onclick="calculate()">Calcular</button>
+                    </div>
+                </div>
+                <!-- </form> -->
+                
+
+            </div>
+
+            <div class="container-fluid col-xl-6 col-md-6 py-5">
+                <h2 class="h2cal">Resultado:</h2>
+                <div class="resultcal my-3" id="result"></div>
+
+                <div class="my-3">
+                    <span class=" spancal">Obs01: os cálculos podem variar, dependendo da precisão da taxa de juros e do número de casas decimais.</span>
+                    <span class=" spancal">Obs02: O rendimento exibido é bruto, sem desconto de eventuais impostos.</span>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
 
         <!-- ###############                            ############### -->
         <!-- ###############  ALTERAR SOMENTE ATÉ AQUI  ############### -->
