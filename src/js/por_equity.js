@@ -60,7 +60,6 @@ function totalReturnByEquity() {
 }
 
 
-
 function historicalReturn() {
 
   patrimonio = totalReturnByEquity();
@@ -76,37 +75,52 @@ function historicalReturn() {
   return totalReturn;
 }
 
-let retorno = historicalReturn();
-retorno = parseFloat(retorno).toFixed(2);
-document.getElementById("return").textContent = retorno;
-if(retorno >= 0) {
-  document.getElementById("return-card").classList.add("bg-success");
+
+function operatingCosts() {
+  getData();
+  getAssets();
+
+  let patrimonio = new Array();
+
+  for (ativo of ativoSet) {
+
+    let tempData = new Array();
+    let quantidade = 0;
+    let custoTotal = 0.0;
+
+    for (let i = 0; i < tradeData.length; i++) {
+
+      if (ativo == tradeData[i].data.ativo && tradeData[i].data.operacao == "Compra") {
+        custoTotal += (parseFloat(tradeData[i].data.corretagem + parseFloat(tradeData[i].data.outrosCustos)));
+        quantidade += parseInt(tradeData[i].data.quantidade);
+      } 
+      else if (ativo == tradeData[i].data.ativo && tradeData[i].data.operacao == "Venda") {
+        custoTotal += (parseFloat(tradeData[i].data.corretagem + parseFloat(tradeData[i].data.outrosCustos)));
+        quantidade -= parseInt(tradeData[i].data.quantidade);
+      } 
+      else {
+        continue;
+      }
+
+      tempData = {
+        ativo,
+        quantidade,
+        custoTotal  
+      }; 
+    }
+    patrimonio.push(tempData);
+  }
+
+  console.log(patrimonio);
+  let totalCost = 0.0;
+
+  for (let i = 0; i < patrimonio.length; i++) {
+    if (parseInt(patrimonio[i].quantidade) == 0) {
+      totalCost += parseFloat(patrimonio[i].custoTotal);
+    }
+  }
+  return(totalCost);
 }
-else {
-  document.getElementById("return-card").classList.add("bg-danger");
-}
-
-
-// function totalReturn() {
-
-//   getData();
-
-//   let valorTotal = 0.0;
-
-//   for (let i = 0; i < tradeData.length; i++) {
-
-//     if (tradeData[i].data.operacao == "Compra") {
-//       valorTotal += parseFloat(tradeData[i].data.valorTotal);
-//     } 
-//     else if (tradeData[i].data.operacao == "Venda") {
-//       valorTotal -= parseFloat(tradeData[i].data.valorTotal);
-//     } 
-//     else {
-//       continue;
-//     }
-//   }; 
-//   console.log(valorTotal);
-// }
 
 
 function getTopN(start = -5, end) {
@@ -148,11 +162,6 @@ function getTopN(start = -5, end) {
   // console.log(outArray);
   return(outArray);
 }
-
-// Run scripts on page load
-// document.addEventListener("DOMContentLoaded", function() {
-//   getAssets();
-// });
 
 
 const bestHist = document.getElementById('bestHistResults');
@@ -231,3 +240,18 @@ function loadCharts() {
   });
 
 }
+
+
+let retorno = historicalReturn();
+retorno = parseFloat(retorno).toFixed(2);
+document.getElementById("return").textContent = "R$ " + retorno;
+if(retorno >= 0) {
+  document.getElementById("return-card").classList.add("bg-success");
+}
+else {
+  document.getElementById("return-card").classList.add("bg-danger");
+}
+
+let costs = operatingCosts();
+costs = parseFloat(costs).toFixed(2);
+document.getElementById("costs").textContent = "R$ " + costs;
