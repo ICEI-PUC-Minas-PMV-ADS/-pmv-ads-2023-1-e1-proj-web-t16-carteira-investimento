@@ -1,40 +1,28 @@
+// Run scripts on page load
+document.addEventListener("DOMContentLoaded", function() {
+  loadCharts();
+});
+
+
 function getData() {
   var tempData = localStorage.getItem("tradeData");
   if (tempData != null) {
       tradeData = JSON.parse(tempData);
   }
+  return tradeData;
 }
+
 
 var ativoSet = new Set();
 function getAssets() {
   for (let i = 0; i < tradeData.length; i++) {
     ativoSet.add(tradeData[i].data.ativo);
   }
+  return ativoSet;
 }
 
-function totalReturn() {
-
-  getData();
-
-  let valorTotal = 0.0;
-
-  for (let i = 0; i < tradeData.length; i++) {
-
-    if (tradeData[i].data.operacao == "Compra") {
-      valorTotal += parseFloat(tradeData[i].data.valorTotal);
-    } 
-    else if (tradeData[i].data.operacao == "Venda") {
-      valorTotal -= parseFloat(tradeData[i].data.valorTotal);
-    } 
-    else {
-      continue;
-    }
-  }; 
-  console.log(valorTotal);
-}
 
 function totalReturnByEquity() {
-
   getData();
   getAssets();
 
@@ -72,15 +60,72 @@ function totalReturnByEquity() {
 }
 
 
+
+function historicalReturn() {
+
+  patrimonio = totalReturnByEquity();
+
+  let totalReturn = 0.0;
+
+  for (let i = 0; i < patrimonio.length; i++) {
+    if (parseInt(patrimonio[i].quantidade) == 0) {
+      totalReturn += parseFloat(patrimonio[i].valorTotal);
+    }
+  // console.log(totalReturn);
+  }
+  return totalReturn;
+}
+
+let retorno = historicalReturn();
+retorno = parseFloat(retorno).toFixed(2);
+document.getElementById("return").textContent = retorno;
+if(retorno >= 0) {
+  document.getElementById("return-card").classList.add("bg-success");
+}
+else {
+  document.getElementById("return-card").classList.add("bg-danger");
+}
+
+
+// function totalReturn() {
+
+//   getData();
+
+//   let valorTotal = 0.0;
+
+//   for (let i = 0; i < tradeData.length; i++) {
+
+//     if (tradeData[i].data.operacao == "Compra") {
+//       valorTotal += parseFloat(tradeData[i].data.valorTotal);
+//     } 
+//     else if (tradeData[i].data.operacao == "Venda") {
+//       valorTotal -= parseFloat(tradeData[i].data.valorTotal);
+//     } 
+//     else {
+//       continue;
+//     }
+//   }; 
+//   console.log(valorTotal);
+// }
+
+
 function getTopN(start = -5, end) {
   let patrimonio = totalReturnByEquity();
-  patrimonio = patrimonio.sort((a, b) => {
+
+  resHist = new Array();
+  for (let i = 0; i < patrimonio.length; i++) {
+    if (parseInt(patrimonio[i].quantidade) == 0) {
+      resHist.push(patrimonio[i]);
+    }
+  }
+
+  resHist = resHist.sort((a, b) => {
     if (a.valorTotal < b.valorTotal) {
       return -1;
     }
   });
 
-  let topN = patrimonio.slice(start, end);
+  let topN = resHist.slice(start, end);
   // console.log("topN ", topN);
 
   let outArray = new Array();
@@ -110,8 +155,8 @@ function getTopN(start = -5, end) {
 // });
 
 
-const best = document.getElementById('bestResults');
-const worst = document.getElementById('worstResults');
+const bestHist = document.getElementById('bestHistResults');
+const worstHist = document.getElementById('worstHistResults');
 
 function loadCharts() {
 
@@ -125,24 +170,24 @@ function loadCharts() {
 
   for (let i = 0; i < topN.length; i++) {
     topValorTotal.push(topN[i].valorTotal);
-    console.log(topValorTotal);
+    // console.log(topValorTotal);
     topAtivo.push(topN[i].ativo);
-    console.log(topAtivo);
+    // console.log(topAtivo);
   }
 
   for (let i = 0; i < bottomN.length; i++) {
     bottomValorTotal.push(bottomN[i].valorTotal);
-    console.log(bottomValorTotal);
+    // console.log(bottomValorTotal);
     bottomAtivo.push(bottomN[i].ativo);
-    console.log(bottomAtivo);
+    // console.log(bottomAtivo);
   }
 
-  new Chart(best, {
+  new Chart(bestHist, {
     type: 'bar',
     data: {
       labels: topAtivo,
       datasets: [{
-        label: '# of Votes',
+        label: 'Lucro R$',
         data: topValorTotal,
         borderWidth: 1
       }]
@@ -161,12 +206,12 @@ function loadCharts() {
     }
   });
   
-  new Chart(worst, {
+  new Chart(worstHist, {
     type: 'bar',
     data: {
       labels: bottomAtivo,
       datasets: [{
-        label: '# of Votes',
+        label: 'Prejuízo R$',
         data: bottomValorTotal,
         borderWidth: 1
       }]
@@ -186,9 +231,3 @@ function loadCharts() {
   });
 
 }
-
-// Run scripts on page load
-document.addEventListener("DOMContentLoaded", function() {
-  loadCharts();
-});
-

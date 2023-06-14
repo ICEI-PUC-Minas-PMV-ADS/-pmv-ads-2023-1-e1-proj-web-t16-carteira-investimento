@@ -1,11 +1,7 @@
-// // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
-// function checkLoggedIn() {
-//     const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
-  
-//     if (!currentUser) {
-//       window.location.href = "login.html";
-//     }
-// };
+// Run scripts on page load
+document.addEventListener("DOMContentLoaded", function() {
+  loadCharts();
+});
 
 function getData() {
   var tempData = localStorage.getItem("tradeData");
@@ -20,6 +16,7 @@ function getAssets() {
   for (let i = 0; i < tradeData.length; i++) {
     ativoSet.add(tradeData[i].data.ativo);
   }
+  return ativoSet;
 }
 
 function totalReturnByEquity() {
@@ -56,7 +53,9 @@ function totalReturnByEquity() {
       }; 
     }
     patrimonio.push(tempData);
+
   }
+
   return(patrimonio);
 }
 
@@ -68,8 +67,8 @@ function totalAquisitonCost() {
     if (parseInt(patrimonio[i].quantidade) != 0) {
       aquisitionCost += parseFloat(patrimonio[i].valorTotal);
     }
-  // console.log(aquisitionCost);
   }
+
   return aquisitionCost;
 }
 
@@ -88,6 +87,7 @@ function totalMarketValue() {
   } else {
     patrimonio *= (1 -  (Math.random() * 0.2));
   }
+
   return patrimonio;
 }
 
@@ -112,14 +112,22 @@ document.getElementById("relative-variation").textContent = relativeVariation + 
 
 function getTopN(start = -5, end) {
   let patrimonio = totalReturnByEquity();
-  patrimonio = patrimonio.sort((a, b) => {
+
+  resHist = new Array();
+  for (let i = 0; i < patrimonio.length; i++) {
+    if (parseInt(patrimonio[i].quantidade) != 0) {
+      resHist.push(patrimonio[i]);
+    }
+  }
+
+  resHist = resHist.sort((a, b) => {
     if (a.valorTotal < b.valorTotal) {
       return -1;
     }
   });
 
-  let topN = patrimonio.slice(start, end);
-
+  let topN = resHist.slice(start, end);
+  // console.log("topN ", topN);
 
   let outArray = new Array();
 
@@ -141,11 +149,6 @@ function getTopN(start = -5, end) {
   // console.log(outArray);
   return(outArray);
 }
-
-// Run scripts on page load
-// document.addEventListener("DOMContentLoaded", function() {
-//   getAssets();
-// });
 
 
 const best = document.getElementById('bestResults');
@@ -226,36 +229,4 @@ function loadCharts() {
 }
 
 
-// Run scripts on page load
-document.addEventListener("DOMContentLoaded", function() {
-  // checkLoggedIn();
-  loadCharts();
-});
 
-
-//// página rentabilidade
-
-// function historicalReturn() {
-
-//   patrimonio = totalReturnByEquity();
-
-//   let totalReturn = 0.0;
-
-//   for (let i = 0; i < patrimonio.length; i++) {
-//     if (parseInt(patrimonio[i].quantidade) == 0) {
-//       totalReturn += parseFloat(patrimonio[i].valorTotal);
-//     }
-//   // console.log(totalReturn);
-//   }
-//   return totalReturn;
-// }
-
-// let retorno = historicalReturn();
-// retorno = parseFloat(retorno).toFixed(2);
-// document.getElementById("").textContent = retorno;
-// if(retorno >= 0) {
-//   document.getElementById("return-card").classList.add("bg-success");
-// }
-// else {
-//   document.getElementById("return-card").classList.add("bg-danger");
-// }

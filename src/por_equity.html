@@ -37,7 +37,7 @@
     <script defer src="js/menu.js"></script>
     <script defer src="js/home.js"></script>
     <script defer src="js/por_equity.js"></script>
-    <script src="js/profileImg.js" defer></script>
+    <script defer src="js/profileImg.js"></script>
     <script defer src="Js/notification.js"></script>
     
 </head>
@@ -153,12 +153,12 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-xl-4 col-md-6">
-                            <div class="card bg-success text-white mb-4">
-                                <div class="card-body">Retorno</div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <p class="small text-white"></p>
+                            <div class="card text-white mb-4" id="return-card">
+                                <div class="card-body">Retorno Histórico</div>
+                                <div class="card-footer">
+                                    <p class="small text-white d-inline text-left" id="return"></p> 
+                                    <p class="small text-white d-inline text-right" id="relative-variation"></p>
                                 </div>
                             </div>
                         </div>
@@ -171,10 +171,10 @@
                             <div class="card mb-4">
                                 <div class="card-header up">
                                     <i class="fa-solid fa-arrow-trend-up"></i>
-                                    Melhores resultados
+                                    Melhores resultados históricos
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="bestResults" width="100%" height="40">
+                                    <canvas id="bestHistResults" width="100%" height="40">
 
                                     </canvas>
                                 </div>
@@ -185,10 +185,10 @@
                             <div class="card mb-4">
                                 <div class="card-header down">
                                     <i class="fa-solid fa-arrow-trend-down"></i>
-                                    Piores resultados
+                                    Piores resultados históricos
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="worstResults" width="100%" height="40">
+                                    <canvas id="worstHistResults" width="100%" height="40">
 
                                     </canvas>
                                 </div>
