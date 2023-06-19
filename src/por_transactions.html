@@ -419,7 +419,25 @@
                         </div>
                     </div>
                 </div>
-                
+
+                <div>
+                    <span class="selectPagLegend">Itens por página</span>
+                    <select id="paginacao" required class="selectPag">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+
+                <div class="pageInfo">
+                    <p id="page-info"></p>
+                </div>
+
+                <div class="btnPaginacao">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" id="previous-button">Página anterior</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" id="next-button">Próxima página</button>
+                </div>
             </main>
         </div>
 
