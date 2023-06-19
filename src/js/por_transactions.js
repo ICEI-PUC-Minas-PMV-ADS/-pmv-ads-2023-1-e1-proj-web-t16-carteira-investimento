@@ -1,3 +1,18 @@
+let pageInfo = document.getElementById("page-info");
+
+let previousPageButton = document.getElementById("previous-button");
+let nextPageButton = document.getElementById("next-button");
+
+let selectPaginacao = document.getElementById("paginacao");
+selectPaginacao.addEventListener("change", function() {
+    rowsPerPage = parseInt(selectPaginacao.value);
+    currentPage = 1;
+    reloadTable();
+    updatePageInfo();
+});
+let rowsPerPage = parseInt(selectPaginacao.value);
+let currentPage = 1;
+
 let submitButton = document.getElementById("register-button");
 let editButton = document.getElementById("edit-button");
 const importButton = document.getElementById("import-button");
@@ -36,6 +51,43 @@ function getData() {
     if (tempData != null) {
         tradeData = JSON.parse(tempData);
     }
+}
+
+previousPageButton.addEventListener("click", function() {
+    if (currentPage > 1) {
+        currentPage--;
+        reloadTable();
+        updatePageInfo();
+    }
+});
+
+nextPageButton.addEventListener("click", function() {
+    let tradeData = JSON.parse(localStorage.getItem("tradeData"));
+    let totalPages = Math.ceil(tradeData.length / rowsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        reloadTable();
+        updatePageInfo();
+    }
+});
+
+function reloadTable() {
+    let tradeTable = document.getElementById("table-content");
+    tradeTable.innerHTML = "";
+
+    if (localStorage.getItem("tradeData") != null) {
+        let tradeData = JSON.parse(localStorage.getItem("tradeData"));
+
+        for (let i = (currentPage - 1) * rowsPerPage; i < currentPage * rowsPerPage && i < tradeData.length; i++) {
+            createTableRow(tradeData[i], currentPage);
+        }
+    }
+}
+
+function updatePageInfo() {
+    let tradeData = JSON.parse(localStorage.getItem("tradeData"));
+    let totalPages = Math.ceil(tradeData.length / rowsPerPage);
+    pageInfo.textContent = `Página ${currentPage} de ${totalPages}`;
 }
 
 //// submit data
@@ -84,12 +136,13 @@ submitButton.addEventListener("click", function () {
 
 //// create table row
 
-function createTableRow(tempData) {
+function createTableRow(tempData, pageIndex) {
     const element = document.createElement("tr");
     let attr = document.createAttribute("data-id");
     attr.value = tempData.id;
     element.setAttributeNode(attr);
     element.classList.add("fulltempData");
+    element.classList.add(`page-${pageIndex}`);
     element.innerHTML = `
         <td id="tdCorretora">${tempData.data.corretora}</td>
         <td id="tdNotaCorretagem">${tempData.data.notaCorretagem}</td>
@@ -248,8 +301,16 @@ function loadData(filePath, storageKey) {
     fetch(filePath)
         .then(response => response.json())
         .then(data => {
-            localStorage.setItem(storageKey, JSON.stringify(data)
-        );
+            localStorage.setItem(storageKey, JSON.stringify(data));
+
+            if (localStorage.getItem("tradeData") != null) {
+                let tradeData = JSON.parse(localStorage.getItem("tradeData"));
+
+                for (let i = (currentPage - 1) * rowsPerPage; i < currentPage * rowsPerPage && i < tradeData.length; i++) {
+                    createTableRow(tradeData[i], currentPage);
+                }
+            }
+            
     })
     .catch(error => console.error(error));
 }
@@ -277,13 +338,13 @@ importButton.addEventListener("click", function() {
 document.addEventListener("DOMContentLoaded", function() {
     
     if (localStorage.getItem("tradeData") != null) {
-
         let tradeData = JSON.parse(localStorage.getItem("tradeData"));
 
-        for (let i = 0; i < tradeData.length; i++) {
-            createTableRow(tradeData[i]);
+        for (let i = (currentPage - 1) * rowsPerPage; i < currentPage * rowsPerPage && i < tradeData.length; i++) {
+            createTableRow(tradeData[i], currentPage);
         }
     }
+    updatePageInfo();
 });
 
 // document.getElementById("table-content")
