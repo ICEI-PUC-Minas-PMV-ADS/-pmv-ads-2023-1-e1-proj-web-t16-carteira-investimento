@@ -31,6 +31,7 @@ function definirAlerta() {
   
       setTimeout(function() {
         alert("Seu investimento: " + mensagem + " está próximo da data selecionada " + dataSelecionada.toLocaleString());
+        exibirHistorico(); // Atualizar o histórico  
       }, diferenca);
     } else {
       alert("Selecione uma data futura.");
@@ -82,6 +83,7 @@ function definirAlerta() {
             notificacao.close();
           }, 5000);
         }, diferenca);
+      exibirHistorico(); // Atualizar o histórico    
       } else {
         alert("Selecione uma data futura.");
       }
