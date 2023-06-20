@@ -3,28 +3,27 @@ const previewImage = document.querySelector("#preview-image");
 const previewImageMin = document.querySelector("#preview-image-min");
 
 // Verifica se há uma imagem de perfil salva no LocalStorage
-const savedProfileImage = localStorage.getItem("profileImage");
-
-if (savedProfileImage) {
-  // Define a imagem de perfil salva no LocalStorage como a origem da imagem do menu
-  const menuImage = document.querySelector("#preview-image-min");
-  menuImage.src = savedProfileImage;
-}
-
+const savedProfileImagePath = localStorage.getItem("profileImagePath");
 // Verifica se há uma imagem principal salva no LocalStorage
 const savedImagePath = localStorage.getItem("imagePath");
 
-if (savedImagePath) {
-  var imgmin = document.getElementById("preview-image-min");
-  previewImageMin.src = 'https://source.unsplash.com/random';
-  previewImage.src = savedImagePath;
+if (savedProfileImagePath) {
+  // Define a imagem de perfil salva no LocalStorage como a origem da imagem do menu
+  const menuImage = document.querySelector("#preview-image-min");
+  menuImage.src = "https://source.unsplash.com/random";
+}
+else{
+  const menuImage = document.querySelector("#preview-image-min");
+  menuImage.src = "https://source.unsplash.com/random";
 }
 
-else{
-  var imgmin = document.getElementById("preview-image-min");
-  imgmin.style.width = '36px';
-  imgmin.style.height = '36px';
-  previewImageMin.src = 'https://source.unsplash.com/random';
+if(savedImagePath){
+  var imgmin = document.querySelector("#preview-image-min");
+  previewImage.src = savedImagePath;
+}
+else {
+  var imgmin = document.querySelector("#preview-image-min");
+  previewImage.src = "https://source.unsplash.com/random";
 }
 
 // 'change' muda a imagem quando o usuário insere a imagem
@@ -37,10 +36,10 @@ input.addEventListener("change", function(e) {
     const imagePath = fr.result;
     const profileImage = URL.createObjectURL(files[0]);
 
-    // Salva a imagem de perfil no LocalStorage
-    localStorage.setItem("profileImage", profileImage);
+    // Salva o caminho da imagem de perfil no LocalStorage
+    localStorage.setItem("profileImagePath", profileImage);
 
-    // Salva a imagem principal no LocalStorage
+    // Salva o caminho da imagem principal no LocalStorage
     localStorage.setItem("imagePath", imagePath);
 
     previewImage.src = imagePath;
@@ -49,7 +48,6 @@ input.addEventListener("change", function(e) {
 
   fr.readAsDataURL(files[0]);
 });
-
 
 document.addEventListener("DOMContentLoaded", function(){
   const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
