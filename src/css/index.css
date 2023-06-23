@@ -93,3 +93,7 @@ a.small {
     border: none;
     color: white !important;
 }
+
+.nav-link:hover{
+    color: #205366 !important;
+}
