@@ -113,12 +113,12 @@
                                         <div class="card-body">
                                         <h1 class="card-title pricing-card-title">R$15,50<small class="text-body-secondary fw-light">/mês</small></h1>
                                         <ul class="list-unstyled mt-3 mb-4">
-                                            <li><i class="fas fa-check"></i> 20 users included</li>
-                                            <li><i class="fas fa-check"></i> 10 GB of storage</li>
-                                            <li><i class="fas fa-check"></i> Priority email support</li>
-                                            <li><i class="fas fa-check"></i> Help center access</li>
+                                            <li><i class="fas fa-check"></i> 20 usuários incluídos</li>
+                                            <li><i class="fas fa-check"></i> 10 GB de armazenamento</li>
+                                            <li><i class="fas fa-check"></i> Suporte prioritário por e-mail</li>
+                                            <li><i class="fas fa-check"></i> Acesso ao centro de ajuda</li>
                                         </ul>
-                                        <button type="button" class="w-100 btn btn-lg btn-primary btn-login" >Comece agora</button>
+                                        <button type="button" class="w-100 btn btn-lg btn-primary btn-login" onClick="registerButton()" >Comece agora</button>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@
                     </div>
                 </div>        
             </section>
-            
+
             <section id="faq">
                 <div class="container-fluid section-padding" id="div-faq">
                     <div class="row justify-content-center">
@@ -138,72 +138,78 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Pergunta #1
+                                        Qual é a diferença entre renda fixa e renda variável?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        <p>A <strong>Renda Fixa</strong> é uma modalidade de investimento para quem procura segurança e bons retornos. O investimento é realizado diretamente em Títulos 
+                                        Públicos e Privados de Renda Fixa.<br><br>A <strong>Renda varável</strong> é composta por investimentos cuja rentabilidade não é previsível, diferentemente da renda 
+                                        fixa, na qual o investidor já entra sabendo quanto vai receber.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Pergunta #2
+                                        O que significam liquidez e rentabilidade?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia sunt ex saepe a! Perferendis unde obcaecati aliquam nesciunt quasi esse consequuntur explicabo enim impedit non!
+                                        <p>A <strong>liquidez</strong> se refere à facilidade ou não de se converter um ativo, seja financeiro (CDBs, títulos públicos etc.) ou físico (imóvel, terreno etc.), 
+                                        em moeda pronta para ser movimentada.<br><br>
+                                        A <strong>rentabilidade</strong> se refere ao ganho, geralmente em porcentagem, que o investidor obtém sobre o capital aplicado.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Pergunta #3
+                                        O que é perfil do investidor?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa voluptas doloremque hic voluptatibus incidunt vitae labore animi illum dolor corrupti.
+                                        <p>O <strong>perfil de investidor </strong>é definido pelas suas preferências, objetivos e tolerância aos riscos do mercado. Os perfis são classificados em conservador, 
+                                        moderado e agressivo, para mostrar qual é a relação do investidor com os riscos das operações.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourth" aria-expanded="false" aria-controls="collapseThree">
-                                        Pergunta #4
+                                        O que são dividendos?
                                         </button>
                                     </h2>
                                     <div id="collapseFourth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                        <strong>This is the fourth item's accordion body.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolor dignissimos quod?
+                                        <p>Os <strong>dividendos</strong> são a parcela do lucro da empresa que é distribuída aos acionistas. Dependem do desempenho do negócio, da geração de caixa, dos ganhos e da estratégia da companhia.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseThree">
-                                        Pergunta #5
+                                        O que é Day trade?
                                         </button>
                                     </h2>
                                     <div id="collapseFifth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                        <strong>This is the fifth item's accordion body.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo est quos tempore harum rerum aliquam quae minima?
+                                        <p>O <strong>day trade</strong> é uma estratégia de investimento que consiste em comprar e vender ações no mesmo dia, dentro do mesmo pregão, com o objetivo de lucrar no curtíssimo prazo.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixth" aria-expanded="false" aria-controls="collapseThree">
-                                        Pergunta #6
+                                        O que é Buy and Hold?
                                         </button>
                                     </h2>
                                     <div id="collapseSixth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                        <strong>This is the sixth item's accordion body.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non qui quia saepe? Doloremque magnam dolores architecto. Recusandae, natus.
+                                        <p>O <strong>buy and hold</strong> é uma estratégia de investimento focada exclusivamente no longo prazo, em que o investidor compra boas ações ou outros ativos e os mantém por um período prolongado.<br>
+                                            A ideia é obter ganhos com a valorização dos ativos ao longo do tempo, em vez de tentar acertar o momento certo de compra e venda.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +220,6 @@
                 </div>
             </section>
 
-            
             <section id="about">
                 <div class="container-fluid section-padding" id="div-about">
                     <div class="row justify-content-center">
@@ -223,48 +228,44 @@
                             <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
                                 
                                 <div class="col d-flex flex-column align-items-start gap-2">
-                                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, incidunt!</h3>
-                                <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                                <a href="#" class="btn btn-outline-primary">Botão</a>
+                                <h3>Qual o objetivo da Capitalize?</h3>
+                                <p class="text-body-secondary">O nosso objetivo é ser um sistema para controle de investimentos e gerenciamento de patrimônio.</p>
+                                <a href="#" class="btn btn-outline-primary">Voltar ao topo</a>
                                 </div>
                         
                                 <div class="col">
-                                    <div class="row row-cols-1 row-cols-sm-2 g-4">
-                                        <div class="col d-flex flex-column gap-2">
-                                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                                <i class="bi bi-collection"></i>
-                                            </div>
-                                            <h4 class="mb-0">Título 1</h4>
-                                            <p class="text-body-secondary">Lorem ipsum dolor sit amet.</p>
-                                        </div>
-                            
-                                        <div class="col d-flex flex-column gap-2">
-                                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                                <i class="bi bi-gear-fill"></i>
-                                            </div>
-                                            <h4 class="mb-0">Título 2</h4>
-                                            <p class="text-body-secondary">Lorem ipsum dolor sit amet consectetur.</p>
-                                        </div>
-                            
-                                        <div class="col d-flex flex-column gap-2">
-                                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                                <i class="bi bi-speedometer2"></i>
-                                            </div>
-                                            <h4 class="mb-0">Título 3</h4>
-                                            <p class="text-body-secondary">Lorem ipsum dolor sit.</p>
-                                        </div>
-                            
-                                        <div class="col d-flex flex-column gap-2">
-                                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                                <i class="bi bi-table"></i>
-                                            </div>
-                                            <h4 class="mb-0">Título 4</h4>
-                                            <p class="text-body-secondary">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                    <div class="row row-cols-1 row-cols-sm-1 g-4">
+                                        <div class="col d-flex flex-column gap-1">
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        Integrantes:
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <p>• Caê Moreira Euphrásio<br><br>
+                                                               • Marco De Pereira Binda</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Orientador:
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <p>• Wagner Cipriano Da Silva</p>
+                                                    </div>
+                                                </div>
+                                            </div> 
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -285,9 +286,6 @@
                     </div>
                 </footer>
             </div>
-
         </div>
-
     </body>
-
 </html>
