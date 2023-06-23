@@ -92,3 +92,9 @@ a.small {
     border: none;
     color: white;
 }
+
+@media (max-width: 576px){
+    .modal-dialog {
+        width: auto;
+    }
+}
