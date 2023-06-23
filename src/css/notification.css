@@ -10,6 +10,7 @@
     font-weight: 400;
     font-size: 1.125rem;
     margin-left: 2rem;
+    display: block;
 }
 
 .inputLabel{
@@ -20,6 +21,8 @@
     border: none;
     border-radius: 2rem;
     cursor: pointer;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
 }
 
 .btn{
