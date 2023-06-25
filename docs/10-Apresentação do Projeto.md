@@ -6,11 +6,11 @@ Capitalize: Sistema para controle de investimentos e gerenciamento de patrimôni
 
 ## Logomarca
 
-<img src="docs/img/logo_marca.png">
+<img src="/docs/img/logo_marca.png">
 
 ## Design Style
 
-<img src="img/design_style.png">
+<img src="/img/design_style.png">
 
 ## Apresentação do Sistema 
 
