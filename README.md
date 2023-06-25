@@ -45,7 +45,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado 
+[Site da Capitalize](https://capitalizeinvest.netlify.app/index.htm)
 
 # Armazenamento do Código-Fonte
 

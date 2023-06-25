@@ -1,11 +1,10 @@
 # Instruções de utilização
 
+Acessar o site neste endereço: [Capitalize](https://capitalizeinvest.netlify.app/index.htm).
 ## Instalação do Site
-
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
 
 ## Histórico de versões
 
-### [0.1.0] - DD/MM/AAAA
+### [0.1.0] - 2023/06/25
 #### Adicionado
-- Adicionado ...
+- Adicionada versão beta do site, com funcionalides de cadastro de usuário, de transações, dashboard de rendimentos, sistema de alertas, simulador de rentabilidade. 
