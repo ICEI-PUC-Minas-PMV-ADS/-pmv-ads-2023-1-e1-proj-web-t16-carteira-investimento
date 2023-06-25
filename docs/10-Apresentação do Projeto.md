@@ -10,7 +10,7 @@ Capitalize: Sistema para controle de investimentos e gerenciamento de patrimôni
 
 ## Design Style
 
-<img src="/img/design_style.png">
+<img src="/docs/img/design_style.png">
 
 ## Apresentação do Sistema 
 
