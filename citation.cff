@@ -1,5 +1,5 @@
 message: Please cite this software using these metadata.
-title: Capitalize: Sistema para controle de investimentos e gerenciamento de patrimônio
+title: Capitalize - Sistema para controle de investimentos e gerenciamento de patrimônio
 authors:
   - family-names: De Jesus Cabral
     given-names: Ahyla
@@ -21,4 +21,4 @@ keywords:
   - Ações
 repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/-pmv-ads-2023-1-e1-proj-web-t16-carteira-investimento
 version: 1.0.0
-date-released: 2023-10-31
+date-released: "2023-10-31"
