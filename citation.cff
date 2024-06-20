@@ -1,29 +1,24 @@
 message: Please cite this software using these metadata.
-title:
+title: Capitalize: Sistema para controle de investimentos e gerenciamento de patrimônio
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: De Jesus Cabral
+    given-names: Ahyla
+  - family-names: Moreira Euphrásio
+    given-names: Caê
+  - family-names: Marinho Ribeiro Guimarães
+    given-names: Lucas
+  - family-names: De Pereira Binda
+    given-names: Marco
+  - family-names: Henrique Da Cruz Alves
+    given-names: Paulo
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Cipriano Da Silva
+    given-names: Wagner
 keywords:
-  - 
-  - 
+  - Controle
+  - Investimentos
+  - Ações
 repository-code: 
 version: 1.0.0
 date-released: 2023-10-31
